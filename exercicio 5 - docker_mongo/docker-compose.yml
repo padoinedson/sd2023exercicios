@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb2023docker
+#    ports:
+#      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+#    volumes:
+      # seeding scripts
+      # named volumes
+#      - mongodb:/data/db
+#      - mongoconfig:/data/configdb
