@@ -1,6 +1,6 @@
 
 
- 
+# mysql
 
 
 # <<<<< INSTALAÇÃO NO HOST >>>>>
@@ -151,4 +151,9 @@ $ docker-compose up
 
 
 
+Em outro terminal:  
 
+
+$ sudo docker ps  
+
+$ sudo docker exec -it mongodb2023docker bash  
