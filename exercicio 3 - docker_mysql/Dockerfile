@@ -1,9 +1,0 @@
-FROM mysql
-
-MAINTAINER padoin
-
-
-
-
-
-
