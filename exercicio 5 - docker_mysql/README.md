@@ -133,6 +133,9 @@ $ sudo docker stop mysql2023docker
 
 
 
+
+
+
 # <<<<< INSTALAÇÃO EM CONTAINER VIA COMPOSE >>>>>
 
 
