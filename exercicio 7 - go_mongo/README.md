@@ -23,6 +23,3 @@ vamos usar:
 > use testing  
 > db.users.find().pretty();  
 
-
-ref:
-https://blog.logrocket.com/integrating-mongodb-go-applications/
