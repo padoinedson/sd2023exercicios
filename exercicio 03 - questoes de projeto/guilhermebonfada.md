@@ -2,6 +2,7 @@ Guilherme Bonfada
 Twitch
 
 Avaliar as 7 questões de projeto:
+
 1 - Transparência:
 
 A Twitch TV é uma plataforma de streaming de vídeo ao vivo conhecida por sua comunicação aberta e transparência com criadores de conteúdo e espectadores. Eles frequentemente compartilham atualizações sobre novos recursos, mudanças de políticas e diretrizes. Através de postagens em blogs, atualizações de status e respostas diretas aos usuários, a Twitch busca manter os usuários informados sobre o que está acontecendo na plataforma
