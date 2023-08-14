@@ -1,4 +1,4 @@
-# Github
+# Bruno Monegat - Github
 
 ## 1 - Transparência:
 A transparência do Github é muito perceptível visto que ele, sendo uma das maiores e mais utilizadas plataformas de hospedagem de código e de gerenciamento de versionamento, é um sistema distribuído extremamente complexo, tendo que lidar com enormes quantidades de dados e interações simultâneas de usuários em repositórios. Aos usuários todos os processos internos são transparentes, visto que não há necessidade de interagir diretamente com eles para se usar o serviço do Github por completo, podendo acessar diretamente a interface que os abstrai. Isso faz parecer ao usuário que o sistema, que é distribuído, funcione como um só. 
