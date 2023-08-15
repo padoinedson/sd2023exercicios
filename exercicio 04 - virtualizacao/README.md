@@ -29,6 +29,8 @@
 
 	$ 	scp  informatica@10.40.1.165:/home/informatica/linuxmint*.iso .   
 
+> 		conformar difitando "yes"
+
 
 
 #### Criar uma VM 
