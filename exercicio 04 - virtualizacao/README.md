@@ -34,11 +34,14 @@
 #### Criar um VM 
 
 
+- Novo
 
 - Menu Configurações
 	- Menu armazenamento
-		- Controladora IDE
-			-- Acrescentar Disco Óptico (local e selecionar a ISO)	
-			-- marcar no link da ISO e selecionar Live CD/DVD
+		- Controladora IDE  
+			-- Acrescentar Disco Óptico (local e selecionar a ISO)	  
+			-- marcar no link da ISO e selecionar Live CD/DVD  
 
-	- Start linux Mint 
+- Start linux Mint   
+
+
