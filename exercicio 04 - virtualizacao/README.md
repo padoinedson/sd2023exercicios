@@ -35,8 +35,10 @@
 
 #### Criar uma VM 
 
+- Abrir Virtualbox  
 
 - Novo
+	- Definir mem, disco, ...
 
 - Menu Configurações
 	- Menu armazenamento
