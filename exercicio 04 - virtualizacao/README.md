@@ -43,8 +43,8 @@
 - Menu Configurações
 	- Menu armazenamento
 		- Controladora IDE  
-			-- Acrescentar Disco Óptico (local e selecionar a ISO)	  
-			-- marcar no link da ISO e selecionar Live CD/DVD  
+			-- Acrescentar Disco Óptico (selecionar local e selecionar a ISO)	  
+			-- Clicar no link da ISO e selecionar Live CD/DVD  
 
 - Start linux Mint   
 
