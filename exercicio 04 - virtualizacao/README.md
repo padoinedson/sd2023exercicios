@@ -27,7 +27,7 @@
 >      scp nome_do_arquivo user@ip_do_servidor:/caminho_do_servidor  
 >      scp user@ip_do_servidor:/caminho_do_servidor/nome_do_arquivo local  
 
-	$ 	scp  informatica@10.40.1.165:/home/informatica/linuxmint*.iso .   
+	$ 	scp  informatica@200.132.196.97:/home/informatica/linuxmint*.iso .   
 
 > 		conformar difitando "yes"
 
