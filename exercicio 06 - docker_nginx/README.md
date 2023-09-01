@@ -91,7 +91,7 @@
 
 ### executar o container com nome e com porta removendo anteriores, com volume, compartilhando a pasta  
 
-> no home - terminal 0
+> no home - terminal 0  
 	$ cd ~  
 	$ mkdir www    
 
