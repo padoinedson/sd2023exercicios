@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql2023docker
+#    ports:
+#      - 13306:3306
+#    volumes: 
+#      - ./init.sql:/data/application/init.sql
+    environment: 
+      MYSQL_ROOT_PASSWORD: 1234
