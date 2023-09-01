@@ -9,7 +9,7 @@
 #### criar uma imagem  
 
 
-	$ vi Dockerfile
+	$ nano Dockerfile
 
 >		FROM golang:1.17  
 >		WORKDIR /go/src  
@@ -20,7 +20,7 @@
  
  
 
-	$ vi main.go
+	$ nano main.go
 
 
 >				package main  
