@@ -1,7 +1,5 @@
 
 
-
-
 ## Atividade 1 ---- docker com servidor go
 
 
@@ -47,6 +45,7 @@
 
 > 			para testar - browser localhost:8080  
 > 									- em outro terminal $ lynx localhost:8080
+
 
 
 
