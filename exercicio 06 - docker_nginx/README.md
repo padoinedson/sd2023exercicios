@@ -92,8 +92,8 @@
 ### executar o container com nome e com porta removendo anteriores, com volume, compartilhando a pasta  
 
 > no home - terminal 0
-	$ cd ~
-	$ mkdir www  
+	$ cd ~  
+	$ mkdir www    
 
 	$ sudo docker run --rm --name nginxpadoin -p 8080:80 -v ~/www:/usr/share/nginx/html nginx  
 
