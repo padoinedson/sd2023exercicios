@@ -1,0 +1,16 @@
+Eleição de Líder	
+	
+	O Algoritmo de Bully é frequentemente considerado mais adequado para a eleição de líderes em sistemas distribuídos. Isso se deve às suas características de robustez e eficiência na detecção de falhas e na eleição de um novo líder quando o líder atual não está mais operacional.
+	O algoritmo de Bully funciona da seguinte maneira: quando um processo detecta a ausência do líder, ele inicia uma eleição enviando mensagens aos processos com IDs maiores. Se nenhum processo responder, o iniciador se declara como líder. Se algum processo responder, o processo iniciador sabe que há um processo com um ID mais alto que ainda está ativo e desiste da eleição. Isso garante que o processo com o maior ID se torne o novo líder.
+	O algoritmo é eficaz em situações de falha de líder e é relativamente simples de entender e implementar. No entanto, como qualquer escolha de algoritmo, é importante considerar o contexto específico do sistema, os requisitos de desempenho e as características de tolerância a falhas ao decidir qual algoritmo utilizar.
+	
+	
+Sincronização
+
+	O Algoritmo de Berkeley é frequentemente considerado um dos melhores algoritmos para sincronização de relógios em sistemas distribuídos. Ele é projetado para reduzir as diferenças de tempo entre os relógios de diferentes máquinas, tornando-os mais coesos e consistentes.
+	O funcionamento básico do Algoritmo de Berkeley é o seguinte:
+1. Um servidor central obtém o tempo de todos os processos (máquinas) no sistema distribuído.
+2. O servidor calcula uma média ponderada dos tempos obtidos e determina as diferenças entre os relógios locais e a média calculada.
+3. O servidor envia as correções de tempo para cada processo, que então ajusta seus relógios de acordo.
+	Essa abordagem ajuda a sincronizar os relógios dos diferentes processos, mesmo que eles estejam executando em máquinas com diferentes velocidades ou sobrecargas.
+	Além do Algoritmo de Berkeley, existem outras técnicas de sincronização, como o Algoritmo de Cristian e o Algoritmo de Lamport, que também podem ser adequados para diferentes cenários de sincronização em sistemas distribuídos. A escolha do algoritmo depende das necessidades específicas do sistema e das características das máquinas envolvidas.
