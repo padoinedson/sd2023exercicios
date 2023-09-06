@@ -1,0 +1,6 @@
+Guilherme Peukert Michel
+
+Para mencionar melhor algoritmo, tanto para sincronização quanto para eleição de líder, em minha opinião depende muito do que o usuário quer no sistema, qual seu objetivo...
+O algoritmo de berkeley é uma escolha interessante, visto que, pode ser designado para transações financeiras já que um de seus méritos é sincronização em tempo real.
+
+Na eleição de líder a decisão depende, assim como sincronização, das prioridades do seu sistema. Se a robustez contra falhas é uma prioridade e você deseja que o processo de eleição continue mesmo após uma falha, o algoritmo Bully pode ser mais adequado. Por outro lado, se a simplicidade e a eficiência são importantes, e a topologia da rede pode ser organizada em um anel, o algoritmo de anel pode ser uma escolha melhor. O algoritmo bully eu escolheria como melhor dentre esses dois, por mais que talvez a eleição em si seja um pouco mais demorada, ele é mais robusto contra falhas.
