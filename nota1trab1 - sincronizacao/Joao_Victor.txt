@@ -1,0 +1,17 @@
+Melhor Escolha para Sincronização: Cristian's Algorithm
+Avaliação:
+No panorama de sistemas distribuídos, o algoritmo de Cristian se destaca como uma abordagem eficiente e elegante para a sincronização de tempo. O modelo requer um servidor de tempo central com uma fonte confiável, como um relógio atômico. A genialidade deste algoritmo está na minimização do erro introduzido pela latência da rede durante a transmissão de informações temporais entre o servidor e os nós. Isso é conseguido ao computar a diferença de tempo entre o envio da solicitação e a recepção da resposta, e ajustando o tempo recebido com esse valor.
+
+Contras:
+No entanto, o algoritmo não é isento de limitações. Por exemplo, em cenários mais complexos, ele é frequentemente superado por abordagens mais robustas como o NTP (Network Time Protocol).
+
+Melhor Escolha para Eleição de Líder: Bully Algorithm
+Avaliação:
+Quando se trata de algoritmos de eleição de líder, o "melhor" pode ser subjetivo e depender das necessidades específicas do sistema. Os dois grandes jogadores aqui são o Algoritmo de Anel e o Algoritmo de Bully. Ambos têm o objetivo comum de designar um nó "mestre" em uma rede de múltiplos nós e garantir que outros nós possam assumir a liderança se o líder atual falhar. O Algoritmo de Anel, embora eficaz em redes locais configuradas fisicamente como um anel, apresenta desafios em sistemas mais complexos, especialmente se um nó falhar, levando a latências acumuladas nos nós adjacentes. Em contrapartida, o Algoritmo de Bully opera em uma topologia de malha, onde cada nó está em comunicação com todos os outros nós. A seleção do líder é baseada em um critério como o ID do Processo, e o nó com o valor mais alto é escolhido.
+
+Contras:
+A principal desvantagem aqui é que a iniciativa para uma nova eleição pode partir de um nó com baixo valor de ID, levando a múltiplas rodadas de eleições e potenciais problemas de desempenho. No entanto, o Bully ainda se destaca como a opção mais versátil, especialmente em sistemas assíncronos e embarcados, devido à sua robustez.
+
+Em resumo, enquanto o algoritmo de Cristian oferece uma abordagem simples, porém precisa, para a sincronização de tempo, o Algoritmo de Bully se sobressai como uma opção confiável para a eleição de líder em diversos cenários. Ambos têm suas limitações, mas suas forças são consideráveis o suficiente para torná-los escolhas viáveis em seus respectivos domínios.
+
+autor: João Victor Martins
