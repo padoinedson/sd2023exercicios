@@ -2,7 +2,7 @@
 ## <<<<<<<<<<<<<<< Instalação com docker-compose >>>>>>>>>>>>>>>>>>>
 
 
-### Acessar
+### Mantenedor do kafka
 https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples  
 https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-cluster
 
