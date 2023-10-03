@@ -1,5 +1,4 @@
-
-Avaliação do trabalho: 
+## Avaliação do trabalho: 
 
 a) instalar Docker e Docker-compose em um sistema/servidor
 
@@ -8,19 +7,21 @@ b) escolher um serviço Ex.:(https://hub.docker.com/).
 c) criar um arquivo README.md com todas as explicações para:
 
           <<<<< INSTALAÇÃO NO HOST >>>>>
+          arquivo instalacao.md  
 
            <<<<< INSTALAÇÃO EM CONTAINER >>>>>
-           Dockerfile
+           arquivo Dockerfile
 
            <<<<< INSTALAÇÃO EM CONTAINER VIA COMPOSE >>>>>
-           docker-compose.yml
+           arquivo docker-compose.yml
 
 
-Entrega do trabalho:
+## Entrega do trabalho:
 
 INDIVIDUAL:   
 
-Um arquivo zipado contendo os arquivos com os seguintes nomes:  
+Entregar no `github` um arquivo zipado contendo:  
+
 a) Dockerfile -> para criação da imagem do serviço escolhido  
 b) docker-compose.yml  
 c) README.md -> passos/comandos para:  

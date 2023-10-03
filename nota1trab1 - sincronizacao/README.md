@@ -1,4 +1,4 @@
-Avaliação do trabalho: 
+## Avaliação do trabalho: 
 
 Escolher um dos problema clássicos de Exclusão Mútua:  
 a) de Sincronização  
@@ -22,12 +22,11 @@ b) de Eleição de líder
 - Estudar e analisar os algoritmos de exemplo 
 - Comparar o algoritmo escolhido com os outros da mesma categoria (Sincronização ou eleição de líder).
 
-Entrega do trabalho:
-
+## Entrega do trabalho:
 
 GRUPO:  
 - Apresentação em aula
-- Entregar no classroom um arquivo zipado contendo:
+- Entregar no `classroom` um arquivo zipado contendo:
 - pdf da apresentação e/ou vídeo da apresentação
 
 INDIVIDUAL:  

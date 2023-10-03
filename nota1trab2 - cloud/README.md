@@ -1,4 +1,4 @@
-Avaliação do trabalho: 
+## Avaliação do trabalho: 
 
 1- Escolher um provedor de serviçõs de cloud:  
 
@@ -41,10 +41,11 @@ c) copiar um arquivo de uma VM para a outra VM sem necessidade de colocar a senh
 
 
 
-Entrega do trabalho:
+## Entrega do trabalho:
 
 INDIVIDUAL:    
-- Entregar no github dois arquivo  
+
+Entregar no `github` um arquivo zipado contendo:  
 	1- print do scp sem senha  
 	2- pdf com seu `nome.md` apresentando as respostas dos ítens `a` a `g` sua opinião com justificativa os criterios de escolha da empresa você contrataria.
 
