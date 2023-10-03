@@ -1,12 +1,17 @@
-Avaliação do trabalho: 
+Grupo:  
+- 2 componentes
 
-1- 
-2- 
+Descrição do trabalho:  
+1- Escolher duas linguagens de programação  
+2- Analisar como JSON é implementado nas linguagens  
+3- Modificar os programas disponibilizados como exemplo para trocarem informações por meio de JSON e BAAS  
 
+Avaliação do trabalho:  
 
-Entrega do trabalho:
-
-INDIVIDUAL:    
-- Entregar no github dois arquivos  
-
-
+Entregar no portal um arquivo zipado contendo:  
+a) arquivo com os nomes dos dois componentes (componentes.txt)  
+b) fontes das implementaçôes (separar as lgg em pastas)  
+c) passos para instalação e execução  
+d) dois prints da execução:  
+- 1 da execução do POST com a lgg A  
+- 1 da execução GET com a lgg B  
