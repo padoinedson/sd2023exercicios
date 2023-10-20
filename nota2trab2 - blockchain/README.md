@@ -16,9 +16,9 @@ Entregar no `github`:
 Criar uma pasta contendo os arquivos:  
 
 a) README.md :   
-	- seu nome   
-	- passos para instalação  
-	- passos para usar/testar o serviço  
+- seu nome   
+- passos para instalação  
+- passos para usar/testar o serviço  
 
 b) 5 prints de tela com:   
 - Criação da conta  
