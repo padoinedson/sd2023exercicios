@@ -36,3 +36,6 @@ c) 3 prints de tela com:
 - git add do diretorio
 - git commit  
 - git push   
+
+
+# Não serão aceitos trabalhos via upload !!!
