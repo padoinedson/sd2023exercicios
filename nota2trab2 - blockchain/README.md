@@ -18,13 +18,14 @@ Entregar no `github`:
 
 Criar um diretorio com o seu nome no diretorio "nota2trab2 - blockchain" contendo os arquivos:  
 
-a) 1 arquivo com nome README.md:    
+a) 1 arquivo com nome README.md:    (30 pontos)
 - seu nome   
 - passos para instalação  
-- passos para realizar as etapas  
+- passos para realização das etapas  
+- novidades em relação ao exemplo de aula
 
 
-b) 5 prints de tela com:   
+b) 5 prints de tela com:       (10 pontos)
 - Criação das contas  
 - conferencia de saldo inicial das 3 contas  
 - Mineração  
@@ -32,7 +33,7 @@ b) 5 prints de tela com:
 - Saldo final das 3 contas  
 
 
-c) 3 prints de tela com:   
+c) 3 prints de tela com:     (10 pontos)   
 - git add do diretorio
 - git commit  
 - git push   
