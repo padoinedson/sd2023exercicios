@@ -16,18 +16,16 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 
 
 
+ 
 
-## Rodar screen
-### no Terminal 1:
 
-		$ screen
 
 
 
 ## Atividade 1 ---- INSTALAÇÃO 
 
 ## Rodar o compose  
-### no Terminal 1:  
+- no Terminal 1:  
 
 
 		$ sudo docker-compose up   
@@ -39,7 +37,7 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 ## Atividade 1.1 ---- GERENCIAMENTO 
 
 ## Verificar o status   
-### no Terminal 2:  
+- no Terminal 2:  
 		$ sudo docker-compose ps  
 		ou
 		$ sudo docker ps  
@@ -50,7 +48,7 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 # Atividade 2 ---- UTILIZAÇÃO 
 
 ## Criar Tópico  
-### no Terminal 3:  
+- no Terminal 3:  
 
 ### Acessar um dos containers  
 
@@ -69,7 +67,7 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 
 
 ## Enviar eventos no tópico << PRODUTOR >> 
-### no Terminal 4:
+- no Terminal 4:
  
 
 ### Acessar um dos containers      
@@ -84,7 +82,7 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 
 
 ## Ler os eventos armazenados no tópico << CONSUMIDOR >>  
-### no Terminal 5:
+- no Terminal 5:
 
 
 
@@ -109,29 +107,29 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 
 ## Parar o KAFKA 
 
-### no Terminal 5:
+- no Terminal 5:
 
 >		CTRL C para sair do console  
 		$ exit para sair do container  
-		$ exit para fechar o terminal do screen  
+		$ exit para fechar o terminal    
 
 
-### no Terminal 4:
+- no Terminal 4:
 
 >		CTRL C para sair do console  
 		$ exit para sair do container  
-		$ exit para fechar o terminal do screen  
+		$ exit para fechar o terminal    
 
-### no Terminal 3:
+- no Terminal 3:
 
 		$ exit para sair do container  
 		$ sudo docker-compose down para encerrar os containers criados  
-		$ exit para fechar o terminal do screen  
+		$ exit para fechar o terminal   
 
 
-### no Terminal 2:
+- no Terminal 2:
 
-		$ exit para fechar o terminal do screen  
+		$ exit para fechar o terminal    
 
 
 
