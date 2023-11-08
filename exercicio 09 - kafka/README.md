@@ -22,32 +22,38 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 
 
 
-## Atividade 1 ---- INSTALAÇÃO 
+# Atividade 1 ---- INSTALAÇÃO 
 
-## Rodar o compose  
+##  1.1 Execução dos Serviços 
 - no Terminal 1:  
 
 
 		$ sudo docker-compose up   
 
-> entrar na pasta que está o arquivo "docker-compose.yml"  
-> usar -d para rodar em backgroud  
+>               entrar na pasta que está o arquivo "docker-compose.yml"  
+>               usar -d para rodar em backgroud  
 
 
-## Atividade 1.1 ---- GERENCIAMENTO 
+##  1.2 Gerenciamento
 
 ## Verificar o status   
 - no Terminal 2:  
 		$ sudo docker-compose ps  
-		ou
+		ou  
 		$ sudo docker ps  
+
+
+
+
+
 
 
 
 
 # Atividade 2 ---- UTILIZAÇÃO 
 
-## Criar Tópico  
+
+##  2.1 Criação de Tópicos  
 - no Terminal 3:  
 
 ### Acessar um dos containers  
@@ -57,16 +63,31 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 ### Criar um tópico  
 		$ kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 3 --partitions 3 --topic calor  
 
-### Listar todos os tópicos criados  	
-		$ kafka-topics --list --bootstrap-server localhost:29092  
 
-### Informações de um tópico  
+
+
+
+##  2.2 Visualização de informações do Tópico  
+
 		$ kafka-topics --describe --bootstrap-server localhost:29092 --topic calor  
 
 
+### Listar todos os tópicos criados  	
+		$ kafka-topics --list --bootstrap-server localhost:29092  
 
 
-## Enviar eventos no tópico << PRODUTOR >> 
+
+
+
+
+
+
+
+
+
+
+##  2.3 Enviar eventos no tópico << PRODUTOR >>  
+
 - no Terminal 4:
  
 
@@ -75,16 +96,17 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 
 ### Post no broker  
 		$ kafka-console-producer --broker-list localhost:29092 --topic calor  
-> ctrl+c para sair do console  
+>               ctrl+c para sair do console  
 
 
 
 
 
-## Ler os eventos armazenados no tópico << CONSUMIDOR >>  
+
+
+##  2.4 Ler os NOVOS eventos de um tópico  << CONSUMIDOR >>   
+
 - no Terminal 5:
-
-
 
 ### Acessar um dos containers      
 		$ sudo docker exec -it padoin_kafka-1_1 bash  
@@ -92,20 +114,30 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 ### Get no broker - receber novas inserções
 		$ kafka-console-consumer --bootstrap-server localhost:29092 --topic calor
 
-> ctrl+c para sair do console  
+>                ctrl+c para sair do console  
 
-### Get no broker - receber todas as inserções  
+
+
+##  2.5 Ler TODOS os eventos armazenados no tópico  << CONSUMIDOR >>   
+
 		$ kafka-console-consumer --bootstrap-server localhost:29092 --topic calor --from-beginning  
-> ctrl+c para sair do console  
 
-### Get no broker - receber todas as inserções de um grupo  
+>                ctrl+c para sair do console  
+
+
+##  2.6  receber todas as inserções de um grupo  
 		$ kafka-console-consumer --bootstrap-server localhost:29092 --topic calor --from-beginning --group sala
 
-> ctrl+c para sair do console  
+>                 ctrl+c para sair do console  
 
 
 
-## Parar o KAFKA 
+
+
+
+
+
+# Atividade 3 ---- Parar os serviços KAFKA e ZooKeeper
 
 - no Terminal 5:
 
