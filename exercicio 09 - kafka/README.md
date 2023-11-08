@@ -27,6 +27,7 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 ##  1.1 Execução dos Serviços 
 - no Terminal 1:  
 
+		$ sudo apt install docker-compose 
 
 		$ sudo docker-compose up   
 
@@ -139,29 +140,18 @@ https://github.com/confluentinc/cp-docker-images/tree/5.3.3-post/examples/kafka-
 
 # Atividade 3 ---- Parar os serviços KAFKA e ZooKeeper
 
-- no Terminal 5:
+- nos Terminais 5, 4, 3 ... :
 
->		CTRL C para sair do console  
-		$ exit para sair do container  
-		$ exit para fechar o terminal    
-
-
-- no Terminal 4:
-
->		CTRL C para sair do console  
-		$ exit para sair do container  
-		$ exit para fechar o terminal    
-
-- no Terminal 3:
-
-		$ exit para sair do container  
-		$ sudo docker-compose down para encerrar os containers criados  
-		$ exit para fechar o terminal   
+>		CTRL C -- para sair do console  
+		$ exit -- para sair do container  
+		$ exit -- para fechar o terminal    
 
 
 - no Terminal 2:
 
-		$ exit para fechar o terminal    
+		$ exit -- para sair do container  
+		$ sudo docker-compose down  -- para encerrar os containers criados  
+		$ exit -- para fechar o terminal   
 
 
 
