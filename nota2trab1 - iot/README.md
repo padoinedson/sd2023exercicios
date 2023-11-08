@@ -6,7 +6,7 @@
  
 Executar as etapas de:  
 a) Instalar o kafka
-b) Configurar um  ambiente com 
+b) Configurar um ambiente com 
 - nodos = 3
 - broquer = 3  
 - partição = 3 
@@ -28,16 +28,20 @@ a) 1 arquivo com nome README.md:    (30 pontos)
 - seu nome   
 - passos para instalação  
 - passos para realização das etapas  
+	- Criação do ambiente (nodos, partição, fator de replicação)
+	- Produtor e Consumidor normal (todos os nodos on)
+	- Produtor e Consumidor com um dos nodos off (derrubar um nodo) 
+	- Produtor e Consumidor com um nodo novo (adicionar um nodo) 
+	- Consumidor com leitura em grupo 
 - novidades em relação ao exemplo de aula
 
 
 b) 5 prints de tela com:       (10 pontos)
 - Criação do ambiente (nodos, partição, fator de replicação)
-- Produtor
-- Consumidor  
-- Consumidor com um dos nodos off  
-- Consumidor com grupo 
-
+- Produtor e Consumidor normal (todos os nodos on)
+- Produtor e Consumidor com um dos nodos off (derrubar um nodo) 
+- Produtor e Consumidor com um nodo novo (adicionar um nodo) 
+- Consumidor com leitura em grupo 
 
 c) 3 prints de tela com:     (10 pontos)   
 - git add do diretorio
