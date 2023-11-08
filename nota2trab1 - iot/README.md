@@ -8,8 +8,9 @@ Executar as etapas de:
 a) Instalar o kafka
 b) Configurar um  ambiente com 
 - nodos = 3
+- broquer = 3  
 - partição = 3 
-- fator de replicação de dados = 2
+- fator de replicação de dados = 3
 c) Enviar dados para o kafka
 d) Ler dados do kafka
 
