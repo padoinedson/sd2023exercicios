@@ -20,7 +20,7 @@ c) criar um arquivo README.md com todas as explicações para:
 
 INDIVIDUAL:   
 
-Entregar no `github` um arquivo zipado contendo:  
+Entregar no `github` uma pasta com o seu nome contendo os seguintes arquivos:  
 
 a) Dockerfile -> para criação da imagem do serviço escolhido  
 b) docker-compose.yml  
