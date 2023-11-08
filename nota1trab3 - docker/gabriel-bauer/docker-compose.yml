@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: pg-compose
+    image: postgres
+    environment:
+      POSTGRES_DB: sd
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  db-data:
