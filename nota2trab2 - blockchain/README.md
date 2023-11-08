@@ -27,7 +27,7 @@ a) 1 arquivo com nome README.md:    (30 pontos)
 
 b) 5 prints de tela com:       (10 pontos)
 - Criação das contas  
-- conferencia de saldo inicial das 3 contas  
+- Conferencia de saldo inicial das 3 contas  
 - Mineração  
 - Transação  
 - Saldo final das 3 contas  
