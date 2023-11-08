@@ -1,4 +1,5 @@
 
+# IoT - Kafka
 
 ## Avaliação do trabalho: 
 
@@ -33,7 +34,7 @@ b) 5 prints de tela com:       (10 pontos)
 - Criação do ambiente (nodos, partição, fator de replicação)
 - Produtor
 - Consumidor  
-- Consumidor derrubando um nodo  
+- Consumidor com um dos nodos off  
 - Consumidor com grupo 
 
 
