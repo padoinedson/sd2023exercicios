@@ -1,0 +1,5 @@
+A escolha de um algoritmo depende muito do contexto, é importante considerar os requisitos específicos do sistema, como a tolerância a falhas, escalabilidade e características da rede ao escolher um algoritmo sincronização e eleição de líder. 
+
+Eleição de líder: Eu escolheria o Bully, pois ele é especialmente indicado para ambientes em que a carga de comunicação é alta ou quando a comunicação entre os nodos é confiável. Portanto, em situações em que a eficiência e a simplicidade é preferida, o algoritmo Bully pode ser uma escolha apropriada. 
+
+Sincronização: Eu escolheria o Lamport, pois esse algoritmo permite uma sincronização precisa, atribuindo carimbos de tempo aos eventos, facilitando a compreensão da ordem casual entre eles. Sendo um algoritmo simples de implementar e oferece uma solução robusta para a sincronização em ambientes distribuídos. A sua capacidade em de fornecer uma ordenação parcial dos eventos é útil quando a sincronização precisa é crucial para a consistência do sistema. 
