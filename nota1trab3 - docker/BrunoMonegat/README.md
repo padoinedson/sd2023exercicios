@@ -105,11 +105,11 @@ version: '3'
 
 services:
   apache:
-	image: httpd:latest
-	ports:
-  		- "8080:80"
-	volumes:
-  		- ./public-html:/usr/local/apache2/htdocs/
+    image: httpd:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public-html:/usr/local/apache2/htdocs/
 ```
 
 Crie um diretório para os arquivos HTML, ele deverá ter o nome igual ao especificado em volumes, no docker-compose.yml:
