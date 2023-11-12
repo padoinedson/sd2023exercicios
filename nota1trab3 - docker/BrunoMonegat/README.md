@@ -154,5 +154,4 @@ Teste o servidor acessando: http://localhost:8080
 - Checando o status do servidor e os últimos logs de acesso de fora do container, através do comando **docker exec**:
 ![](docker_exec_0.png)
 ![](docker_exec_1.png)
-> Talvez seja necessário alterar algumas configurações do servidor para executar certos comandos!
-
+> Talvez seja necessário alterar algumas configurações do servidor para executar esses comandos!
