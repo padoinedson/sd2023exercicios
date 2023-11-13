@@ -1,4 +1,11 @@
 
+
+# Sistemas Distribuídos  
+## Nota 2 Trabalho 1  
+
+Aplicação de Blockchain em aplicação real.
+
+
 # Blockchain
 
 ## Avaliação do trabalho: 
@@ -10,7 +17,7 @@ b) Adicionar três contas com saldo 1000, 2000 e 3000
 c) Minerar para gerar `gas`  
 d) Fazer duas transferências (111 da 1a para 2ª e 222 da 2a para 3ª)  
 e) Minerar para efetivar as transferências no `block`  
-
+f) Destacar as novidades em relação ao exemplo de aula
 
 
 ## Entrega do trabalho:
@@ -42,4 +49,4 @@ c) 3 prints de tela com:     (10 pontos)
 - git push   
 
 
-# Não serão aceitos trabalhos via upload  - somente com commit e pull !!!
+# Não serão aceitos trabalhos via `upload` - somente com `commit` e `pull` !!!

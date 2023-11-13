@@ -1,9 +1,14 @@
 
 
-Opção 1 - Kafka
-Opção 2 - K8S
+# Sistemas Distribuídos  
+## Nota 2 Trabalho 2  
 
+Aplicação de kafka ou K8S em aplicação real.
 
+### Escolher uma das opções:  
+- Opção 1 - Kafka  (app que envia dados para o kafka e conector que salva em SGBD)  
+- Opção 2 - Kafka  (app que envia dados para o kafka e conector que salva em SGBD)  
+- Opção 3 - K8S  
 
 
 # IoT - Kafka
@@ -20,7 +25,7 @@ b) Configurar um ambiente com
 - fator de replicação de dados = 3
 c) Enviar dados para o kafka
 d) Ler dados do kafka
-
+e) Destacar as novidades em relação ao exemplo de aula
 
 
 ## Entrega do trabalho:
@@ -56,4 +61,4 @@ c) 3 prints de tela com:     (10 pontos)
 - git push   
 
 
-# Não serão aceitos trabalhos via upload - somente com commit e pull !!!
+# Não serão aceitos trabalhos via `upload` - somente com `commit` e `pull` !!!
