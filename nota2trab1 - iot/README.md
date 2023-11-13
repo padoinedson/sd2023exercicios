@@ -1,4 +1,11 @@
 
+
+Opção 1 - Kafka
+Opção 2 - K8S
+
+
+
+
 # IoT - Kafka
 
 ## Avaliação do trabalho: 
@@ -33,7 +40,7 @@ a) 1 arquivo com nome README.md:    (30 pontos)
 	- Produtor e Consumidor com um dos nodos off (derrubar um nodo) 
 	- Produtor e Consumidor com um nodo novo (adicionar um nodo) 
 	- Consumidor com leitura em grupo 
-- novidades em relação ao exemplo de aula
+- novidades em relação ao exemplo de aula - 20 pontos
 
 
 b) 5 prints de tela com:       (10 pontos)
@@ -49,4 +56,4 @@ c) 3 prints de tela com:     (10 pontos)
 - git push   
 
 
-# Não serão aceitos trabalhos via upload !!!
+# Não serão aceitos trabalhos via upload - somente com commit e pull !!!
