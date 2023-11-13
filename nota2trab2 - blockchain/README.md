@@ -49,4 +49,4 @@ c) 3 prints de tela com:     (10 pontos)
 - git push   
 
 
-# Não serão aceitos trabalhos via `upload` - somente com `commit` e `pull` !!!
+# Não serão aceitos trabalhos via `upload` - somente com `commit` e `push` !!!
