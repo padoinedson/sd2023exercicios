@@ -1,0 +1,8 @@
+version: '3'
+services:
+    nodejs:
+        image: nodejs-diego:1.0.0
+        container_name: diegojs-node
+        command: node
+        stdin_open: true
+        tty: true
