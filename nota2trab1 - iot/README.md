@@ -1,14 +1,13 @@
 
 
 # Sistemas Distribuídos  
-## Nota 2 Trabalho 2  
+## Nota 2 Trabalho 1  
 
 Aplicação de kafka ou K8S em aplicação real.
 
 ### Escolher uma das opções:  
 - Opção 1 - Kafka  (app que envia dados para o kafka e conector que salva em SGBD)  
-- Opção 2 - Kafka  (app que envia dados para o kafka e conector que salva em SGBD)  
-- Opção 3 - K8S  
+- Opção 2 - K8S  
 
 
 
