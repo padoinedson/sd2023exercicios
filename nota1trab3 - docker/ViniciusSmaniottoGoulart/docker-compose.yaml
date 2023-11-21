@@ -1,0 +1,8 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3.13
+    container_name: docker_rabbitmq
+    stdin_open: true
+    tty: true
+
