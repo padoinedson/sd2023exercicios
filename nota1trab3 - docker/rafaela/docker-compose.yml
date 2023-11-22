@@ -1,0 +1,7 @@
+version: '3.5'
+
+services:
+    ubuntu:
+        build:
+            context: .
+        image: jammy/ubuntu
