@@ -1,3 +1,5 @@
+Problema de Sincronização:
+
 O "Algoritmo de Peterson" é uma escolha eficaz para abordar o Problema de Sincronização em sistemas com dois processos concorrentes. Ele utiliza variáveis compartilhadas, como turn e flag, para garantir a exclusão mútua e prevenir condições de corrida. A estratégia do turno alterna a vez de cada processo para acessar a seção crítica, enquanto a flag indica o desejo de um processo de entrar na seção crítica. Este algoritmo é eficiente e relativamente simples de entender e implementar em sistemas com apenas dois processos.
 
 Problema de Eleição de Líder:
