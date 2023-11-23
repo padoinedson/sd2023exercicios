@@ -1,0 +1,3 @@
+Eleição de líder: Bully, pois é o melhor para ambientes onde a comunicação é alta ou quando a comunicação entre os nodos é confiável. O algoritmo Bully é a melhor escolha se você quer algo simples e eficaz. 
+
+Sincronização: Acredito que Lamport, já que libera uma sincronização precisa, colocando timestamps em tudo, ou seja, tornando mais fácil de se organizar entre eles. É fácil de implementar e se torna mais útil quando a sincronização é algo obrigatório para o sistema.
