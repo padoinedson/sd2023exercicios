@@ -1,0 +1,5 @@
+O "Algoritmo de Peterson" é uma escolha eficaz para abordar o Problema de Sincronização em sistemas com dois processos concorrentes. Ele utiliza variáveis compartilhadas, como turn e flag, para garantir a exclusão mútua e prevenir condições de corrida. A estratégia do turno alterna a vez de cada processo para acessar a seção crítica, enquanto a flag indica o desejo de um processo de entrar na seção crítica. Este algoritmo é eficiente e relativamente simples de entender e implementar em sistemas com apenas dois processos.
+
+Problema de Eleição de Líder:
+
+O "Algoritmo de Bully" é uma escolha sólida para abordar o Problema de Eleição de Líder em sistemas distribuídos. Este algoritmo é projetado para sistemas onde processos podem falhar e é eficaz em eleger um novo líder quando o líder atual falha. O processo com a maior prioridade (maior ID) assume a liderança. Se um processo perceber a falha do líder, inicia uma eleição, enviando mensagens para processos com IDs mais altos. Este algoritmo é simples, eficiente e lida bem com falhas, tornando-o uma escolha robusta para ambientes distribuídos.
