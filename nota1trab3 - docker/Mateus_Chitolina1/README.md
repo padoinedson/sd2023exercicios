@@ -16,7 +16,7 @@ Após realizar o download da imagem basta subir o docker através do comando:
 
 `sudo docker run -id debian`
 
-<img src="/Print_docker_run.png">
+<img src="./Print_docker_run.png">
 
 Obs:
 
