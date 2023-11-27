@@ -136,3 +136,19 @@ Após executar o programa, podemos visualizar que o tópico `tabela-temporaria-c
 ![](kafka-ui/quarkus-topic1.png)
 
 ![](kafka-ui/quarkus-topic2.png)
+
+### 6. Git add, push e commit
+
+- Add
+![](git/add.png)
+
+- Push
+![](git/push.png)
+
+- Commit
+![](git/commit.png)
+
+- Github 
+![](git/github.png)
+
+![Alt text](image-1.png)
