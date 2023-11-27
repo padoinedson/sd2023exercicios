@@ -32,8 +32,8 @@ a) 1 arquivo com nome README.md:    (30 pontos)
 - seu nome   
 - passos para instalação  
 - passos para realização das etapas  
-- novidades em relação ao exemplo de aula - 20 pontos
-
+- novidades em relação ao exemplo de aula - 20 pontos  
+- links para os prints dos itens b) e c) 
 
 b) 5 prints de tela com:       (10 pontos)
 - Criação das contas  
