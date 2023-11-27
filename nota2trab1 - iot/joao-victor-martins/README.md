@@ -150,5 +150,3 @@ Após executar o programa, podemos visualizar que o tópico `tabela-temporaria-c
 
 - Github 
 ![](git/github.png)
-
-![Alt text](image-1.png)
