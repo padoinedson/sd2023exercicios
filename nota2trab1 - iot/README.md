@@ -5,6 +5,8 @@
 
 Aplicação de kafka ou K8S em aplicação real.
 
+
+
 ### Escolher uma das opções:  
 - Opção 1 - Kafka  (app que envia dados para o kafka e conector que salva em SGBD)  
 - Opção 2 - K8S  
@@ -47,7 +49,9 @@ a) 1 arquivo com nome README.md:    (30 pontos)
 	- Produtor e Consumidor com um nodo novo (adicionar um nodo) 
 	- Consumidor com leitura em grupo 
 - novidades em relação ao exemplo de aula - 20 pontos
+- links para os prints dos itens b) e c)
 
+ 
 
 b) 5 prints de tela com:       (10 pontos)
 - Criação do ambiente (nodos, partição, fator de replicação)

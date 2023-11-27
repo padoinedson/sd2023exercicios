@@ -38,7 +38,7 @@ c) README.md -> passos/comandos para:
 	- INSTALAÇÃO EM CONTAINER  
 	- INSTALAÇÃO EM CONTAINER VIA COMPOSE  
 	- usar/testar o serviço que está rodando no container   
-- links para os prints dos itens b) 
+- links para os prints do item b) 
 
 b) 5 prints de tela com:   
 
