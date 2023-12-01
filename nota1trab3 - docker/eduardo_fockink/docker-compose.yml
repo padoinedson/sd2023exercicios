@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: .
+    container_name: server-nginx-docker-compose
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+    volumes:
+      - ./files/nginx:/usr/share/nginx
+      - ./files/conf.d:/etc/nginx/conf.d
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    labels:
+      maintainer: "Eduardo Fockink Silva"
+      description: "Configuração do Nginx para TRABALHO 3 NOTA 1"
+
+networks:
+  default:
+    driver: bridge
