@@ -1,4 +1,4 @@
-# Sistemas Distribuídos 2023
+# Sistemas Distribuídos 2023/2
 
-## Exercícios
+## Exercícios e Trabalhos da disciplina
 
