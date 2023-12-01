@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ruby-app:
+    image: imgruby:1.0.0
+    container_name: rubycomp
+    command: "irb"
+    tty: true
+    stdin_open: true
