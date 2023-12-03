@@ -1,13 +1,14 @@
-#Serviço escolhido:
+# Serviço escolhido:
+
 apache http server (httpd - https://hub.docker.com/_/httpd)
 
-#Instalação no host:
+# Instalação no host:
 
 
-#Instalação em conteiner:
+# Instalação em conteiner:
 
-##Usando docker run:
+## Usando docker run:
 
-##Usando dockerfile
+## Usando dockerfile
 
-#Instalação com docker-compose
+# Instalação com docker-compose
