@@ -75,12 +75,19 @@ Para criar uma blockchain, deve-se, inicialmente, configurar o container seguind
 <h1 align="center"><<<<< b) ADIÇÃO DAS CONTAS COM O SALDO >>>>></h1>
 
 1. Antes de realizar transações entre as contas, é necessário criar as mesmas. Assim, deve-se rodar o comando “geth account new –datadir ~/nomedaconta”, substituindo “nomedaconta” pelos nomes das contas a serem criadas. Nos exemplos disponibilizados, as mesmas serão chamadas de “le1”, “le2” e “le3”. É importante rodar cada comando no terminal que foi definido para cada conta, facilitando a organização.
+
    a. Deve-se anotar os valores dos endereços das chaves e as senhas de cada uma dessas contas, senão não será possível realizar transações com elas.
+
       i. Endereço público de Le1:  0xAfd89dd896dc019A6Ed4225013502Dc11171c438
+
       ii. Endereço público de Le2: 0x4e08CA1d876909cC5292c2c6B693d7ac8192971e
+
       iii. Endereço público de Le3: 0xFEC74494F8e969da33a009308C2633E624C10788
+
    b. Substituir o valor das chaves no arquivo genesis.json para que estejam de acordo com as chaves geradas.
+
       i. cd ~
+      
       ii. nano ethereum/genesis.json
 
 
