@@ -4,10 +4,6 @@ Primeiramente foi necessário instalar o docker para realizar os testes. Os segu
 
 `sudo apt install docker`
 
-`sudo apt install docker.io`
-
-`sudo apt install docker-compose`
-
 Depois de ter o docker instalado é necessário realizar o download da imagem que desejamos utilizar. No nosso caso é client-go:release-1.10. então é utilizado o comando:
 
 `sudo docker pull ethereum/client-go:release-1.10`
