@@ -87,7 +87,7 @@ Para criar uma blockchain, deve-se, inicialmente, configurar o container seguind
    b. Substituir o valor das chaves no arquivo genesis.json para que estejam de acordo com as chaves geradas.
 
       i. cd ~
-      
+
       ii. nano ethereum/genesis.json
 
 
@@ -127,21 +127,22 @@ Para criar uma blockchain, deve-se, inicialmente, configurar o container seguind
 
 1. Antes de conseguir trocar saldo entre as contas, deve-se adicionar uma à outra.
 
-    a. admin.addPeer("enodedooutrono");
+    a. admin.addPeer("enodedooutrono")
 
         i. Substituir "enodedooutrono" pelo enode dos outros nós.
-        ii. No caso da primeira conta, ficará assim: admin.addPeer("enode://8e2895778341501547dca232c62a8fd014929d9c6352af654416644f81113e4c57e87ef61bf9902b9ec60d350ffb6d896f475f87508f7dc8a3b037c7f4d29f89@127.0.0.1:30902");
+       
+        ii. No caso da primeira conta, ficará assim: admin.addPeer("enode://8e2895778341501547dca232c62a8fd014929d9c6352af654416644f81113e4c57e87ef61bf9902b9ec60d350ffb6d896f475f87508f7dc8a3b037c7f4d29f89@127.0.0.1:30902")
 
-        admin.addPeer("enode://66d5b13ed669324528434d7effeceb85ec58afabba3e966da70aa4702e31d0675fb6e5e0cd58567bba7be96d7cfe0ce2eca948f964ea4f44386a813576c35605@127.0.0.1:30302");
+        admin.addPeer("enode://66d5b13ed669324528434d7effeceb85ec58afabba3e966da70aa4702e31d0675fb6e5e0cd58567bba7be96d7cfe0ce2eca948f964ea4f44386a813576c35605@127.0.0.1:30302")
 
-        iii. Segunda conta: admin.addPeer("enode://8e2895778341501547dca232c62a8fd014929d9c6352af654416644f81113e4c57e87ef61bf9902b9ec60d350ffb6d896f475f87508f7dc8a3b037c7f4d29f89@127.0.0.1:30902");
+        iii. Segunda conta: admin.addPeer("enode://8e2895778341501547dca232c62a8fd014929d9c6352af654416644f81113e4c57e87ef61bf9902b9ec60d350ffb6d896f475f87508f7dc8a3b037c7f4d29f89@127.0.0.1:30902")
 
-        admin.addPeer("enode://9bdc82c396e402d233178e90f01837c158c472ca88604b1d3e6f0f3188a445221925a96cc5703d27104d847028d963e1137cb481fd425db7df26e952b310cefb@127.0.0.1:30303");
+        admin.addPeer("enode://9bdc82c396e402d233178e90f01837c158c472ca88604b1d3e6f0f3188a445221925a96cc5703d27104d847028d963e1137cb481fd425db7df26e952b310cefb@127.0.0.1:30303")
 
         iv. Terceira conta: 
-        admin.addPeer("enode://9bdc82c396e402d233178e90f01837c158c472ca88604b1d3e6f0f3188a445221925a96cc5703d27104d847028d963e1137cb481fd425db7df26e952b310cefb@127.0.0.1:30303");
+        admin.addPeer("enode://9bdc82c396e402d233178e90f01837c158c472ca88604b1d3e6f0f3188a445221925a96cc5703d27104d847028d963e1137cb481fd425db7df26e952b310cefb@127.0.0.1:30303")
 
-        admin.addPeer("enode://66d5b13ed669324528434d7effeceb85ec58afabba3e966da70aa4702e31d0675fb6e5e0cd58567bba7be96d7cfe0ce2eca948f964ea4f44386a813576c35605@127.0.0.1:30302");
+        admin.addPeer("enode://66d5b13ed669324528434d7effeceb85ec58afabba3e966da70aa4702e31d0675fb6e5e0cd58567bba7be96d7cfe0ce2eca948f964ea4f44386a813576c35605@127.0.0.1:30302")
 
 2. Deve-se liberar a conta antes de usar ela, substituindo “chave” pela chave de cada uma das contas. Repetir o comando nos terminais de cada uma das contas:
 
