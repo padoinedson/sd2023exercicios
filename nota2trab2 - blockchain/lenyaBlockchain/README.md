@@ -101,7 +101,7 @@ Para criar uma blockchain, deve-se, inicialmente, configurar o container seguind
 
       b. geth --datadir /root/nomedaconta/ init genesis.json
 
-         i. Substituir “nomedaconta” pelo nome da conta.
+        i. Substituir “nomedaconta” pelo nome da conta.
 
 2. Deve-se colocar os nós da rede para rodar.
 
@@ -112,10 +112,15 @@ Para criar uma blockchain, deve-se, inicialmente, configurar o container seguind
    b. Nos terminais da segunda e terceira conta, executar o comando:
 
       i. geth --datadir ~/nomedaconta --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8546 --port 30302 --http.port 8544 --allow-insecure-unlock console
+        
          Importante: Deve-se substituir a porta por uma adequada, tente até conseguir obter uma que esteja livre.
+   
     c. Não pode-se esquecer de anotar o enode de cada uma das contas.
+
         i. Enode de Le1: self=enode://9bdc82c396e402d233178e90f01837c158c472ca88604b1d3e6f0f3188a445221925a96cc5703d27104d847028d963e1137cb481fd425db7df26e952b310cefb@127.0.0.1:30303
+
         ii. Enode de Le2: self=enode://66d5b13ed669324528434d7effeceb85ec58afabba3e966da70aa4702e31d0675fb6e5e0cd58567bba7be96d7cfe0ce2eca948f964ea4f44386a813576c35605@127.0.0.1:30302
+        
         iii. Enode de Le3: self=enode://8e2895778341501547dca232c62a8fd014929d9c6352af654416644f81113e4c57e87ef61bf9902b9ec60d350ffb6d896f475f87508f7dc8a3b037c7f4d29f89@127.0.0.1:30902
 
 3. Por fim, pode-se executar a mineração com o comando “miner.start(10)”, sendo que o número é indicativo da quantidade de threads.
