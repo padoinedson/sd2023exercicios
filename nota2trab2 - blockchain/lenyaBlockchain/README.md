@@ -120,7 +120,7 @@ Para criar uma blockchain, deve-se, inicialmente, configurar o container seguind
         i. Enode de Le1: self=enode://9bdc82c396e402d233178e90f01837c158c472ca88604b1d3e6f0f3188a445221925a96cc5703d27104d847028d963e1137cb481fd425db7df26e952b310cefb@127.0.0.1:30303
 
         ii. Enode de Le2: self=enode://66d5b13ed669324528434d7effeceb85ec58afabba3e966da70aa4702e31d0675fb6e5e0cd58567bba7be96d7cfe0ce2eca948f964ea4f44386a813576c35605@127.0.0.1:30302
-        
+
         iii. Enode de Le3: self=enode://8e2895778341501547dca232c62a8fd014929d9c6352af654416644f81113e4c57e87ef61bf9902b9ec60d350ffb6d896f475f87508f7dc8a3b037c7f4d29f89@127.0.0.1:30902
 
 3. Por fim, pode-se executar a mineração com o comando “miner.start(10)”, sendo que o número é indicativo da quantidade de threads.
@@ -186,10 +186,10 @@ Para criar uma blockchain, deve-se, inicialmente, configurar o container seguind
 
 Os prints foram postados juntos da atividade, entretanto, também será disponibilizado o link com todos os prints reunidos:
 
-b) 5 prints de tela com: (10 pontos)
+b) 5 prints de tela com:
 
 https://docs.google.com/document/d/1MUtElfALJnfeK5h9An09G6xr2nuh1pVDBs2qhpLUVlI/edit?usp=sharing
 
-c) 3 prints de tela com: (10 pontos)
+c) 3 prints de tela com:
 
 https://docs.google.com/document/d/1nScSLa1uxy_OIRgynysceS9sW2cTQugjF6eCy61JB4I/edit?usp=sharing
