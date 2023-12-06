@@ -14,9 +14,10 @@ O comando vai buscar a imagem do postgres local, se não houver ele irá fazer o
     * POSTGRES_USER: Nome do usuário
     * POSTGRES_DB: Nome do banco de dados
 4. Por fim a porta para expor o banco de dados a conexões no nosso caso a porta padrão do postgree então ficaria **EXPOSE 5432**
-5. Portanto nosso arquivo ficaria desta forma: ![dockerfile image](image.png)
+5. Portanto nosso arquivo ficaria desta forma: 
+![dockerfile image](Dockerfile.png.png)
 
-    ![Rodando o container com Dockerfile]
+![Rodando o container com Dockerfile](dockerfile-run.png)
 
 ## Instalação via Docker Compose
 1. Crie um arquivo com o nome docker-compose.yml
@@ -31,4 +32,4 @@ O comando vai buscar a imagem do postgres local, se não houver ele irá fazer o
 
 ## Testando o serviço
 
-    ![Testando o serviço](testandoServico.png)
+![Testando o serviço](testandoServico.png)
