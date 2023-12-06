@@ -90,4 +90,8 @@ clef newaccount --keystore dir/keystore
 ```
 a tag keystore diz onde o clef irá guardar as chaves, ao executar o comadno ele vai pedir a senha da conta sendo no mínimo de 10 dígitos.
 Exemplo de criação de conta: ![Clef](clef.png)
+
+### Git
     
+![Git Add](git_add.png)
+![Git Commit Push](git_commit_push.png)
