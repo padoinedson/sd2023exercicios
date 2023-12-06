@@ -21,8 +21,7 @@ O comando vai buscar a imagem do postgres local, se não houver ele irá fazer o
 2. Primeira linha seria a versão do docker compose instalado: **version: 3**,
 3. A próxima linha são os serviços que serão instalados nosso caso ficaria como na imagem a seguir:
 ![Serviços](services.png)
-4. O arquivo final ficaria desta forma:
-![Arquivo docker-compose.yml final](docker-compose.png)
+4. O arquivo final ficaria desta forma:  ![Arquivo docker-compose.yml final](docker-compose.png)
 
 ![Rodando o container com docker-compose](docker-compose-run.png)
 
