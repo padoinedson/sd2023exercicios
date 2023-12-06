@@ -1,0 +1,9 @@
+FROM postgres:latest
+
+ENV POSTGRES_PASSWORD 123456
+ENV POSTGRES_USER admin
+ENV POSTGRES_DB dbname
+
+
+EXPOSE 5432
+    
