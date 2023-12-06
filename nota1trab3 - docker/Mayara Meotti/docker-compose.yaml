@@ -1,0 +1,9 @@
+version: '3'
+services:
+  python:
+    image: python3:1.0.0
+    container_name: composePython
+    command: python
+    stdin_open: true
+    tty: true
+    
