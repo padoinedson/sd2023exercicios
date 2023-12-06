@@ -109,3 +109,10 @@ Como novidade deste trabalho, destaco a criação de uma aplicação Node.js que
 
 <img src="./15.jpg"/>
 
+2. git commit
+
+<img src="./16.jpg"/>
+
+3. git push
+
+<img src="./17.jpg"/>
