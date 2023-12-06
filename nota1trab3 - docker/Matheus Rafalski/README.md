@@ -1,5 +1,5 @@
 ## INSTALAÇÃO NO HOST
-    1. Execute o comando: ```bash 
+    ```bash 
     docker run -e POSTGRES_PASSWORD=123456 --name {nome do container} -p 5432:5432 -d postgres
     ```
     O comando vai buscar a imagem do postgres local, se não houver ele irá fazer o download automático.
@@ -31,4 +31,4 @@
 
 ## Testando o serviço
 
-    ![Testando o serviço](testando%20serviço.png)
+    ![Testando o serviço](testandoServico.png)
