@@ -3,7 +3,7 @@ Aluno: Matheus Rafalski
 * Docker
 
 ### Criação das Contas
-Para facilitar nosso exercício já deixamos pré-criadas as contas em um arquivo que vai ser compartilhado com o container que da máquina da blockchain, o arquivo ficará dessa forma: ![conta arquivo](genesisImage.png)
+Para facilitar nosso exercício já deixamos pré-criadas as contas em um arquivo que vai ser compartilhado com o container que da máquina da blockchain, o arquivo ficará dessa forma: ![conta arquivo](genesis.png)
 
 Basta deixa-lo em uma pasta com o nome de **ethereum**.
 
@@ -89,5 +89,5 @@ Para criar uma conta no clef basta executar o comando:
 clef newaccount --keystore dir/keystore
 ```
 a tag keystore diz onde o clef irá guardar as chaves, ao executar o comadno ele vai pedir a senha da conta sendo no mínimo de 10 dígitos.
-Exemplo de criação de conta: [Clef](clef.png)
+Exemplo de criação de conta: ![Clef](clef.png)
     
