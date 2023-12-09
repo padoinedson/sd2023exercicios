@@ -115,7 +115,9 @@ Para ver a situação dos contêineres (todos os nós de em execução):
 <img src="./images/todosNosExecutando.png"/>
 
 Para entrar no container:
-```sudo docker exec -it kafka_kafka-1_1 bash```
+```
+sudo docker exec -it kafka_kafka-1_1 bash
+```
 
 Criando o tópico jogos com o fator de replicação 3 e 3 partições
 ```
@@ -158,7 +160,7 @@ print do terminal 2:
 <img src="./images/lendoTopicoTempoReal.png"/>
 Para parar de receber as mensagens do tópico: `ctrl + c`
 
-### Vamos derrubar um nó e ver as mensagens do tópico sofreram alguma alteração:
+### Vamos derrubar um nó e ver se as mensagens do tópico sofreram alguma alteração:
 No terminal 1, para sair do contêiner: `exit`
 
 Derrubar um nó:
@@ -184,9 +186,11 @@ kafka-console-consumer --bootstrap-server localhost:29092 --topic jogos --from-b
 
 <img src="./images/topicoSemUmNo.png"/>
 
-`mensagens não foram ‘perdidas’ pois o tópico graças ao seu fator replicação (neste caso sendo 3)`
+`mensagens não foram ‘perdidas’ no tópico graças ao seu fator replicação (neste caso sendo 3)`
 
 `ctrl + c` para parar de receber as mensagens
+
+### Vamos reerguer o nó para ver se houve alteração nas mensagens
 
 No terminal 1, executar novamente o nó que havia sido derrubado:
 ```
@@ -210,7 +214,9 @@ kafka-console-consumer --bootstrap-server localhost:29092 --topic jogos --from-b
 `ctrl + c` para interromper execução
 
 para sair do contêiner:
-```exit```
+```
+exit
+```
 
 ### Teste utilizando um nó para envio de mensagens e outros dois para recebê-las em tempo real
 No terminal 1, acessar um container e o deixar como consumidor:
