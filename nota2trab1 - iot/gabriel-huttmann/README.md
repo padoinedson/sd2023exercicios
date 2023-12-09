@@ -1,3 +1,5 @@
+Aluno: Gabriel Pires Huttmann
+
 # Kafka
 
 Na realização deste trabalho será utilizado o docker e docker compose, para instalar estes:
