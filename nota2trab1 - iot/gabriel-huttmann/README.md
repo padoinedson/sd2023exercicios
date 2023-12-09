@@ -118,7 +118,9 @@ Para entrar no container:
 ```sudo docker exec -it kafka_kafka-1_1 bash```
 
 Criando o tópico jogos com o fator de replicação 3 e 3 partições
-```kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 3 --partitions 3 --topic jogos```
+```
+kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 3 --partitions 3 --topic jogos
+```
 <img src="./images/criandoTopico.png"/>
 
 Para postar no tópico:
@@ -126,7 +128,8 @@ Para postar no tópico:
 kafka-console-producer --broker-list localhost:29092 --topic jogos
 ``` 
 fazer postagens no tópico
-```Rocket League
+```
+Rocket League
 CS:GO
 League of Legends
 ```
@@ -157,6 +160,7 @@ Para parar de receber as mensagens do tópico: `ctrl + c`
 
 ### Vamos derrubar um nó e ver as mensagens do tópico sofreram alguma alteração:
 No terminal 1, para sair do contêiner: `exit`
+
 Derrubar um nó:
 ```
 sudo docker stop kafka_kafka-1_1
@@ -167,14 +171,19 @@ sudo docker ps
 ```
 <img src="./images/derrubandoUmNo.png"/>
 No terminal 2, acessar outro contêiner:
+
 ```
 sudo docker exec -it kafka_kafka-2_1 bash
 ```
+
 Receber mensagens:
+
 ```
 kafka-console-consumer --bootstrap-server localhost:29092 --topic jogos --from-beginning
 ```
+
 <img src="./images/topicoSemUmNo.png"/>
+
 `mensagens não foram ‘perdidas’ pois o tópico graças ao seu fator replicação (neste caso sendo 3)`
 
 `ctrl + c` para parar de receber as mensagens
@@ -196,7 +205,7 @@ kafka-console-consumer --bootstrap-server localhost:29092 --topic jogos --from-b
 ```
 <img src="./images/topicoComNoReerguido.png"/>
 
-`não houve alteração nas mensagens pois elas estão replicadas`
+`não houve alteração nas mensagens pois elas estão replicadas nos demais nós`
 
 `ctrl + c` para interromper execução
 
@@ -280,7 +289,7 @@ print("Ctrl+c to Stop")
 while True:
     producer.send('message-generator', random.randint(1,999))
 ```
-abrir um segundo terminal, criar o tópico `message-generator` e passar a escutá-lo:
+abrir um segundo terminal, acessar um contêiner, criar o tópico `message-generator` e passar a escutá-lo:
 ```
 sudo docker exec -it kafka_kafka-2_1 bash
 kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 3 --partitions 3 --topic message-generator
@@ -288,11 +297,7 @@ kafka-console-consumer --bootstrap-server localhost:29092 --topic message-genera
 ```
 <img src="./images/extra-criandoTopicoGerador.png"/>
 
-no primeiro terminal, dentro da pasta kafka, ativar o virtualenv e executar script:
-```
-source extra/bin/activate
-```
-instalar o pacote kafka para python:
+no primeiro terminal, dentro da pasta kafka, instalar o pacote kafka para python:
 ```
 pip install kafka-python
 ```
@@ -312,8 +317,9 @@ deactivate
 ```
 
 derrubar contêiners:
-````
+```
 sudo docker-compose down
-``
+```
+
 ## print git
 <img src="./images/git.png"/>
