@@ -53,7 +53,7 @@ Neste caso, criei esse arquivo no diretório home do usuário, para chegar lá, 
 
 # Criando Container
 Vamos agora rodar um container a partir da imagem previamente baixada.
-1. Executar `sudo docker run -d --name eth -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30302:30302 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10`
+1. Executar `sudo docker run -d --name eth -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30302:30302 -p 3000:3000 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10`
 - Criamos um container que faz uso de um volume, ligando a pasta "ethereum" (onde criamos o arquivos genesis.json) com a pasta "/root" (que está dentro do container).
 - Nome do container de "eth"
 2. Podemos verificar a execução do container com `sudo docker ps`
@@ -195,7 +195,7 @@ Vamos verificar novamente como ficaram os saldos das 3 contas, após os processo
 
 # Novidades em relação aos exemplos da aula
 Como novidade deste trabalho, iremos instalar o `ethstats` para monitorar a nossa rede através de um dashboard. Como estamos utilizando uma imagem docker baseada no "Alpine", no lugar de "apt install", devemos utilizar "apk add ..."
-> Importante: Para utilizar visualizar o dashboard do ethstats, vamos estar utilizado a porta 3000, para isso, precisei iniciar um novo container com `docker run` passando o parâmetro adicional `-p 3000:3000`. Os próximos passos são executados dentro do container.
+> Importante: Para utilizar visualizar o dashboard do ethstats, vamos estar utilizado a porta 3000, para isso, precisei iniciar um novo container com `docker run` passando o parâmetro adicional `-p 3000:3000` (caso você criou o container no passo "Criando Container", não precisará fazer isso, pois lá esta porta já está configurada). Os próximos passos são executados dentro do container.
 1. Executar `apk add nodejs`
 2. Executar `apk add npm`
 3. Executar `apk add git`
