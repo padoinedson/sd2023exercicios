@@ -149,23 +149,24 @@ geth --datadir /root/gabriel2/ init genesis.json
 ```
 
 
-executar o nó na rede no primeiro terminal 
+> executar o nó na rede no primeiro terminal 
 ```
 geth --datadir ~/gabriel0 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
 ```
 salvar enode `enode://4ce35e0dbff90651bc629c6580e41b2f7f105963f84e9a18339d1d9db8ea3c591505298ff0e64987bcc13a7f9c66a02094b2658af422c289cda3feb51483e0a3@127.0.0.1:30303`
 
-executar o nó na rede no segundo terminal
+> executar o nó na rede no segundo terminal
 ```
 geth --datadir ~/gabriel1 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8546 --port 30302 --http.port 8544 --allow-insecure-unlock console
 ```
 salvar enode `enode://6e10f3b7d45285617e9be87b9889520ff417c87f1750655caf8befcab293fcbda6de9ebadc0c2b0b54c58d22c63daf19d8f72f03694bde8607bd074ce6045de5@127.0.0.1:30302`
 
-executar o nó na rede no terceiro terminal
+> executar o nó na rede no terceiro terminal
 ```
 geth --datadir ~/gabriel2 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8549 --port 30304 --http.port 8548 --allow-insecure-unlock console
 ```
 salvar enode `enode://05366aff0f2961a74321e0e343e5fd70ad975a710a676740eece15d0bd87326bd9aabd5c5a99106ec53aba6fab044e2d3e65f16bcaebbda6ffb92465dc65ab20@127.0.0.1:30304`
+
 
 
 checar saldo inicial
@@ -262,7 +263,7 @@ eth.blockNumber
 <img src="./images/extra-blockNumberAntes.png"/>
 
 > block number depois de minerar um pouco
-<img src="./images/extra-blockNumberdepois.png"/>
+<img src="./images/extra-blockNumberDepois.png"/>
 
 ### print do git
 <img src="./images/git.png"/>
