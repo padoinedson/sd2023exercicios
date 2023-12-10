@@ -66,7 +66,7 @@ salvar chave pública `0xC62F9857eAb569585F0E9F0951d7F4107b33a2bE`
 
 
 
-abrir um segundo terminal no qual será criado a segunda conta, acessar o container
+> abrir um segundo terminal no qual será criado a segunda conta, acessar o container
 ```
 sudo docker exec -it ethereum-node sh
 ```
@@ -77,7 +77,7 @@ geth account new --datadir ~/gabriel1
 salvar chave pública `0x15f9a846992cef2f66AeF4a5AdeBd9a3b24b2cB8`
 
 
-abrir um terceiro terminal no qual será criado a terceira conta, acessar o container
+> abrir um terceiro terminal no qual será criado a terceira conta, acessar o container
 ```
 sudo docker exec -it ethereum-node sh
 ```
@@ -195,7 +195,7 @@ admin.addPeer("enode://4ce35e0dbff90651bc629c6580e41b2f7f105963f84e9a18339d1d9db
 admin.addPeer("enode://6e10f3b7d45285617e9be87b9889520ff417c87f1750655caf8befcab293fcbda6de9ebadc0c2b0b54c58d22c63daf19d8f72f03694bde8607bd074ce6045de5@127.0.0.1:30302");
 ```
 
-mineirar
+minerar
 ```
 miner.start(5)
 ```
@@ -234,7 +234,7 @@ para desbloquear a conta do cliente 2
 personal.unlockAccount("0x15f9a846992cef2f66AeF4a5AdeBd9a3b24b2cB8")
 ```
 
-transação do cliente 2 para o cliente 3 `(mineirar antes para ter saldo o suficiente para o value + gas)`
+transação do cliente 2 para o cliente 3 `(minerar antes para ter saldo o suficiente para o value + gas)`
 ```
 eth.sendTransaction({from:"0x15f9a846992cef2f66AeF4a5AdeBd9a3b24b2cB8", to:"0x82a64966B5A724C6f9BFE79883d43107Fd78ABaf", value:222, gas: 21000})
 ```
@@ -245,7 +245,7 @@ eth.sendTransaction({from:"0x15f9a846992cef2f66AeF4a5AdeBd9a3b24b2cB8", to:"0x82
 <img src="./images/transacaoEfetuadaAposMineracao2.png"/>
 
 #### saldo final
-<img src="./images/saldofinal.png"/>
+<img src="./images/saldoFinal.png"/>
 
 
 > parar o container
