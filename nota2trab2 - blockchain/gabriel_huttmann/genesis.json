@@ -1,0 +1,32 @@
+{
+    "config": {
+        "chainId": 2023,
+        "homesteadBlock": 0,
+        "eip150Block": 0,
+        "eip155Block": 0,
+        "eip158Block": 0,
+        "byzantiumBlock": 0,
+        "constantinopleBlock": 0,
+        "petersburgBlock": 0,
+        "istanbulBlock": 0
+    },
+    "alloc": {
+   	   "0xC62F9857eAb569585F0E9F0951d7F4107b33a2bE": {
+   	 	"balance": "1000"
+   	   },
+   	   "0x15f9a846992cef2f66AeF4a5AdeBd9a3b24b2cB8": {
+   	 	"balance": "2000"
+   	   },
+   	   "0x82a64966B5A724C6f9BFE79883d43107Fd78ABaf": {
+   	 	"balance": "3000"
+   	   }
+    },
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "difficulty": "0x20000",
+    "extraData": "",
+    "gasLimit": "0x2fefd8",
+    "nonce": "0x0000000000000111",
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "timestamp": "0x00"
+}
