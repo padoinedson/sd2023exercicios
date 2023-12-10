@@ -291,10 +291,10 @@ Cada mensagem dentro do tópico **artists** será impressa em formato JSON, incl
 
 ## Git
 ### Git add
-TODO: git_add.png
+![](git_add.png)
 
 ### Git commit
-TODO: git_commit.png
+![](git_commit.png)
 
 ### Git push
-TODO: git_push.png
+![](git_push.png)
