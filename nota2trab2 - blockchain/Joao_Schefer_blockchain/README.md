@@ -76,11 +76,11 @@
     geth --datadir ~/Lucas --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8548 --port 30500 --http.port 30501 --allow-insecure-unlock console
 	
 	
-##### 11 = É importante anotar o seu enode, exemplo => João: 
+##### 11 É importante anotar o seu enode, exemplo => João: 
 	self=enode://33a051ac754ff2b09b887081e7018c39a45bdb19df326113df0e961e2c996337c7f174ca7d345c41e8daa11a6451b5be99fe4a38d98c191ed97dcfd4488ece2d@127.0.0.1:30303
 	
 	
-##### 12 = Agora, o seguinte comando verifica o saldo em cada conta, como exemplo usar a conta João:
+##### 12 Agora, o seguinte comando verifica o saldo em cada conta, como exemplo usar a conta João:
 	eth.getBalance("0x23f83e268116525087a13eA66eF1cad761852F9d") 
 - É preciso alterar o que está entre parenteses pela key da conta. Se fizer isso com as três contas, vai ver que possui 1000, 2000 e 3000 nas contas.
 
@@ -89,7 +89,7 @@
 ![Saldo Inicial Lucas](saldo_inicial_lucas.png)	
 	
 
-##### 13 = Para começar a minerar
+##### 13 Para começar a minerar
     miner.start(10)
 ![Mineração João](mineracao_joao.png)
 ![Mineração Jean](mineracao_jean.png)
@@ -97,35 +97,36 @@
 
 - 10 é o número de threads
 
-##### 14 = Para parar de minerar
+##### 14 Para parar de minerar
     miner.stop(10)
     
 
-##### 15 = Pode ser verificado o saldo agora também, seguindo o passo 12
+##### 15 Pode ser verificado o saldo agora também, seguindo o passo 12
 
 
-##### 16 = Na parte de transação, precisei liberar a conta antes, com o seguinte comando (fazer isso com todas as contas):
+##### 16 Na parte de transação, precisei liberar a conta antes, com o seguinte comando (fazer isso com todas as contas):
 	personal.unlockAccount("0x23f83e268116525087a13eA66eF1cad761852F9d")
 	
 	
-##### 17 = Para enviar uma transação, usei o seguinte comando:
+##### 17 Para enviar uma transação, usei o seguinte comando:
 	eth.sendTransaction({from:"0x23f83e268116525087a13eA66eF1cad761852F9d", to:"0x1Dc51192F2523868dBe386340d63B62d7162780d", value:111, gas:21000})
 	
 - Neste ccomando, precisei colocar a key da conta que quero tirar o dinheiro e a key da conta que quero enviar o dinheiro, especificando o valor em value.
+
 ![Transação João para Jean](transacao_joao_jean.png)
 ![Transação Jean para Lucas](transacao_jean_lucas.png)
 
 
-##### 18 = É possível verificar o poool de transações com o seguinte comando:
+##### 18 É possível verificar o poool de transações com o seguinte comando:
 	txpool.status
 
-##### 19 = É preciso minerar novamente para confirmar a transação com o "miner.start(10)"
+##### 19 É preciso minerar novamente para confirmar a transação com o "miner.start(10)"
 
 
-##### 20 = Depois "miner.stop()" para encerrar a mineração
+##### 20 Depois "miner.stop()" para encerrar a mineração
 
 
-##### 21 = Agora eu conferi novamente o saldo das contas, seguindo o passo 12.
+##### 21 Agora eu conferi novamente o saldo das contas, seguindo o passo 12.
 ![Saldo Final João](saldo_final_joao.png)
 ![Saldo Final Jean](saldo_final_jean.png)
 ![Saldo Final Lucas](saldo_final_lucas.png)	
@@ -133,7 +134,7 @@
 
 #### No Ethereum, a blockchain é composta por blocos, e cada bloco contém uma lista de transações. Você pode verificar informações sobre os blocos, como o número de blocos mais recente usando comando "eth.blockNumber". Depois de digitar esse comando, vai ser retornado o número do bloco mais recente na blockchain Ethereum. Esse número representa a posiçãoi do bloco na cadeia e é incrementado sempre que um novo bloco é adicionado a blockchain. Isso é útil para acompanhar o progresso da blockchain e para verificar o estado atual da rede. Você pode usar informações de bloco como essa para rastrear transações, contratos inteligentes, ...
 
-##### 22 = "eth.blockNUmber" e será mostrada o numero do bloco (olhar os prints).
+##### 22 "eth.blockNUmber" e será mostrada o numero do bloco.
 ![Bloco João](bloco_joao.png)
 ![Bloco Jean](bloco_jean.png)
 ![Bloco Lucas](bloco_lucas.png)
