@@ -1,11 +1,11 @@
 *Guilherme Peukert Michel*
-### PASSOS PARA INSTALAÇÃO
+### *PASSOS PARA INSTALAÇÃO*
 
 - VM = Donwload virtual box, imagem linux, executar virtual box, criar máquina virtual, acessar terminal = sudo apt install docker
 
 - Linux = acessar terminal = sudo apt install docker
 
-### PASSOS PARA REALIZAÇÃO DAS ETAPAS
+### *PASSOS PARA REALIZAÇÃO DAS ETAPAS*
 
 -  1-Criação da pasta:
 
