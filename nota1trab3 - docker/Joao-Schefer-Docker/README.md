@@ -87,17 +87,17 @@
 
 	version: '3'
 
-services:
-  couchdb:
-    image: couchdb
-    container_name: my-couchdb-com
-    ports:
-      - "5990:5984"
-    environment:
-      COUCHDB_USER: joao
-      COUCHDB_PASSWORD: 2125
-    volumes:
-      - couchdb_data:/opt/couchdb/data
+	services:
+  	couchdb:
+    	image: couchdb
+    	container_name: my-couchdb-com
+    	ports:
+      	- "5990:5984"
+    	environment:
+      	COUCHDB_USER: joao
+      	COUCHDB_PASSWORD: 2125
+    	volumes:
+      	- couchdb_data:/opt/couchdb/data
 
 volumes:
   couchdb_data:
