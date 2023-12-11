@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  meu_container:
+    image: meu_banco:latest
+    volumes:
+      - ./script.sql:/docker-entrypoint-initdb.d/script.sql
+    command: sqlite3 /dados/meu_banco.db
+
+volumes:
+  meu_volume:  # se necessário
+
