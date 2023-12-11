@@ -75,8 +75,9 @@
 - 15-Autorizada a conta e inserida a senha pode realizar transação
 
 	`$eth.sendTransaction({from:"chave", to:"chave", value:1111, gas:21000})`
-![](send111.jpg)
-![](send222.jpg)
+	
+![](send111.png)
+![](send222.png)
 
 - 16-Feito a transação ela vai ficar como pendente, pode verificar utilizando
 
