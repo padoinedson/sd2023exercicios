@@ -1,0 +1,9 @@
+FROM couchdb:latest
+
+ENV COUCHDB_USER=admin
+ENV COUCHDB_PASSWORD=2125
+
+EXPOSE 5988
+
+CMD ["couchdb"]
+
