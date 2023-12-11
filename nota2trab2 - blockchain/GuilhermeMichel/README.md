@@ -1,11 +1,11 @@
 *Guilherme Peukert Michel*
-### *PASSOS PARA INSTALAÇÃO*
+### PASSOS PARA INSTALAÇÃO
 
 - VM = Donwload virtual box, imagem linux, executar virtual box, criar máquina virtual, acessar terminal = sudo apt install docker
 
 - Linux = acessar terminal = sudo apt install docker
 
-### *PASSOS PARA REALIZAÇÃO DAS ETAPAS*
+### PASSOS PARA REALIZAÇÃO DAS ETAPAS
 
 -  1-Criação da pasta:
 
@@ -75,10 +75,8 @@
 - 15-Autorizada a conta e inserida a senha pode realizar transação
 
 	`$eth.sendTransaction({from:"chave", to:"chave", value:1111, gas:21000})`
-
-
-![](111.png)
-![](222.png)
+![](send111.png)
+![](send222.png)
 
 - 16-Feito a transação ela vai ficar como pendente, pode verificar utilizando
 
