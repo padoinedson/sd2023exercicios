@@ -207,7 +207,7 @@ networks:
 ### 4. Ler mensagens do kafka
 - Após produzir a mensagem seguindo o passo acima, você consegue visualizar as mensagens produzidas na aba `Messages`
 
-![](vendo_msg_kafka-ui.png.png)
+![](vendo_msg_kafka-ui.png)
 
 ### 3. Produzire consumir mensagens do kafka
 - Para produzir mensagens nós usamos o container que foi declarado no arquivo do docker-compose que constantemente publica mensagens.
@@ -223,4 +223,6 @@ fonte: `[](https://github.com/ruanbekker/quick-starts/blob/main/docker/kafka/pyt
 
 ### 6. Git add, push e commit
 
+![](commit-add.png)
 
+![](git-push.png)
