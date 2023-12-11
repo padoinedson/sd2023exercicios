@@ -52,18 +52,18 @@
 ![Criação da Conta Lucas](criacao_conta_lucas.png)
 
 
-##### 7 =  depois de criar as contas, é preciso anotar a senha da conta e a chave pública, pois serão usadas no futuro.
+##### 7 Depois de criar as contas, é preciso anotar a senha da conta e a chave pública, pois serão usadas no futuro.
 
 
-##### 8 = É preciso pegar essas chaves publicas e atiualizar no arquivo genesis.json
+##### 8 É preciso pegar essas chaves publicas e atiualizar no arquivo genesis.json
 
 
-##### 9 = Em seguida, é necessário dar o seguinte comando:
+##### 9 Em seguida, é necessário dar o seguinte comando:
 	geth --datadir /root/nome_da_conta/ init genesis.json == trocar o nome_da_conta pelo nome da sua conta
 - Esse comando vai iniciar os nós na rede. Tem que fazer isso com todas as contas, em seus respectivos terminais, um para cada conta.
     
     
-##### 10 = Nesse passo, foi colocado os nós da rede para rodar:
+##### 10 Nesse passo, foi colocado os nós da rede para rodar:
 ##### No segundo terminal rodamos o comando
     geth --datadir ~/João --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
     
@@ -84,7 +84,7 @@
 	eth.getBalance("0x23f83e268116525087a13eA66eF1cad761852F9d") 
 - É preciso alterar o que está entre parenteses pela key da conta. Se fizer isso com as três contas, vai ver que possui 1000, 2000 e 3000 nas contas, como mostra nos prints.
 ![Saldo Inicial João](saldo_inicial_joao.png)
-![Saldo Inicial Jean](saLdo_inicial_jean.png)
+![Saldo Inicial Jean](saldo_inicial_jean.png)
 ![Saldo Inicial Lucas](saldo_inicial_lucas.png)	
 	
 
@@ -111,7 +111,7 @@
 	eth.sendTransaction({from:"0x23f83e268116525087a13eA66eF1cad761852F9d", to:"0x1Dc51192F2523868dBe386340d63B62d7162780d", value:111, gas:21000})
 	
 - Neste ccomando, precisei colocar a key da conta que quero tirar o dinheiro e a key da conta que quero enviar o dinheiro, especificando o valor em value.
-![Transação João para Jean](transação_joao_jean.png)
+![Transação João para Jean](transacao_joao_jean.png)
 ![Transação Jean para Lucas](transacao_jean_lucas.png)
 
 
@@ -126,7 +126,7 @@
 
 ##### 21 = Agora eu conferi novamente o saldo das contas, seguindo o passo 12.
 ![Saldo Final João](saldo_final_joao.png)
-![Saldo Final Jean](saLdo_final_jean.png)
+![Saldo Final Jean](saldo_final_jean.png)
 ![Saldo Final Lucas](saldo_final_lucas.png)	
 
 
