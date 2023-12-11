@@ -55,4 +55,4 @@ Veja que o sistema ainda funciona
 
 ### Git
 
-![Alt text](git.png)
+![Alt text](images/git.png)
