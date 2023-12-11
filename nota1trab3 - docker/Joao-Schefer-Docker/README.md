@@ -96,7 +96,7 @@
     	environment:
       	COUCHDB_USER: joao
       	COUCHDB_PASSWORD: 2125
-    	volumes:
+    volumes:
       	- couchdb_data:/opt/couchdb/data
 
 volumes:
