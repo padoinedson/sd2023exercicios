@@ -1,0 +1,14 @@
+{
+  "name": "FirebaseSourceConnector",
+  "config": {
+    "tasks.max": "1",
+    "connector.class": "io.confluent.connect.firebase.FirebaseSourceConnector",
+    
+    "gcp.firebase.database.reference": "https://teste-kafka-default-rtdb.firebaseio.com/musicBlog",
+    "gcp.firebase.credentials.path": "/home/appuser/serviceAccountKey.json",
+    "gcp.firebase.snapshot": "true",
+        
+    "confluent.topic.bootstrap.servers": "kafka-broker-1:9092,kafka-broker-2:9094,kafka-broker-3:9096",
+    "confluent.topic.replication.factor": "3"
+  }
+}
