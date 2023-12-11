@@ -99,8 +99,8 @@
     volumes:
       	- couchdb_data:/opt/couchdb/data
 
-volumes:
-  couchdb_data:
+    volumes:
+        couchdb_data:
   
 ##### Você deve substituir a porta, o conteiner_name, COUCHDB_USER e COUCHDB_PASSWORD.
 
