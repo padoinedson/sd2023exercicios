@@ -54,3 +54,5 @@ Veja que o sistema ainda funciona
 3. Gerenciamento dos tópicos via Kafka-ui
 
 ### Git
+
+![Alt text](git.png)
