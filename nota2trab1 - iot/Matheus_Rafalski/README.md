@@ -5,6 +5,9 @@
 ### Pré-requisitos
 Docker
 
+### Novidades
+- Kafka ui e container de consumer e outro de producer
+
 ### Configuração do Docker Compose
 1. **Crie um arquivo `docker-compose.yml`** com o seguinte conteúdo  no seu diretório de trabalho:
 
