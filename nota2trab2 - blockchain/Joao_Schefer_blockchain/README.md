@@ -82,7 +82,8 @@
 	
 ##### 12 = Agora, o seguinte comando verifica o saldo em cada conta, como exemplo usar a conta João:
 	eth.getBalance("0x23f83e268116525087a13eA66eF1cad761852F9d") 
-- É preciso alterar o que está entre parenteses pela key da conta. Se fizer isso com as três contas, vai ver que possui 1000, 2000 e 3000 nas contas, como mostra nos prints.
+- É preciso alterar o que está entre parenteses pela key da conta. Se fizer isso com as três contas, vai ver que possui 1000, 2000 e 3000 nas contas.
+
 ![Saldo Inicial João](saldo_inicial_joao.png)
 ![Saldo Inicial Jean](saldo_inicial_jean.png)
 ![Saldo Inicial Lucas](saldo_inicial_lucas.png)	
