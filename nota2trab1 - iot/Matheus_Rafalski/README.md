@@ -211,13 +211,13 @@ networks:
 
 ### 3. Produzire consumir mensagens do kafka
 - Para produzir mensagens nós usamos o container que foi declarado no arquivo do docker-compose que constantemente publica mensagens.
-fonte: `[](https://github.com/ruanbekker/quick-starts/blob/main/docker/kafka/python-client/produce.py)`
+fonte: [producer](https://github.com/ruanbekker/quick-starts/blob/main/docker/kafka/python-client/produce.py)
 - Para ver as mensagens publicas basta executar o comando `docker logs -f producer`
 
 ![](logs-producer.png)
 
 - Da mesma forma temos um container que consome as mensagens para ver as mensagens chegando no container basta executar o comando `docker logs -f consumer`
-fonte: `[](https://github.com/ruanbekker/quick-starts/blob/main/docker/kafka/python-client/consume.py)`
+fonte: [consumer](https://github.com/ruanbekker/quick-starts/blob/main/docker/kafka/python-client/consume.py)
 
 ![](log-consumer.png)
 
