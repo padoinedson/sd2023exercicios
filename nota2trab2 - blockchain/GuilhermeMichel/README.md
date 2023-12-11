@@ -1,11 +1,11 @@
 *Guilherme Peukert Michel*
-###PASSOS PARA INSTAÇÃO
+### PASSOS PARA INSTALAÇÃO
 
 - VM = Donwload virtual box, imagem linux, executar virtual box, criar máquina virtual, acessar terminal = sudo apt install docker
 
 - Linux = acessar terminal = sudo apt install docker
 
-###PASSOS PARA REALIZAÇÃO DAS ETAPAS
+### PASSOS PARA REALIZAÇÃO DAS ETAPAS
 
 -  1-Criação da pasta:
 
@@ -97,7 +97,7 @@
 
 >Saldo não bate apenas com transação solicitada devido que foi realizado outras a fins de teste
 
-###Novidade
+### Novidade
 - 18-Referente a novidade seria que no passo 15 o que é inserido no terminal muda, passando para 
 
 	`$eth.sendTransaction({from:"chave", to:"chave", value:web3.toWei(300, "ether", data:web3.toHex("Descrição_da_transação)})`
