@@ -68,17 +68,17 @@
 
 ![](tabela.png)
 
-##### Listei os dados
+##### Listar os dados
 	curl -u admin:2125 -X GET http://localhost:5988/database-teste/_all_docs
 
 ![](conteudo-banco.png)
 
-##### Listei info de um banco
+##### Listar informações de um banco
 	curl -u admin:2125 -X GET http://localhost:5988/database-teste/468eb2f98c8c966908efa85039001ed9	
 
 ![](conteudo-banco-json.png)
 
-=============================================================================================================
+
 
 ### <<<<< INSTALAÇÃO EM CONTAINER VIA COMPOSE >>>>>
 #### Instalação do serviço em um container com Docker-compose           
