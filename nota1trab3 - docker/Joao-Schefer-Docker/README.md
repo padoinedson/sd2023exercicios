@@ -3,7 +3,6 @@
 
 ##### Para fazer esse trabalho, foi escolhido o serviço Apache CouchDB, que é um serviço de banco de dados de código-aberto que pode ser usado via web.
 
-=============================================================================================================
 
 ### <<<<< INSTALAÇÃO NO HOST >>>>>
 #### Instalação do serviço no computador sem docker
@@ -30,7 +29,7 @@
 
 ![](print4.png)
 
-=============================================================================================================
+
 
 ### <<<<< INSTALAÇÃO EM CONTAINER >>>>>
 #### Instalação do serviço em um container com Dockerfile           
