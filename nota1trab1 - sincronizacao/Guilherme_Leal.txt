@@ -1,0 +1,3 @@
+Guilherme Leal
+
+Eu acredito que o algoritmo dos Generais é o melhor pois ele possui diversas qualidades como tolerância a falhas, onde o sistema funciona mesmo quando alguns dos nós falham. Além disso, o algoritmo demonstra consistência, pois garante que todos os nós cheguem a uma decisão comum. Outro ponto, é a segurança onde os algoritmos são projetados para resistir a ataques de nós mal-intencionados que tentam manipular o processo de tomada de decisão. Ele também garante que todos os nós estejam cientes das mensagens relevantes e estejam em conformidade com o estado compartilhado. E por fim, o algoritmo também é projetado para ser bem escalável sem sacrificar a eficiência ou a capacidade de lidar com falhas.
