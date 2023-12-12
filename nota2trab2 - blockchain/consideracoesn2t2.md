@@ -1,5 +1,5 @@
 # Sistemas Distribuídos
-## Nota 2 Trabalho 1
+## Nota 2 Trabalho 2
 ### Pesos
 
 1 arquivo com nome README.md: (30 pontos). 
