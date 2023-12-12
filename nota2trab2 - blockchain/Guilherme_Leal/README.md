@@ -8,7 +8,7 @@ $ sudo apt install docker.io
 
 Baixar o container utilizado durante esse trabalho
 
-
+ 
 $ sudo docker pull ethereum/client-go:release-1.10
 
 
