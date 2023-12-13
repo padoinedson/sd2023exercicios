@@ -225,3 +225,13 @@ console.log("Dados Decodificados:", dadosDecodificados);
 **VERIFICANDO AS INFORMAÇÕES ADICIONADAS NA TRANSAÇÃO ATRAVÉS DO HASH**
 
 ![verificação de informações da transação](https://github.com/padoinedson/sd2023exercicios/assets/141967871/9727ee37-998c-4a12-9154-eeb64a370ad2)
+
+# ENVIO DOS PRINTS REFERENTE AO GIT ADD, GIT COMMIT E GIT PUSH
+
+GIT ADD e GIT COMMIT
+
+![git add](https://github.com/padoinedson/sd2023exercicios/assets/141967871/f8dab70a-8e9e-45f0-a408-1e95da717f4d)
+
+GIT PUSH
+
+![git push](https://github.com/padoinedson/sd2023exercicios/assets/141967871/4bce4aeb-1bb7-4ad4-a7ad-7532ae7e42fa)
