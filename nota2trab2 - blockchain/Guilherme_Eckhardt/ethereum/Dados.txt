@@ -1,0 +1,21 @@
+eckhardt1
+senha: guilherme
+chave publica: 0x00131917f78fabD2454BaD5e81f63F9542B0c6C5
+eth.getBalance("0x00131917f78fabD2454BaD5e81f63F9542B0c6C5")
+personal.unlockAccount("0x00131917f78fabD2454BaD5e81f63F9542B0c6C5")
+
+eckhardt2
+senha: guilherme
+chave publica: 0xAEAdaC1a663C92A609e2e40958A3EF095A9bdd44
+eth.getBalance("0xAEAdaC1a663C92A609e2e40958A3EF095A9bdd44")
+personal.unlockAccount("0xAEAdaC1a663C92A609e2e40958A3EF095A9bdd44")
+
+eckhardt3
+senha: guilherme
+chave publica: 0xbA994583b5B5aE4026114019F6e81162E21a0114
+eth.getBalance("0xbA994583b5B5aE4026114019F6e81162E21a0114") 
+personal.unlockAccount("0xbA994583b5B5aE4026114019F6e81162E21a0114")
+
+TRANSACOES
+eth.sendTransaction({from:"0x00131917f78fabD2454BaD5e81f63F9542B0c6C5", to:"0xAEAdaC1a663C92A609e2e40958A3EF095A9bdd44", value:111, gas:21000})
+eth.sendTransaction({from:"0xAEAdaC1a663C92A609e2e40958A3EF095A9bdd44", to:"0xbA994583b5B5aE4026114019F6e81162E21a0114", value:222, gas:21000})
