@@ -119,7 +119,7 @@ services:
 	sudo docker stop joao-schefer-iot_kafka2_1
 ![](derrubando_container.png)
 	
-##### Vamos ver os conatiners em execução
+##### Vamos ver os containers em execução
 	sudo docker ps
 	
 ##### Vamos acessar outro container em outro terminal
@@ -141,9 +141,9 @@ services:
 ![](consumindo_dados_novamente.png)
 
 
-##### Agora em um terminal, vamos deixaar ele como produtor
+##### Agora em um terminal, vamos deixar ele como produtor
 ##### Outro terminal como consumidor
-##### E mais como consumidor
+##### E mais um como consumidor
 ![Enviando dados (times) em tempo real](enviando_dados_tempo_real.png)
 ![Lendo dados (times) em tempo real](lendo_dados_tempo_real.png)
 ![Lendo dados (times) em outro container em tempo real](lendo_dados_tempo_real_outro_container.png)		
