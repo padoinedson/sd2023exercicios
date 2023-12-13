@@ -9,7 +9,7 @@
 João Victor Martins kafka
 - 28 Kafka Table
 - 10
-- 10. 
+- 10   
 
 Gabriel Pires Huttmann kafka
 - 25 max-messages e virtualenv
