@@ -1,7 +1,7 @@
 #### Aplicação de Kafka
 #### João Gabriel Foletto Schefer
 
-##### 1 Instalar o kafka
+##### Instalar o kafka
 ##### Comando para fazer o download do kafka
 	wget https://archive.apache.org/dist/kafka/3.3.1/kafka_2.13-3.3.1.tgz
 	
@@ -11,11 +11,12 @@
 ##### Acessar o diretório
 	cd kafka_2.13-3.3.1/
 
-##### 2 Vamos utilizar o docker compose e precisamos instalar (nessa máquina já tenho instalado)
+##### Vamos utilizar o docker compose e precisamos instalar (nessa máquina já tenho instalado)
 
-##### 3 Criação do ambiente (nodos, partição, fator de replicação)
+##### Criação do ambiente (nodos, partição, fator de replicação)
 ##### Temos que criar um arquivo chamado "docker-compose.yml" com o seguinte conteudo
 
+```
 version: '2'
 services:
   zookeeper:
@@ -70,13 +71,13 @@ services:
       KAFKA_BROKER_ID: 3
       KAFKA_NUM_PARTITIONS: 3
       KAFKA_REPLICATION_FACTOR: 3
+```
 
-
-##### 4 Abra um terminal e va para o diretorio onde esta esse arquivo e de o seguinte comando
+##### Abra um terminal e va para o diretorio onde esta esse arquivo e de o seguinte comando
 	docker-compose up -d
 ![](iniciar_ambientes.png)
 
-##### 5 Verfique se os containers estão em execução com o comando
+##### Verfique se os containers estão em execução com o comando
 	docker-compose ps
 ![](containers_execucao.png)
 
@@ -177,6 +178,11 @@ services:
 #### Prints de tela com:
 
 ##### git add do diretorio
+![](gitadd.png)
+
 ##### git commit
+![](gitcommit.png)
+
 ##### git push
+![](gitpush.png)
 
