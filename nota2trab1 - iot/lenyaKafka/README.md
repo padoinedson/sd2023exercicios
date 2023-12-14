@@ -95,9 +95,9 @@ services:
     extra_hosts:
       - "moby:127.0.0.1"
 
-      b. Depois, certifique-se de que está na pasta com o arquivo yml feito anteriormente e rode "sudo apt install docker-compose" e "sudo docker-compose up".
+  b. Depois, certifique-se de que está na pasta com o arquivo yml feito anteriormente e rode "sudo apt install docker-compose" e "sudo docker-compose up".
 
-      ![github-small](https://i.imgur.com/BRw8QVF.png)
+  ![github-small](https://i.imgur.com/BRw8QVF.png)
 
 
 <h1 align="center"><<<<< b) Produtor e Consumidor normal (todos os nodos on) >>>>></h1>
