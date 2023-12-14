@@ -20,6 +20,7 @@ Blockchain Guilherme Bonfada
 
 	$nano genesis.json
 
+```
 {
    "config":{
       "chainId":2023,
@@ -52,7 +53,7 @@ Blockchain Guilherme Bonfada
    "parentHash":"0x0000000000000000000000000000000000000000000000000000000000000000",
    "timestamp":"0x00"
 }
-
+```
 6 para rodar o container usa o comando: 
 
 	$sudo docker run -d --name ethereum-node -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30302:30302 -p 30303:30303 -p 30304:30304 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10
@@ -74,9 +75,9 @@ Blockchain Guilherme Bonfada
 	$geth account new --datadir ~/(nome_da_conta), como podem observar nesses print abaixo, eu criei com os nomes jose, bruno e dudu, mas o usuario pode adicionar com qualquer nome desejado.
 
 
-	![criação de conta jose](criar-jose.png)
-	![criação de conta do bruno](criar-bruno.png)
-	![criação de conta do dudu](criar-dudu.png)
+	![criação de conta jose](img/criar-jose.png)
+	![criação de conta do bruno](img/criar-bruno.png)
+	![criação de conta do dudu](img/criar-dudu.png)
 
 11 lembrando de anotar a senha e a chave publica, no qual deve ser colocada no arquivo genesis.json
 
@@ -99,17 +100,17 @@ Blockchain Guilherme Bonfada
 	
 15 Segue as imagem para ver o funcionamento do codigo:
 
-	![valor inicial jose](saldo-jose.png)
-	![valor inicial bruno](saldo-bruno.png)
-	![valor inicial dudu](saldo-dudu.png)
+	![valor inicial jose](img/saldo-jose.png)
+	![valor inicial bruno](img/saldo-bruno.png)
+	![valor inicial dudu](img/saldo-dudu.png)
 
 16 para comecar a minerar, usa o comando:
 
 	$miner.start(10)
 
-	![minerando jose](minerando-jose.png)
-	![minerando bruno](minerando-bruno.png)
-	![minerando dudu](minerando-dudu.png)
+	![minerando jose](img/minerando-jose.png)
+	![minerando bruno](img/minerando-bruno.png)
+	![minerando dudu](img/minerando-dudu.png)
 	
 17 para parar de minerar, usa o comando:
 	
@@ -123,15 +124,15 @@ Blockchain Guilherme Bonfada
 
 	$eth.sendTransaction({from:"chave_puclica_aonde_envia", to:"chave_publica_onde_reccebe", value:Valor, gas:21000})
 	
-	![transação jose-bruno](transferencia-jose-bruno.png)
-	![transação bruno-dudu](transferencia-bruno-dudu.png)
+	![transação jose-bruno](img/transferencia-jose-bruno.png)
+	![transação bruno-dudu](img/transferencia-bruno-dudu.png)
 
 20 apos isso, podemos conferir o seu sado final: 
 	$eth.getBalance("chave_publica_da_conta")
 	
-	![saldo-final jose](saldo-final-jose.png)
-	![saldo-final bruno](saldo-final-bruno.png)
-	![saldo-final dudu](saldo-final-dudu.png)
+	![saldo-final jose](img/saldo-final-jose.png)
+	![saldo-final bruno](img/saldo-final-bruno.png)
+	![saldo-final dudu](img/saldo-final-dudu.png)
 	
 	
 NOVIDADE
@@ -146,7 +147,7 @@ NOVIDADE
 
 	$ eth.hashrate
 	
-	![novidade](novidade.png)
+	![novidade](img/novidade.png)
 	 
 
 
