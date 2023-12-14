@@ -10,9 +10,9 @@ Lenya Ribeiro Ferreira
 
 1. Visto que o trabalho vai ser feito com foco em Kafka e uso de Docker, é necessário montar o arquivo "docker-compose.yml" que tenha: nodos = 3, broquer = 3, partição = 3 e fator de replicação de dados = 3. A configuração do arquivo necessário está disponível abaixo:
 
-	a. 
+  a. 
 
-	
+  
 version: '2'
 services:
   zookeeper-1:
@@ -105,25 +105,25 @@ services:
 
 1. Antes de criar os consumidores e produtores, é necessário criar o tópico a ser utilizado. Abaixo será explicitado os comandos utilizados na realização do trabalho.
 
-	a. Para utilizar o container criado anteriormente, "sudo docker exec -it trabalhokafka_kafka-1_1 bash"
+  a. Para utilizar o container criado anteriormente, "sudo docker exec -it trabalhokafka_kafka-1_1 bash"
 
-	b. Para criar um tópico é necessário usar "kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 3 --partitions 3 --topic trabalhokafka". Como pode ser visto, o nome do mesmo será "trabalhokafka".
+  b. Para criar um tópico é necessário usar "kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 3 --partitions 3 --topic trabalhokafka". Como pode ser visto, o nome do mesmo será "trabalhokafka".
 
-	c. Com "kafka-topics --describe --bootstrap-server localhost:29092 --topic trabalhokafka" pode-se ver as informações do tópico. Ainda não foram produzidas mensagens.
+  c. Com "kafka-topics --describe --bootstrap-server localhost:29092 --topic trabalhokafka" pode-se ver as informações do tópico. Ainda não foram produzidas mensagens.
 
 2. Para enviar eventos é necessário criar um produtor, então deve-se primeiro acessar o container selecionado.
 
-	a. Em um novo terminal, usa-se o comando "sudo docker exec -it trabalhokafka_kafka-1_1 bash", com "trabalhokafka_kafka-1_1" sendo utilizado neste caso especificamente, mas podendo variar.
+  a. Em um novo terminal, usa-se o comando "sudo docker exec -it trabalhokafka_kafka-1_1 bash", com "trabalhokafka_kafka-1_1" sendo utilizado neste caso especificamente, mas podendo variar.
 
-	b. Usa-se "kafka-console-producer --broker-list localhost:29092 --topic trabalhokafka" para que criar o produtor. Assim, pode-se enviar mensagens.
+  b. Usa-se "kafka-console-producer --broker-list localhost:29092 --topic trabalhokafka" para que criar o produtor. Assim, pode-se enviar mensagens.
 
 3. Para visualizar as mensagens enviadas é necessário criar consumidores.
 
-	a. Usa-se, em um novo terminal, o comando "sudo docker exec -it trabalhokafka_kafka-1_1 bash" para entrar novamente no container.
+  a. Usa-se, em um novo terminal, o comando "sudo docker exec -it trabalhokafka_kafka-1_1 bash" para entrar novamente no container.
 
-	b. Usa-se "kafka-console-consumer --bootstrap-server localhost:29092 --topic trabalhokafka" para poder observar as mensagens que serão enviadas pelo produtor.
+  b. Usa-se "kafka-console-consumer --bootstrap-server localhost:29092 --topic trabalhokafka" para poder observar as mensagens que serão enviadas pelo produtor.
 
-	c. Se quiser ter a possibilidade de ver todas as mensagens enviadas anteriormente, acrescente "--from-beginning" no final do comando anterior.
+  c. Se quiser ter a possibilidade de ver todas as mensagens enviadas anteriormente, acrescente "--from-beginning" no final do comando anterior.
 
   ![github-small](https://i.imgur.com/MVDBdf6.png)
   Produtor.
@@ -137,9 +137,9 @@ services:
 
  1. Foi selecionado o nó de um dos consumidores para ser derrubado.
 
- 	a. Foi rodado o comando "sudo docker stop 58a999141da5" para parar o container.
+  a. Foi rodado o comando "sudo docker stop 58a999141da5" para parar o container.
 
- 	b. Foi utilizado "sudo docker ps" para conferir se tudo havia ocorrido conforme esperado.
+  b. Foi utilizado "sudo docker ps" para conferir se tudo havia ocorrido conforme esperado.
 
   ![github-small](https://i.imgur.com/egFadJ5.png)
 
@@ -154,7 +154,7 @@ services:
 
 1. Para fazer o uso de leitura em grupo, deve-se indicar o nome do grupo no final do comando utilizado para criar o produtor e consumidor.
 
-	a. Assim, usa-se "kafka-console-consumer --bootstrap-server localhost:29092 --topic trabalhokafka --from-beginning --group 1".
+  a. Assim, usa-se "kafka-console-consumer --bootstrap-server localhost:29092 --topic trabalhokafka --from-beginning --group 1".
 
   ![github-small](https://i.imgur.com/0eP37qw.png)
   Produtor.
