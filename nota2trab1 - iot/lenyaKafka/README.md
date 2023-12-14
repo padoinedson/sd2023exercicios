@@ -8,7 +8,7 @@ Lenya Ribeiro Ferreira
 <h1 align="center"><<<<< a) Criação do ambiente (nodos, partição, fator de replicação)
  >>>>></h1>
 
-1. Visto que o trabalho vai ser feito com foco em Kafka e uso de Docker, é necessário montar o arquivo "docker-compose.yml" que tenha: nodos = 3, broquer = 3, partição = 3 e fator de replicação de dados = 3. A configuração do arquivo necessário está disponível abaixo:
+1. Visto que o trabalho vai ser feito com foco em Kafka e uso de Docker, é necessário montar o arquivo "docker-compose.yml", para que se tenha: nodos = 3, broquer = 3, partição = 3 e fator de replicação de dados = 3. A configuração do arquivo necessário está disponível abaixo:
 
   a. 
 
@@ -105,7 +105,7 @@ services:
 
 1. Antes de criar os consumidores e produtores, é necessário criar o tópico a ser utilizado. Abaixo será explicitado os comandos utilizados na realização do trabalho.
 
-  a. Para utilizar o container criado anteriormente, "sudo docker exec -it trabalhokafka_kafka-1_1 bash"
+  a. Para utilizar um container criado anteriormente, "sudo docker exec -it trabalhokafka_kafka-1_1 bash".
 
   b. Para criar um tópico é necessário usar "kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 3 --partitions 3 --topic trabalhokafka". Como pode ser visto, o nome do mesmo será "trabalhokafka".
 
@@ -115,7 +115,7 @@ services:
 
   a. Em um novo terminal, usa-se o comando "sudo docker exec -it trabalhokafka_kafka-1_1 bash", com "trabalhokafka_kafka-1_1" sendo utilizado neste caso especificamente, mas podendo variar.
 
-  b. Usa-se "kafka-console-producer --broker-list localhost:29092 --topic trabalhokafka" para que criar o produtor. Assim, pode-se enviar mensagens.
+  b. Usa-se "kafka-console-producer --broker-list localhost:29092 --topic trabalhokafka" para criar o produtor. Assim, pode-se enviar mensagens.
 
 3. Para visualizar as mensagens enviadas é necessário criar consumidores.
 
@@ -146,7 +146,7 @@ services:
 <h1 align="center"><<<<< d) Produtor e Consumidor com um nodo novo (adicionar um nodo)
  >>>>></h1>
 
- 1. Depois de derrunar um nó no passo anterior, foi adicionado um novo nó consumidor. Podem ser recuperadas as mensagens enviadas enquanto o processo anterior ocorria.
+ 1. Depois de derrubar um nó no passo anterior, foi adicionado um novo nó consumidor. Podem ser recuperadas as mensagens enviadas enquanto o processo anterior ocorria.
 
  ![github-small](https://i.imgur.com/k7KziAs.png)
 
@@ -168,7 +168,7 @@ Conduktor é uma ferramenta simples que pode ser usada para monitorar o broker K
 
 1. Visto que o processo foi realizado em uma máquina diferente, com Linux instalado, foi necessário realizar a instalação e configuração do Kafka neste novo laptop.
 
-  a. Versão selecionada foi a Scala 2.12  - kafka_2.12-2.4.0.tgz (asc, sha512).
+  a. No site "https://kafka.apache.org/downloads", a versão selecionada foi a Scala 2.12  - kafka_2.12-2.4.0.tgz (asc, sha512).
 
   b. É necessário ir ao diretório onde o download foi feito e executar os comandos "tar -xvf kafka_2.12-2.4.0.tgz" para extrair os arquivos e "mv kafka_2.12-2.4.0 kafka" para renomear o arquivo. O "kafka" então foi movido para o home com "mv kafka/ ~". 
 
@@ -186,7 +186,7 @@ Conduktor é uma ferramenta simples que pode ser usada para monitorar o broker K
 
 2. Após toda a preparação inicial, é possível iniciar a instalação do Conduktor em si.
 
-  a. Para instalar o Conduktor no Linux Ubuntu, foi necessário realizar uma configuração adicional. No site "https://www.conduktor.io/get-started/#desktop" foi selecionada a versão para Linux, escolhendo o diretório Flatpack.
+  a. Para instalar o Conduktor no Linux Ubuntu, foi necessário realizar uma configuração adicional. No site "https://www.conduktor.io/get-started/#desktop" foi selecionada a versão para Linux, escolhendo a opção Flatpack.
 
   b. No site do Flathub, foi procurado o setup inicial que deve ser feito para a utilização dessa plataforma com Ubuntu. Então, foi rodado o comando "sudo apt install flatpak" e "sudo apt install gnome-software-plugin-flatpak", possibilitando a instalação de aplicativos sem a necessidade da utilização da linha de comando. Depois, foi rodado o comando para adicionar o repositório Flathub "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo". O sistema então foi reiniciado e o Conduktor foi instalado.
 
@@ -209,7 +209,7 @@ Sucesso!
 
   Com o Conduktor, é posível produzir e consumir, ver os tópicos, partições, brokers, entre outras funcionalidades.
 
-  b. Foram então produzidas mensagens para o tópico criado anteriormente, "trabalhokafka". Para isso, é necessário clicar no botão "+ producer". Após a seleção do tópico, pode-se indicar se a mensagem enviada será composta por informações aleatórias, o que foi feito para testar o funcionamento do programa.
+  b. Foram então produzidas mensagens para o tópico criado anteriormente, "trabalhokafka". Para isso, é necessário clicar no botão "+ producer". Após a seleção do tópico, pode-se indicar se a mensagem enviada será composta por informações aleatórias, o que é útil para testar o funcionamento do programa.
 
 ![github-small](https://i.imgur.com/Q7rInDH.png)
 
@@ -222,6 +222,8 @@ Sucesso!
 ![github-small](https://i.imgur.com/KofWrYx.png)
 
   Ademais, ao conferir as mensagens enviadas por meio do terminal, o que foi enviado com o uso do Conduktor se encontrava lá.
+
+  ![github-small](https://i.imgur.com/Z9LcLyH.png)
 
 <h1 align="center"><<<<< Extra) Prints >>>>></h1>
 1. Link com doc contendo todos os prints: https://docs.google.com/document/d/1wzWXKQfqRpkoEAzRXUPapPnh7vAYYZcIbqbEk6l2B7U/edit?usp=sharing
