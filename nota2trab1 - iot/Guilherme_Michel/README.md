@@ -86,7 +86,7 @@
 
 - 11-Com o novo criado e rodando podemos realizar testes:
 
-	`$ bin/kafka-console-producer.sh --topic INTER --bootstrap-server localhost:9098'
+	`$ bin/kafka-console-producer.sh --topic INTER --bootstrap-server localhost:9098`
 >Colocando o "novomichel" com porta 9098 para Produtor para fins de testes
 
 	`$bin/kafka-console-consumer.sh --topic INTER --bootstrap-server localhost:9095 --from-beginning`
@@ -119,7 +119,7 @@
 
 - Print referente ao :
  - git add .
- - git commit -m "sendtrabblockchain"
+ - git commit -m "sendtrabkafka"
  - git push origin main
  ![](commitpush.png)
  
