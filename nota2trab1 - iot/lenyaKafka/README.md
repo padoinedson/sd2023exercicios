@@ -10,7 +10,8 @@ Lenya Ribeiro Ferreira
 1. Visto que o trabalho vai ser feito com foco em Kafka e uso de Docker, é necessário montar o arquivo "docker-compose.yml" que tenha: nodos = 3, broquer = 3, partição = 3 e fator de replicação de dados = 3. A configuração do arquivo necessário está disponível abaixo:
 
 	a. 
-	---
+
+	
 version: '2'
 services:
   zookeeper-1:
@@ -99,7 +100,7 @@ services:
       ![github-small](https://i.imgur.com/BRw8QVF.png)
 
 
-<h1 align="center"><<<<< Extra) Produtor e Consumidor normal (todos os nodos on) >>>>></h1>
+<h1 align="center"><<<<< b) Produtor e Consumidor normal (todos os nodos on) >>>>></h1>
 
 1. Antes de criar os consumidores e produtores, é necessário criar o tópico a ser utilizado. Abaixo será explicitado os comandos utilizados na realização do trabalho.
 
@@ -130,7 +131,7 @@ services:
   ![github-small](https://i.imgur.com/3I9XWil.png)
   Consumidor.
 
-<h1 align="center"><<<<< Extra) Produtor e Consumidor com um dos nodos off (derrubar um nodo)
+<h1 align="center"><<<<< c) Produtor e Consumidor com um dos nodos off (derrubar um nodo)
  >>>>></h1>
 
  1. Foi selecionado o nó de um dos consumidores para ser derrubado.
@@ -141,14 +142,14 @@ services:
 
   ![github-small](https://i.imgur.com/egFadJ5.png)
 
-<h1 align="center"><<<<< Extra) Produtor e Consumidor com um nodo novo (adicionar um nodo)
+<h1 align="center"><<<<< d) Produtor e Consumidor com um nodo novo (adicionar um nodo)
  >>>>></h1>
 
  1. Depois de derrunar um nó no passo anterior, foi adicionado um novo nó consumidor. Podem ser recuperadas as mensagens enviadas enquanto o processo anterior ocorria.
 
  ![github-small](https://i.imgur.com/k7KziAs.png)
 
-<h1 align="center"><<<<< Extra) Consumidor com leitura em grupo >>>>></h1>
+<h1 align="center"><<<<< e) Consumidor com leitura em grupo >>>>></h1>
 
 1. Para fazer o uso de leitura em grupo, deve-se indicar o nome do grupo no final do comando utilizado para criar o produtor e consumidor.
 
@@ -160,7 +161,7 @@ services:
   ![github-small](https://i.imgur.com/5NaTP10.png)
   Consumidor.
 
-<h1 align="center"><<<<< Extra) Novidades em relação ao exemplo de aula >>>>></h1>
+<h1 align="center"><<<<< f) Novidades em relação ao exemplo de aula >>>>></h1>
 
 Conduktor é uma ferramenta simples que pode ser usada para monitorar o broker Kafka. Com ele, é possível observar as características tais quais os tópicos e partições. Além disso, é possível produzir e consumir mensagens com ele.
 
