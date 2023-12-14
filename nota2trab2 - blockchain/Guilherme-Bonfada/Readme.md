@@ -171,8 +171,8 @@ eth.hashrate
 ### Git Post
 
 
-![git1](images/git-add-git-comit.png.png)
-![git2](images/git-remote-git-push.png.png)
+![git1](images/git-add-git-comit.png)
+![git2](images/git-remote-git-push.png)
 
 
 
