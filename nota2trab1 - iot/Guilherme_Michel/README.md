@@ -32,7 +32,7 @@
 
 - 4-Após criados você deve navegar até as pastas properties criadas e edite, mudando o campo "broker.id" onde vai ser um ID único daquele broker e o campo "listeners=PLAINTEXT://:9095" na qual precisa designar uma porta para cada broker, no meu caso usei a 9095, 9096 e 9097.
 
-![](brockersproperties.png)
+![](brokersproperties.png)
 
 
 - 5-Após a configuração volte para o terminal e execute um "cd .." para que saia da pasta config e volte para a do kafka inicial.
@@ -100,11 +100,11 @@
  
 	`$ bin/kafka-console-producer.sh --topic INTER --bootstrap-server localhost:9095`
 >Iniciamos um Produtor para fazer testes usando comando designando um grupo
-![](prodgrup.png)
+![](produgrup.png)
 
 
 	`$bin/kafka-console-consumer.sh --topic INTER --bootstrap-server localhost:9092 --group VanParaJogo`
->Esse comando vai vazer que o seja designado um grupo, que no caso se chama "VanParaJogo" onde Consumidores presentes nele vao conseguir ler o que é colocado
+>Esse comando vai vazer que o seja designado um grupo, que no caso se chama "VanParaJogo" onde Consumidores presentes nele vao conseguir ler o que é colocado.
 >Detalhe que o Produtor não precisa estar inserido no grupo, qualquer produtor pode escrever em qualquer tópico 
 ![](consumgrup.png)
 	
@@ -117,7 +117,7 @@
 ![](novidade.png)
 >Importante também dizer que por mais que na imagem é notório, essa novidade faz com que você consiga mandar uma mensagem por vez apenas, porém trazendo dados de data e hora que foram Produzidas
 
-- Print referente ao 
+- Print referente ao :
  - git add .
  - git commit -m "sendtrabblockchain"
  - git push origin main
