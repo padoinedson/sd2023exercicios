@@ -301,3 +301,11 @@ Você também pode usar o método eth_call via JSON-RPC para fazer chamadas de l
 - Os dados da função a serem passados em data devem ser codificados de acordo com a especificação do contrato inteligente.
 - A especificação do contrato inteligente determinará o que você pode consultar e como interpretar os resultados.
 - O eth_call é uma ferramenta útil para interagir com contratos inteligentes e obter informações sem a necessidade de criar transações na blockchain. Certifique-se de entender a especificação do contrato inteligente que você está consultando para usar esse comando efetivamente.
+
+
+### 12. Git - Prints de tela - 
+- 1 = add, 
+- 2 = commit
+- 3 = push
+
+![](git.PNG)
