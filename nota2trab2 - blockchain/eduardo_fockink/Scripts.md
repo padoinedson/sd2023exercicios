@@ -144,7 +144,7 @@ networks:
 EOF
 ```
 
-### startnode.sh - checar criacao de conta
+### startnode.sh
 
 ```bash
 cat << 'EOF' > $HOME/ethereum_4245/configs/startnode.sh
@@ -293,7 +293,7 @@ EOF
 sudo chmod +x ./scripts/generate_initial_transactions.sh
 ```
 
-### generate_interaccount_transactions.sh - detectar melhor o retorno do node e printar
+### generate_interaccount_transactions.sh
 
 ```bash
 cat << 'EOF' > $HOME/ethereum_4245/scripts/generate_interaccount_transactions.sh
