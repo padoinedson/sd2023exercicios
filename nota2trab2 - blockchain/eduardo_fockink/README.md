@@ -227,34 +227,11 @@ Use o node4 para iniciar a mineração da blockchain.
     
 ## Adicionando ao repositório remoto
 
-    **Print 6 git add**
-    ![Print 6 git add](./prints/git_add.png)
+**Print 6 git add**
+![Print 6 git add](./prints/git_add.png)
 
-    **Print 7 git commit**
-    ![Print 7 git commit](./prints/git_commit.png)
+**Print 7 git commit**
+![Print 7 git commit](./prints/git_commit.png)
 
-    **Print 8 git push**
-    ![Print 8 git push](./prints/git_push.png)
-    ---
-    
-    1 arquivo com nome [README.md](http://readme.md/): (30 pontos)
-    
-    - [x]  seu nome
-    - [ ]  passos para instalação
-    - [x]  passos para realização das etapas
-    - [x]  novidades em relação ao exemplo de aula - 20 pontos
-    - [ ]  links para os prints dos itens b) e c)
-    
-    b) 5 prints de tela com: (10 pontos)
-    
-    - [ ]  Criação das contas
-    - [ ]  Conferencia de saldo inicial das 3 contas
-    - [ ]  Mineração
-    - [ ]  Transação
-    - [ ]  Saldo final das 3 contas
-    
-    c) 3 prints de tela com: (10 pontos)
-    
-    - [ ]  git add do diretorio
-    - [ ]  git commit
-    - [ ]  git push
+**Print 8 git push**
+![Print 8 git push](./prints/git_push.png)
