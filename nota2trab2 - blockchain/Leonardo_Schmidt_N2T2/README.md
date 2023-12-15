@@ -91,9 +91,9 @@
     ```
     - Substitua 'nome-da-conta' pelo nome desejado para a conta. No meu caso, criei 3 contas, uma com o nome Leonardo, outra Leozinho e a ultima Leozao
     
-    ![Criação da Conta Leonardo](/images/criacaodaconta.png)
-    ![Criação da Conta Leozinho](/images/criacaoconta1.png)
-    ![Criação da Conta Leozao](/images/criacaoconta2.png)
+    ![Criação da Conta Leonardo](images/criacaodaconta.png)
+    ![Criação da Conta Leozinho](images/criacaoconta1.png)
+    ![Criação da Conta Leozao](images/criacaoconta2.png)
 
 
 9. Copie a chave pública e atualize o arquivo `genesis.json`.
@@ -157,17 +157,17 @@
     eth.getBalance("0x4c4CC7cD985915c644E0242A3cF79e1B7C5fE6B5")
     eth.getBalance("0x2A44D4a9061286ff933BEe276D6BE88C4f294f83")
     ```
-    ![Saldo Inicial Leonardo](/images/saldodaconta.png)
-    ![Saldo Inicial Leozinho](/images/saldodaconta1.png)
-    ![Saldo Inicial Leozao](/images/saldodaconta2.png)
+    ![Saldo Inicial Leonardo](images/saldodaconta.png)
+    ![Saldo Inicial Leozinho](images/saldodaconta1.png)
+    ![Saldo Inicial Leozao](images/saldodaconta2.png)
 
 13. Inicie a mineração:
     ```bash
     miner.start(10)
     ```
-    ![Mineração Leonardo](/images/mineracao.png)
-    ![Mineração Leozinho](/images/mineracao1.png)
-    ![Mineração Leozao](/images/mineracao2.png)
+    ![Mineração Leonardo](images/mineracao.png)
+    ![Mineração Leozinho](images/mineracao1.png)
+    ![Mineração Leozao](images/mineracao2.png)
 
 14. Pare a mineração:
     ```bash
@@ -186,13 +186,13 @@
     ```bash
     eth.sendTransaction({from:"0x65a7f3862cCdDDD0ABb2f71750d200C65e5FC627", to:"0x4c4CC7cD985915c644E0242A3cF79e1B7C5fE6B5", value:111, gas:21000})
     ```
-    ![Transação de Leonardo para Leozinho](/images/primeiratransacao.png)
+    ![Transação de Leonardo para Leozinho](images/primeiratransacao.png)
 
     - Segunda conta para a terceira:
     ```bash
     eth.sendTransaction({from:"0x4c4CC7cD985915c644E0242A3cF79e1B7C5fE6B5", to:"0x2A44D4a9061286ff933BEe276D6BE88C4f294f83", value:222, gas:21000})
     ```
-    ![Transação de Leozinho para Leozao](/images/segundatransacao.png)
+    ![Transação de Leozinho para Leozao](images/segundatransacao.png)
 
 17. Verifique o status do pool de transações:
     ```bash
@@ -215,9 +215,9 @@
     eth.getBalance("0x4c4CC7cD985915c644E0242A3cF79e1B7C5fE6B5")
     eth.getBalance("0x2A44D4a9061286ff933BEe276D6BE88C4f294f83")
     ```
-    ![Saldo Final Leonardo](/images/balancopostransacao.png)
-    ![Saldo Final Leozinho](/images/balancopostransacao1.png)
-    ![Saldo Final Leozao](/images/balancopostransacao2.png)
+    ![Saldo Final Leonardo](images/balancopostransacao.png)
+    ![Saldo Final Leozinho](images/balancopostransacao1.png)
+    ![Saldo Final Leozao](images/balancopostransacao2.png)
 
 ## Novidade
 
@@ -226,5 +226,11 @@
     eth.pendingTransactions
     ```
 
-    ![Novidade de Pendências](/images/novidade.png)
+    ![Novidade de Pendências](images/novidade.png)
+    
+### GIT
+
+    ![Git add](images/add.png)
+    ![Git commit](images/commit.png)
+    ![Git push](images/push.png)
 
