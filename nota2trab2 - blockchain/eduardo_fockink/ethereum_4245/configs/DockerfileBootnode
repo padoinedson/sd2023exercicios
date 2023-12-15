@@ -1,0 +1,9 @@
+FROM ethereum/client-go:alltools-v1.10.5
+
+RUN mkdir -p /ethereum
+WORKDIR /ethereum
+
+COPY configs/startbootnode.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+
+ENTRYPOINT ["/usr/local/bin/start.sh"]

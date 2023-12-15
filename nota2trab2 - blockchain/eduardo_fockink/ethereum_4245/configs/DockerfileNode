@@ -1,0 +1,10 @@
+FROM ethereum/client-go:v1.10.5
+
+RUN mkdir -p /ethereum
+WORKDIR /ethereum
+
+COPY configs/startnode.sh /usr/local/bin/start.sh
+COPY configs/genesis.json /root/genesis.json
+RUN chmod +x /usr/local/bin/start.sh
+
+ENTRYPOINT ["/usr/local/bin/start.sh"]

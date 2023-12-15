@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  bootnode:
+    hostname: bootnode
+    build:
+      context: .
+      dockerfile: configs/DockerfileBootnode
+    volumes:
+      - ./nodes/bootnode:/ethereum/
+    stdin_open: true
+    networks:
+      - eth-net
+
+  node1:
+    build:
+      context: .
+      dockerfile: configs/DockerfileNode
+    image: ethereum_4245_node:latest
+    volumes:
+      - ./nodes/node1:/ethereum/
+    depends_on:
+      - bootnode
+    stdin_open: true
+    networks:
+      - eth-net
+
+  node2:
+    image: ethereum_4245_node:latest
+    volumes:
+      - ./nodes/node2:/ethereum/
+    depends_on:
+      - bootnode
+    stdin_open: true
+    networks:
+      - eth-net
+
+  node3:
+    image: ethereum_4245_node:latest
+    volumes:
+      - ./nodes/node3:/ethereum/
+    depends_on:
+      - bootnode
+    stdin_open: true
+    networks:
+      - eth-net
+
+  node4:
+    image: ethereum_4245_node:latest
+    volumes:
+      - ./nodes/node4:/ethereum/
+    depends_on:
+      - bootnode
+    stdin_open: true
+    networks:
+      - eth-net
+
+networks:
+  eth-net:
+    driver: bridge
