@@ -91,9 +91,9 @@
     ```
     - Substitua 'nome-da-conta' pelo nome desejado para a conta. No meu caso, criei 3 contas, uma com o nome Leonardo, outra Leozinho e a ultima Leozao
     
-    ![Criação da Conta Leonardo](images/criacaodaconta.png)
-    ![Criação da Conta Leozinho](images/criacaoconta1.png)
-    ![Criação da Conta Leozao](images/criacaoconta2.png)
+    ![Criação da Conta Leonardo](images/criacaodeconta.png)
+    ![Criação da Conta Leozinho](images/criacaodeconta1.png)
+    ![Criação da Conta Leozao](images/criacaodeconta2.png)
 
 
 9. Copie a chave pública e atualize o arquivo `genesis.json`.
@@ -230,7 +230,7 @@
     
 ### GIT
 
-    ![Git add](images/add.png)
-    ![Git commit](images/commit.png)
-    ![Git push](images/push.png)
+    ![add](images/add.png)
+    ![commit](images/commit.png)
+    ![push](images/push.png)
 
