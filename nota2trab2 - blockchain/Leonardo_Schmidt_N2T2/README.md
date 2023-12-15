@@ -230,7 +230,8 @@
     
 ### GIT
 
-    ![add](images/add.png)
-    ![commit](images/commit.png)
-    ![push](images/push.png)
+-O passo a passo do git usado:
 
+    ![Add dos arquivos](images/add.png)
+    ![commit dos arquivos](images/commit.png)
+    ![Push dos arquivos](images/push.png)
