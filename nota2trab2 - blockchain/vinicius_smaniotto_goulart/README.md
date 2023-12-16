@@ -1,3 +1,5 @@
+**Aluno**: Vinicius Smaniotto Goulart
+
 **Para desenvolver uma rede ethereum privada com 3 contas para realizarem transferência**
 
 ***Primeiro devemos instalar o docker:***
