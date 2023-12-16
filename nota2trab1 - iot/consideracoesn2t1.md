@@ -35,3 +35,28 @@ Matheus Rafalski
 - 26 kafka-ui   	
 - 10
 - 10
+
+Lenya
+- 26 Conduktor
+- 10
+- 10
+
+João Gabriel Foletto Schefer
+- 24  partição e offset
+- 10
+- 10
+
+
+Guilherme Peukert Michel
+- 23   leitura em grupo 
+- 10
+- 10
+
+
+Guilherme Izidro Leal
+- 42 --property "print.key=true" --property "key.separator=:"  
+- 10
+- 10
+
+
+000003043
