@@ -251,12 +251,15 @@ Por fim, através do http://localhost:3000 e do http://localhost:80 é possível
 
 ## Comandos Git
 - Git Add:
+
 ![](prints/git_add.png)
 
 - Git Commit:
+
 ![](prints/git_commit.png)
 
 - Git Push:
+
 ![](prints/git_push.png)
 
 ## Referências
