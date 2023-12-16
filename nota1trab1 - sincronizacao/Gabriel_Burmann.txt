@@ -1,0 +1,27 @@
+Aluno: Gabriel Burmann
+
+
+Algoritmo de Sincronização:
+
+-Cristian Algorithm
+
+Positivo:
+    Simplicidade: Sua abordagem simples facilita a compreensão e implementação.
+    Comunicação centralizada: A comunicação com um servidor central simplifica o processo de sincronização.
+
+Negativo:
+    Limitado para casos complexos: Pode não ser ideal para situações mais complexas ou exigentes.
+    Dependência do servidor: A sincronização depende fortemente da disponibilidade e desempenho do servidor central.
+
+Algoritmo de eleição de líder:
+
+-Bully Algorithm
+
+Positivo:
+    Seleção rápida de líder: A escolha do líder com base no ID mais alto é eficiente em muitos casos.
+    Simplicidade na ideia: O conceito de eleição de líder por meio de IDs é direto.
+
+Negativo:
+    Ineficiente em casos específicos: Em situações em que a entidade com menor ID inicia uma votação, o algoritmo pode se tornar 
+    ineficiente.
+    Potencial para eleições frequentes: Pode ocorrer um cenário em que eleições frequentes são iniciadas, prejudicando o desempenho.
