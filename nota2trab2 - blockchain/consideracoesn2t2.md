@@ -51,17 +51,47 @@ Gabriel Bauer Vieira.
 - 10   
 - 10   
 
-Carlos Eduardo
+
 - 15   Ferramenta para fazer requisições HTTP ========
 - 10   
 - 10  
 
 
 
+Vinicius Smaniotto Goulart
+- 22    admin.nodeInfo
+- 10   
+- 10  
 
+Leonardo_Schmidt_N2T2
+- 24	  eth.pendingTransactions
+- 10  
+- 10   
 
+João Victor Martins
+- 28	  personal.newAccount
+- 10  
+- 10
 
+Guilherme Bonfada
+- 27	  eth.mining  e  eth.hashrate   
+- 10  
+- 10
 
+Eduardo Fockink Silva
+- 30  7 	    
+- 10  
+- 10
+
+PEDRO HENRIQUE VON GROLL
+- 15   web3.toHex =======================
+- 10  
+- 10
+
+Guilherme_Eckhardt
+- 24  eth.getBlock  
+- 10  
+- 10
 
 
 
