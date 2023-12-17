@@ -149,7 +149,7 @@ eth.getBalance("chave_publica")
 ![verificaçao6](images/saldo-final-mayara3.png)
 
 
-NOVIDADEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+NOVIDADE!
 
 ### 21 A novidade consiste em 2 novidades. 
 
@@ -169,7 +169,7 @@ eth.gasPrice
 ### GIT PUSH
 
 
-
+![git](images/git-commit.png)
 
 
 
