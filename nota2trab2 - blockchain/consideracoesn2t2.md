@@ -51,13 +51,6 @@ Gabriel Bauer Vieira.
 - 10   
 - 10   
 
-
-- 15   Ferramenta para fazer requisições HTTP ========
-- 10   
-- 10  
-
-
-
 Vinicius Smaniotto Goulart
 - 22    admin.nodeInfo
 - 10   
@@ -93,8 +86,16 @@ Guilherme_Eckhardt
 - 10  
 - 10
 
+Bruno Moretto Monegat
+- 25  Memento
+- 10  
+- 10
 
 
+Mayara de Lourdes Schreiber Meotti
+- 25  eth.coinbase  eth.gasPrice
+- 10  
+- 10
 
 
 
