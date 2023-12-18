@@ -1,4 +1,4 @@
-﻿Readme com as instruções necessárias para realizar a mineração e transação com blockchain.
+Readme com as instruções necessárias para realizar a mineração e transação com blockchain.
 
 
 Primeiramente, para realizar a criação da blockchain, é criado um diretório chamado ethereum
@@ -8,7 +8,7 @@ $ mkdir ethereum
 
 
 Então é criado um arquivo genesis.json
-que irá conter as configurações da blockchain e de três contas que vão receber um saldo inicial e quando criadas uma chave pública que será anexada neste arquivo.
+que irá conter as configurações da blockchain e de três contas que vão receber um saldo inicial. Quando criadas as contas vão gerar uma chave pública que será anexada neste arquivo posteriormente.
 
 
           {
@@ -72,7 +72,7 @@ Agora será criada as contas, dentro do containers de cada terminal onde as cont
 $cd /root
 
 
-<<CRIANDO CONTA>>
+CRIANDO CONTA
 
 
 Assim rodar o seguinte comando onde teste1 será o nome da conta criada, sendo substituído no terminal dois por teste 2 e no 3 para teste3
@@ -110,7 +110,7 @@ $ geth --datadir ~/teste2 --networkid 2023 --http --http.api 'txpool,eth,net,web
 $ geth --datadir ~/teste3 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8544 --port 30303 --http.port 8546 --allow-insecure-unlock console
 
 
-<<ADICIONANDO PEER>>
+ADICIONANDO PEER
 
 
 Com as contas criadas é adicionado um peer para cada uma delas, a teste1 irá receber a o enode da teste2 e teste3, a teste2 recebe da teste1 e teste3 e a teste3 recebe da teste1 e teste2.
@@ -161,7 +161,7 @@ teste2
 admin.addPeer("enode://723f76f46edfdc761ea01871aa02a14148e08dbb811777616c085bedbef22d2ec3a1746e4b294fc5a7dc35ca8ee4a825939e998635db650556b53bafd0fda586@127.0.0.1:30302");
 
 
-<<MINERAÇÃO>>
+MINERAÇÃO
 
 
 Agora que todas as contas receberam os peers das outras, será inicializada a miração com 10 threads
@@ -176,7 +176,7 @@ E para parar a mineração será rodado
 $ miner.stop()
 
 
-<<CONFERINDO SALDO>>
+CONFERINDO SALDO
 
 
 Então após a realização da mineração confere-se o saldo das contas com o seguinte comando.
@@ -194,7 +194,7 @@ eth.getBalance("0x612eb303D4bAfbE04dC23B18d6a821e183C94424")
 eth.getBalance("0x25BAC677518Bb8699b8CCfA48ce759eBa7f62c83")
 
 
-<<DESBLOQUEANDO CONTA>>
+DESBLOQUEANDO CONTA
 
 
 Quando as duas contas que forem realizar a transferência estiverem desbloqueadas, então pode ser realizada a transação.
@@ -215,7 +215,7 @@ personal.unlockAccount("0x612eb303D4bAfbE04dC23B18d6a821e183C94424")
 personal.unlockAccount("0x25BAC677518Bb8699b8CCfA48ce759eBa7f62c83")
 
 
-<<TRANSFERINDO SALDO>>
+TRANSFERINDO SALDO
 
 
 Para realizar a transferência de saldo é rodado o seguinte comando. Deve ser informado de qual a conta será retirado o valor e depois para qual conta será depositado, para isso é informada a chave pública da conta, e, logo após, o valor que será transferido.
@@ -256,7 +256,7 @@ eth.getBalance("0x612eb303D4bAfbE04dC23B18d6a821e183C94424")
 eth.getBalance("0x25BAC677518Bb8699b8CCfA48ce759eBa7f62c83")
 
 
-<<NOVIDADE PARA BLOCKCHAIN>>
+NOVIDADE PARA BLOCKCHAIN
 
 
 Agora com as transações feitas entre as contas, usando o geth é possível exportar as contas para um arquivo binário.
