@@ -54,9 +54,23 @@ Guilherme Peukert Michel
 
 
 Guilherme Izidro Leal
-- 42 --property "print.key=true" --property "key.separator=:"  
+- 22 --property "print.key=true" --property "key.separator=:"  
 - 10
 - 10
+
+
+Mateus E. Chitolina
+- 22  KAFKA_CREATE_TOPICS
+- 10
+- 10
+
+
+Pedro Henrique Von Groll
+- 25 le um conteúdo do arquivo mensagens.txt e realiza o envio dessas mensagens para o tópico rainbow-six.
+- 10
+- 10
+
+
 
 
 000003043
