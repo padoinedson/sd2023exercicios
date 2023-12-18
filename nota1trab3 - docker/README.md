@@ -1,50 +1,29 @@
-## Avaliação do trabalho: 
+<<<<< INSTALAÇÃO NO HOST >>>>>
+    
+    Agora que a instalação do docker foi concluída; procuramos, baixamos e executamos a imagem que escolhemos:
+    
+    Procurar a imagem: sudo docker search hello-world.
+    Baixar: sudo docker pull hello-world.
+    Criar e executar o container: sudo docker run -it hello-world
+    ![Alt text](I.png)
 
-a) instalar Docker e Docker-compose em um sistema/servidor
+<<<<< INSTALAÇÃO EM CONTAINER >>>>>
+       
+    Criar um arquivo com o nome de Dockerfile.
+    Dentro do arquivo, colocar as instruções:
+    ![Alt text](<II 1.png>)
+    No diretório onde está localizado o arquivo Dockerfile, executar: sudo docker build -t hello-world-a:1.0.0 -f Dockerfile .
+    ![Alt text](<II 2.png>)
 
-b) escolher um serviço Ex.:(https://hub.docker.com/).
+<<<<< INSTALAÇÃO EM CONTAINER VIA COMPOSE >>>>>
 
-c) criar um arquivo README.md conetendo todas as explicações para:
+    Criar um arquivo chamado docker-compose.yaml
+    Dentro do arquivo docker-compose.yaml, colocar as instruções:
+    ![Alt text](<III 1.png>)
+    Executar no diretório onde está o arquivo docker-compose.yaml: sudo docker-compose up -d.
+    ![Alt text](<III 2.png>)
+    Executar um comando diretamente no container, sem acessá-lo: sudo docker exec -it optimistic_hugle bash -c "apt-get update".
+    ![Alt text](IV.png)
 
- 
-
-          <<<<< INSTALAÇÃO NO HOST >>>>>
-          instalação do serviço no computador sem docker  
-          nome do arquivo instalacao.md  
-
-           <<<<< INSTALAÇÃO EM CONTAINER >>>>>
-           instalação do serviço em um container com Dockerfile           
-           arquivo Dockerfile
-
-           <<<<< INSTALAÇÃO EM CONTAINER VIA COMPOSE >>>>>
-           instalação do serviço em um container com Docker-compose           
-           arquivo docker-compose.yml
-
-
-## Entrega do trabalho:
-
-INDIVIDUAL:   
-
-Entregar no `github` uma pasta com o seu nome contendo os seguintes arquivos:  
-
-a) Dockerfile -> para criação da imagem do serviço escolhido  
-b) docker-compose.yml  
-c) README.md -> passos/comandos para:  
->> o arquivo README.md deve seguir o modelo do exercicio 07 - docker compose mysql  
-
-- Seu Nome:  
-- Nome do serviço:  
-	- INSTALAÇÃO NO HOST   
-	- INSTALAÇÃO EM CONTAINER  
-	- INSTALAÇÃO EM CONTAINER VIA COMPOSE  
-	- usar/testar o serviço que está rodando no container   
-- links para os prints do item b) 
-
-b) 5 prints de tela com:   
-
-	i - criação do container normal - docker run  
-	ii - criação do container com o Dockerfile  
-	iii - criação do container com docker-compose  
-	iv - testando o serviço de um shell de fora do container - docker exec  
 
 
