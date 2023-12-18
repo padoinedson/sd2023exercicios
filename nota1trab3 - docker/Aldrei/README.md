@@ -5,7 +5,7 @@
     Procurar a imagem: sudo docker search hello-world.
     Baixar: sudo docker pull hello-world.
     Criar e executar o container: sudo docker run -it hello-world
-    ![Alt text](I.png)
+    ![Alt text](https://github.com/padoinedson/sd2023exercicios/blob/main/nota1trab3%20-%20docker/Aldrei/I.png)
 
 <<<<< INSTALAÇÃO EM CONTAINER >>>>>
        
