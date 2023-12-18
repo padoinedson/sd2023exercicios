@@ -1,4 +1,0 @@
-FROM ubuntu
-MAINTAINER a
-RUN apt-get -y update
-ENV apt-get -y hello-world
