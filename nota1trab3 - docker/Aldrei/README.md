@@ -19,9 +19,12 @@
 
     Criar um arquivo chamado docker-compose.yaml
     Dentro do arquivo docker-compose.yaml, colocar as instruções:
+
 ![Alt text](<III 1.png>)
+   
     Executar no diretório onde está o arquivo docker-compose.yaml: sudo docker-compose up -d.
 ![Alt text](<III 2.png>)
+    
     Executar um comando diretamente no container, sem acessá-lo: sudo docker exec -it optimistic_hugle bash -c "apt-get update".
 ![Alt text](IV.png)
 
