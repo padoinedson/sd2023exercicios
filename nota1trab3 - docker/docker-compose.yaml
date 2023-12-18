@@ -1,8 +1,0 @@
-version: '3'
-services:
-	hello-world:
-		image: hello-world
-		container_name: optimistic_hugle
-		command: "/bin/bash"
-		stdin_open: true
-		tty: true
