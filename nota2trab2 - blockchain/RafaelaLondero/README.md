@@ -1,11 +1,10 @@
-Readme com as instruções necessárias para realizar a mineração e transação com blockchain.
+Rafaela Londero
 
+Readme com as instruções necessárias para realizar a mineração e transação com blockchain.
 
 Primeiramente, para realizar a criação da blockchain, é criado um diretório chamado ethereum
 
-
 $ mkdir ethereum
-
 
 Então é criado um arquivo genesis.json
 que irá conter as configurações da blockchain e de três contas que vão receber um saldo inicial. Quando criadas as contas vão gerar uma chave pública que será anexada neste arquivo posteriormente.
@@ -276,9 +275,12 @@ $ sudo geth export teste2.rlp
 
 $ sudo geth export teste3.rlp
 
-
 Os arquivos vão aparecer na pasta junto às contas e ao arquivo genesis.
 
+Prints do processo estão dentro da pasta Prints e também em um arquivo do google docs.
 
-Prints do processo estão dentro da pasta Prints. 
-Os prints da melhoria estão na pasta Print-novidade
+link do Google Docs https://docs.google.com/document/d/1xSiM2ik2rwcMAn3QPe0GX3nWZ0KqJW986NqMQjWxsNo/edit
+
+Os prints da melhoria estão na pasta Print-novidade e também no google docs
+
+link do Google Docs https://docs.google.com/document/d/1z4UqpO4Y63VT74QQd6bX_5BXf_UPYsMhIM-57H4IiMI/edit
