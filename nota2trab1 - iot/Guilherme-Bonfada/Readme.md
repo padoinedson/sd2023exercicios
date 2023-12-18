@@ -63,14 +63,14 @@ cada um em um terminal diferente
 ```
 ./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3 --topic SEU-TOPICO
 ```
-![2](imagem/CRIANDO-TOPICO.png)
+![2](imagem/CRIANDO-TOPICOS.png)
 
 ### 14- Após isso, para verificar se ele criou, en todos os broken corretamente, usa o comando abaixo: obs: mudando a porta no final 
 ```
 ./bin/kafka-topics.sh --list --botstrap-server localhost:PORT
 ```
 
-![3](imagem/criando-topico2.png)
+![3](imagem/criando-topicos2.png)
 
 ### 15- Para verificar as partições, usa o comando abaixo:
 ```
@@ -127,11 +127,11 @@ Ele vai colocar numeros de 0 a 10, de forma automatica
 ```
 ### Tento como saida:
 
-![12](imagem/resultado1.png)
+![12](imagem/resposta1.png)
 
 ### GIT E PUSH
 
-
+![13](imagem/git.png)
 
 
 
