@@ -98,7 +98,8 @@ Mayara de Lourdes Schreiber Meotti
 - 10
 
 
-
-
-
+Rafaela Londero
+- 20    geth é possível exportar as contas para um arquivo binário.
+- 10  
+- 10
 
