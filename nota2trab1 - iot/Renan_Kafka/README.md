@@ -162,7 +162,7 @@ kafka-console-consumer.sh --topic nome_topico --from-beginning --bootstrap-serve
 ```
 
 ![Nodos off 1](images/Um_nodo_off_1.png)
-![Nodos off 2](images/Um_nodo_off_2.png)
+![Nodos off 2](images/Um_nodo_off.png)
 
 
 - Produtor e consumidor com um novo nodo.
@@ -186,8 +186,8 @@ sudo docker exec -it nome_pasta_kafka2_1 bash
 kafka-console-consumer.sh --topic nome_topico --from-beginning --bootstrap-server kafka1:9093
 ```
 
-![Novo nodo 1](images/Nodo_novo_1.png)
-![Novo nodo 2](images/Nodo_novo_2.png)
+![Novo nodo 1](images/Novo_nodo_1.png)
+![Novo nodo 2](images/Novo_nodo_2.png)
 
 
 - Consumidor com leitura em grupo
@@ -206,7 +206,6 @@ kafka-topics.sh --bootstrap-server localhost:9093 --delete --topic animes
 2. Delete um grupo: 
 ```
 kafka-consumer-groups.sh --bootstrap-server localhost:9093 --delete --group otaku
-
 ```
 
 
