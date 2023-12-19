@@ -258,3 +258,7 @@ Veremos que o terminal para de mostrar qualquer output, e se abrirmos o arquivo 
 <img src="./Minha_novidade_4.png">
 
 Dessa forma é possível manter um histórico organizado de qualquer ocorrência na sua conta ou blockchain
+
+## Git
+
+<img src="./Print_git.png"/>

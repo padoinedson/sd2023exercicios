@@ -145,3 +145,7 @@ Além disso, também é possível guardar esses valres em um arquivo .txt ou .js
 
 <img src="./img/Novidade_(3).png"/>
 
+## Git
+
+<img src="./img/Git_(1).png"/>
+<img src="./img/Git_(2).png"/>
