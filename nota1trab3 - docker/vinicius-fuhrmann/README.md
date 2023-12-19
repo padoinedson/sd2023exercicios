@@ -1,17 +1,17 @@
-1.Instalar o Apache Cassandra em um host com sistema baseado em Debian/Ubuntu
+### 1.Instalar o Apache Cassandra em um host com sistema baseado em Debian/Ubuntu
 
-->Atualize o índice do pacote: sudo apt update
-->Instale o Apache Cassandra: sudo apt install cassandra
-->Verifique o status do serviço: sudo systemctl status cassandra
-->Para interagir com o Cassandra: cqlsh
+#####-> Atualize o índice do pacote: sudo apt update
+#####-> Instale o Apache Cassandra: sudo apt install cassandra
+#####-> Verifique o status do serviço: sudo systemctl status cassandra
+#####-> Para interagir com o Cassandra: cqlsh
 
 
 
-2.Instalação com Dockerfile
+### 2.Instalação com Dockerfile
 
 Instalação do Docker
-->sudo apt update
-->sudo apt install docker.io
+#####-> sudo apt update
+#####-> sudo apt install docker.io
 
 Crie um arquivo Dockerfile com o conteúdo abaixo:
 	
@@ -21,20 +21,20 @@ Crie um arquivo Dockerfile com o conteúdo abaixo:
 	# Exponha a porta padrão do Cassandra
 	EXPOSE 9042
 
-Construir a imagem Docker: docker build -t cassandra-docker.
-Executar o contêiner Docker: docker run -p 9042:9042 --name cassandra-container -d cassandra-docker
-Verificar o status do contêiner: docker ps
+#####-> Construir a imagem Docker: docker build -t cassandra-docker.
 
-{Imagem1
- imagemum
-}
+#####-> Executar o contêiner Docker: docker run -p 9042:9042 --name cassandra-container -d cassandra-docker
 
+#####-> Verificar o status do contêiner: docker ps
 
-3.Instalação com Docker-Compose
+![](dockerfile.png)
+![](dockerfile1.png)
 
-Baixe a versão mais recente do Docker Compose: sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+### 3.Instalação com Docker-Compose
 
-Torne o binário executável: sudo chmod +x /usr/local/bin/docker-compose
+#####-> Baixe a versão mais recente do Docker Compose: sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+#####-> Torne o binário executável: sudo chmod +x /usr/local/bin/docker-compose
 
 Criação do arquivo docker-compose.yml com o conteúdo abaixo:
 
@@ -52,13 +52,11 @@ Criação do arquivo docker-compose.yml com o conteúdo abaixo:
 	    volumes:
 	      - /path/to/local/data:/var/lib/cassandra
 	      
-Execução do Docker Compose: docker-compose up -d
-Verifique se o container foi criado com sucesso: docker ps -a
+#####-> Execução do Docker Compose: docker-compose up -d
+#####-> Verifique se o container foi criado com sucesso: docker ps -a
 
-{Imagem2
- imagemdois
-}
-
+![](compose.png)
+![](compose1.png)
 
 
 
