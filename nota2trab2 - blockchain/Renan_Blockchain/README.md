@@ -11,27 +11,27 @@ Nome: Renan L. Dambrós
     sudo apt install docker.io
 ```
     
-    Baixe a imagem 'ethereum/client-go':
+2. Baixe a imagem 'ethereum/client-go':
 ```bash
     sudo docker pull ethereum/client-go:release-1.10
 ```
 
-2. Crie um diretório chamado 'ethereum':
+3. Crie um diretório chamado 'ethereum':
 ```bash
     mkdir ethereum
 ```
     
-    Entre na pasta
+4. Entre na pasta
 ```bash
     cd ethereum
 ```
     
-    Crie o arquivo `genesis.json`:
+5. Crie o arquivo `genesis.json`:
 ```bash
     nano genesis.json
 ```
 
-3. Cole e salve o seguinte conteúdo:
+6. . Cole e salve o seguinte conteúdo:
 ```json
     {
         "config": {
@@ -64,17 +64,17 @@ Nome: Renan L. Dambrós
     }
 ```
     
-4. Saia da pasta:
+7. Saia da pasta:
 ```bash
     cd ..
 ```
 
-5. Execute o container:
+8. Execute o container:
 ```bash
     sudo docker run -d --name ethereum-node -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30310:30310 -p 30320:30320 -p 30330:30330 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10
 ```
 
-6. Abra 3 terminais. Acesse o container, de um ls e verifique se o arquivo `genesis.json` está presente:
+9. Abra 3 terminais. Acesse o container, de um ls e verifique se o arquivo `genesis.json` está presente:
 ```bash
     sudo docker exec -it ethereum-node sh
 ```
@@ -87,7 +87,7 @@ Nome: Renan L. Dambrós
     ls
 ```
 
-7. Crie contas usando o comando:
+9. Crie contas usando o comando:
 ```bash
     geth account new --datadir ~/renan1
 ```
@@ -100,12 +100,12 @@ Nome: Renan L. Dambrós
     geth account new --datadir ~/renan3
 ```
     
-![Criação da Conta 1](images/Criacao_Conta_1.png)
+![Criação da Conta 1](images/Criacao_conta_1.png)
 ![Criação da Conta 2](images/Criacao_Conta_2.png)
 ![Criação da Conta 3](images/Criacao_Conta_3.png)
 
 
-8. Copie a chave pública e atualize o arquivo `genesis.json`.
+10. Copie a chave pública e atualize o arquivo `genesis.json`.
 
 ```json
     {
@@ -142,7 +142,7 @@ Nome: Renan L. Dambrós
     }
 ```
 
-9. Inicie os nós na rede:
+11. Inicie os nós na rede:
 ```bash
     geth --datadir /root/renan1/ init genesis.json
 ```
@@ -155,7 +155,7 @@ Nome: Renan L. Dambrós
     geth --datadir /root/renan3/ init genesis.json
 ```
 
-10. Rode os nós na rede:
+12. Rode os nós na rede:
 ```bash
     geth --datadir ~/renan1 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
 ```
@@ -168,7 +168,7 @@ Nome: Renan L. Dambrós
     geth --datadir ~/renan3 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8548 --port 30500 --http.port 30501 --allow-insecure-unlock console
 ```
 
-11. Em cada terminal, use a chave respectiva para verificar o saldo da conta:
+13. Em cada terminal, use a chave respectiva para verificar o saldo da conta:
 ```bash
     eth.getBalance("0x6ac8849CFc8671d3f7Cd6018d00553C1d4360051")
 ```
@@ -185,7 +185,7 @@ Nome: Renan L. Dambrós
 ![Saldo Inicial Conta 2](images/Saldo_Inicial_Conta_2.png)
 ![Saldo Inicial Conta 3](images/Saldo_Inicial_Conta_3.png)
 
-12. Inicie a mineração:
+14. Inicie a mineração:
 ```bash
     miner.start(10)
 ```
@@ -193,12 +193,12 @@ Nome: Renan L. Dambrós
 ![Mineração Conta 2](images/Mineracao_Conta_2.png)
 ![Mineração Conta 3](images/Mineracao_Conta_3.png)
 
-    Pare a mineração:
+15. Pare a mineração:
 ```bash
     miner.stop()
 ```
 
-13. Desbloqueie as contas para transações colando o comando abaixo e digitando a senha escolhida pra conta:
+16. Desbloqueie as contas para transações colando o comando abaixo e digitando a senha escolhida pra conta:
 ```bash
     personal.unlockAccount("0x6ac8849CFc8671d3f7Cd6018d00553C1d4360051")
 ```
@@ -211,34 +211,34 @@ Nome: Renan L. Dambrós
     personal.unlockAccount("0x7A48e3eC7c3bA4a91f9FA80f814b89BEB98ce7a6")
 ```
 
-14. Transações entre contas: Primeira conta para a segunda:
+17. Transações entre contas: Primeira conta para a segunda:
 ```bash
     eth.sendTransaction({from:"0x6ac8849CFc8671d3f7Cd6018d00553C1d4360051", to:"0xc408C9F90EFC2cA4517dea2AB9A2F856d48dB1d1", value:111, gas:21000})
 ```
 ![Transação da Conta 1 para a Conta 2](images/Transacao_Conta_1_para_Conta_2.png)
 
-15. Segunda conta para a terceira:
+18. Segunda conta para a terceira:
 ```bash
     eth.sendTransaction({from:"0xc408C9F90EFC2cA4517dea2AB9A2F856d48dB1d1", to:"0x7A48e3eC7c3bA4a91f9FA80f814b89BEB98ce7a6", value:222, gas:21000})
 ```
 ![Transação de Conta 2 para a Conta 3](images/Transacao_Conta_2_para_Conta_3.png)
 
-16. Verifique o pool de transações:
+19. Verifique o pool de transações:
 ```bash
     txpool.status
 ```
 
-17. Inicie a mineração para confirmar transações:
+20. Inicie a mineração para confirmar transações:
 ```bash
     miner.start(10)
 ```
 
-18. Pare a mineração para efetuar as transações:
+21. Pare a mineração para efetuar as transações:
 ```bash
     miner.stop()
 ```
 
-19. Verifique o saldo novamente para cada conta:
+22. Verifique o saldo novamente para cada conta:
 ```bash
     eth.getBalance("0x6ac8849CFc8671d3f7Cd6018d00553C1d4360051")
 ```
