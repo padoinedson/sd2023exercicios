@@ -1,4 +1,4 @@
-﻿Rafaela Londero
+Rafaela Londero
 
 
 Criação do ambiente (nodos, partição, fator de replicação)
@@ -344,10 +344,4 @@ Pode ser feita a verificação conteúdo do arquivo exportado com o seguinte com
 $ cat new-messages.txt
 
 
-
-
-  
-
-
-
-Lendo as mensagens contidas no kafka que foram adicionadas pelos arquivos com o comando cat, para verificar se o comando cat dos arquivos exportados estão corretos.
+Link do Google Docs com os prints organizados https://docs.google.com/document/d/1-xcMv8jMMeaUGYY_2p2dXJ9Thy9C6pMR1ETr1xEP7JQ/edit?usp=sharing
