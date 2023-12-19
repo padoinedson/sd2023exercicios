@@ -100,7 +100,7 @@ services:
       - "moby:127.0.0.1"
 
 
-No terminal 1
+>> No terminal 1
 
 
 Será necessário realizar a instalação do docker compose, que será feito com o seguinte comando
@@ -121,13 +121,10 @@ $ sudo docker-compose up
 Agora os containers estão rodando.
 
 
+![github-small](https://i.imgur.com/ABFEAam.jpg)
 
 
-  
-
-
-
-No terminal 2
+>> No terminal 2
 
 
 Para verificar o status dos containers
@@ -136,7 +133,7 @@ Para verificar o status dos containers
 $ sudo docker-compose ps
 
 
-  
+![github-small](https://i.imgur.com/mVIJuz0.jpg)
 
 
 
@@ -146,7 +143,7 @@ Com os containers prontos, será feita a criação dos tópicos dentro de um del
 > Criação de Tópicos
 
 
-No terminal 3
+>> No terminal 3
 
 
 No terceiro terminal será acessado o container escolhido
@@ -155,7 +152,7 @@ No terceiro terminal será acessado o container escolhido
 $ sudo docker exec -it kafka_kafka-1_1 bash 
 
 
-  
+![github-small](https://i.imgur.com/poDfmp0.jpg)
 
 
 
@@ -166,17 +163,17 @@ $ kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 
 
 
   
-
+![github-small](https://i.imgur.com/kFF6rr8.jpg)
 
 
 Com o tópico criado é possível fazer a visualização deste tópico 
 
 
-  
+![github-small](https://i.imgur.com/zDmDJ5G.jpg)
 
 
 
-No terminal 4
+>> No terminal 4
 
 
 
@@ -202,14 +199,14 @@ $ kafka-console-producer --broker-list localhost:29092 --topic calor
 Escrevendo mensagens no produtor para posteriormente serem lidas no consumidor
 
 
-  
+![github-small](https://i.imgur.com/cpgeW6D.jpg)
 
 
 
 CONSUMIDOR
 
 
-No terminal 5
+>> No terminal 5
 
 
 Com as mensagens já enviadas pelo producer, será realizada a leitura das mesmas pelo consumidor.
@@ -234,7 +231,7 @@ $ kafka-console-consumer --bootstrap-server localhost:29092 --topic calor --from
 
 
   
-
+![github-small](https://i.imgur.com/JFT2EdV.jpg)
 
 
 PARANDO UM DOS NÓS
@@ -252,13 +249,14 @@ $ sudo docker ps
 O nó escolhido foi o kafka_kafka_3_1
   
 
+![github-small](https://i.imgur.com/EqdBUtM.jpg)
 
 
 Subindo o container kafka_kafka_3_1 novamente e parando o kafka_kafka_1_1
 
 
   
-
+![github-small](https://i.imgur.com/P6V1ZNZ.jpg)
 
 
 Agora para ver se as mensagens enviadas anteriormente continuam no container será acessado o container kafka_kafka_3_1, assim garantindo que nada foi perdido.
@@ -270,7 +268,7 @@ Comando para exibir as mensagens enviadas
 $ kafka-console-consumer --bootstrap-server localhost:29092 --topic calor --from-beginning  
 
 
-  
+![github-small](https://i.imgur.com/eEDRuou.jpg)
 
 
 
@@ -293,7 +291,7 @@ Escrevendo dentro do container do kafka uma mensagem em um arquivo
 
 
   
-
+![github-small](https://i.imgur.com/HCcFxjS.jpg)
 
 
 Agora com o arquivo criado, é realizado um comando cat do arquivo passando uma operação de producer, para escrever a mensagem contida no arquivo no kafka.
@@ -308,7 +306,7 @@ Essas mensagens podem ser lidas em outro terminal com o comando a seguir
 $ kafka-console-consumer --bootstrap-server localhost:29092 --topic calor --from-beginning  
 
 
-  
+![github-small](https://i.imgur.com/c5czNoX.jpg)
 
 
 
@@ -321,7 +319,7 @@ Exportando todas as mensagens do tópico calor para dentro de um arquivo chamado
 $ kafka-console-consumer --topic calor --bootstrap-server localhost:29092 --from-beginning > new-messages.txt
   
 
-
+![github-small](https://i.imgur.com/TBDn86Y.jpg)
 
 
 
@@ -334,7 +332,7 @@ Com o comando ls é possível ver os arquivos que estão dentro do container
 $ ls
   
 
-
+![github-small](https://i.imgur.com/qJpfCuo.jpg)
 
 
 
@@ -343,5 +341,10 @@ Pode ser feita a verificação conteúdo do arquivo exportado com o seguinte com
 
 $ cat new-messages.txt
 
+![github-small](https://i.imgur.com/bZzd5lY.jpg)
 
-Link do Google Docs com os prints organizados https://docs.google.com/document/d/1-xcMv8jMMeaUGYY_2p2dXJ9Thy9C6pMR1ETr1xEP7JQ/edit?usp=sharing
+Lendo as mensagens contidas no kafka que foram adicionadas pelos arquivos com o comando cat, para verificar se o comando cat dos arquivos exportados estão corretos.
+
+![github-small](https://i.imgur.com/mCx70lm.jpg)
+
+Link do Google Docs com os prints https://docs.google.com/document/d/1-xcMv8jMMeaUGYY_2p2dXJ9Thy9C6pMR1ETr1xEP7JQ/edit?usp=sharing
