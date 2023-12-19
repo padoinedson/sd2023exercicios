@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra-container
+    ports:
+      - "9040:9040"
+    environment:
+      - MAX_HEAP_SIZE=2G
+      - HEAP_NEWSIZE=1G
+    volumes:
+      - /path/to/local/data:/var/lib/cassandra
