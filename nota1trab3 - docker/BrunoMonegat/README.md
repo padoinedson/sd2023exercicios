@@ -1,157 +1,84 @@
-﻿# Docker - Apache Server
+﻿# Mosquitto
 
 ## Instalação no Host
-Instale o package do Apache Server:
+
+Atualize od pacotes:
 ```bash
-$ sudo apt install apache2
+$ sudo apt update
 ```
 
-Inicialize o serviço do servidor:
+Instale o Mosquitto:
 ```bash
-$ sudo systemctl start apache2
+$ sudo apt install mosquito mosquitto-clients
 ```
 
-Abra o arquivo de configurações do servidor em um editor de texto:
+Inicie o serviço Mosquitto:
 ```bash
-$ sudo vim /etc/apache2/sites-available/000-default.conf
+$ sudo service mosquitto start
 ```
 
-Localize a seguinte linha no arquivo:
-```xml
-<VirtualHost *:80>
-```
-
-Altere o port padrão de 80 para 8080 e salve o arquivo:
-```xml
-<VirtualHost *:8080>
-```
-> O port 8080 é um port alternativo ao port 80 para serviços HTTP, ele será utilizado para impedir possíveis conflitos com outros serviços usando o port 80.
-
-Reinicie o serviço do servidor:
+Verifique o status do serviço Mosquitto:
 ```bash
-$ sudo systemctl restart apache2
+$ sudo service mosquitto status
 ```
-
-Teste o servidor acessando: http://localhost:8080 
-> O diretório padrão onde o  Apache Server busca o arquivo index.html é **/var/www/html**
 
 ## Instalação com Dockerfile
-Crie um diretório raiz para o projeto e acesse-o:
-```bash
-$ mkdir apache_project
-$ cd apache_project
-```
-> A partir de agora, todos os passos seguintes deverão ser feitos dentro desse diretório.
- 
-Crie um arquivo chamado **Dockerfile**:
-```bash
-$ touch Dockerfile
-```
 
 Através de um editor de texto, adicione o seguinte trecho ao arquivo Dockerfile:
 ```dockerfile
-FROM httpd:latest
-COPY ./public-html/ /usr/local/apache2/htdocs/
+FROM eclipse-mosquitto:latest
 ```
 
-Crie um diretório para os arquivos HTML, ele deverá ter o nome igual ao especificado após o COPY no Dockerfile:
+Construir a imagem a partir do Dockerfile:
 ```bash
-$ mkdir public-html
+$ sudo docker build -t meu-mosquitto-image .
 ```
-> Após o container ser iniciado, esse diretório será montado para dentro do container, no diretório /usr/local/apache2/htdocs/
 
-Adicione um arquivo **index.html** dentro desse diretório:
+Criar e iniciar um container: 
 ```bash
-$ touch public-html/index.html
+$ sudo docker run -d --name meu-mosquitto-container -p 1883:1883 -p 9001:9001 meu-mosquitto-image
 ```
 
-Através de um editor de texto, adicione o seguinte trecho ao arquivo index.html:
-```html
-<html>
-  <body>
-	<h1>Hello, World!</h1>
-  </body>
-</html>
-```
-
-Compile a imagem do container:
+Verifique se o container está ativo: 
 ```bash
-$ docker build -t my-apache2 .
+$ sudo docker ps
 ```
-
-Execute o container:
-```bash
-$ docker run -dit --name my-running-app -p 8080:80 my-apache2
-```
-
-Teste o servidor acessando: http://localhost:8080 
 
 ## Instalação com Docker-Compose 
-Crie um diretório raiz para o projeto e acesse-o:
-```bash
-$ mkdir apache_project
-$ cd apache_project
-```
-> A partir de agora, todos os passos seguintes deverão ser feitos dentro desse diretório.
- 
-Crie um arquivo chamado **docker-compose.yml**:
-```bash
-$ touch docker-compose.yml
-```
 
-Através de um editor de texto, adicione o seguinte trecho ao arquivo docker-compose.yml:
+Através de um editor de texto, crie e adicione o seguinte trecho ao arquivo docker-compose.yml:
 ```yml
 version: '3'
 
 services:
-  apache:
-    image: httpd:latest
+  mosquitto:
+    image: eclipse-mosquitto:latest
     ports:
-      - "8080:80"
-    volumes:
-      - ./public-html:/usr/local/apache2/htdocs/
-```
-
-Crie um diretório para os arquivos HTML, ele deverá ter o nome igual ao especificado em volumes, no docker-compose.yml:
-```bash
-$ mkdir public-html
-```
-> Durante a sua execução, esse diretório funcionará como uma interface entre o host e container, sendo montado ao diretório /usr/local/apache2/htdocs/
-
-Adicione um arquivo **index.html** dentro desse diretório:
-```bash
-$ touch public-html/index.html
-```
-
-Através de um editor de texto, adicione o seguinte trecho ao arquivo index.html:
-```html
-<html>
-  <body>
-	<h1>Hello, World!</h1>
-  </body>
-</html>
+      - "1883:1883"
+      - "9001:9001"
 ```
 
 Execute o container:
 ```bash
-$ docker-compose up -d
+$ sudo docker-compose up -d
 ```
-> A flag -d executa o container em background.
 
-Teste o servidor acessando: http://localhost:8080
+Verifique se o container está ativo: 
+```bash
+$ sudo docker ps
+```
 
-## Testando o Servidor
-- Executando o comando **docker run** sem Dockerfile nem docker-compose:
-![](run_default.png)
+## Testando o Serviço
 
-- Criando o container com **Dockerfile**:
-![](run_dockerfile_0.png)
-![](run_dockerfile_1.png)
+Com o container ja ativo:
 
-- Criando o container com **docker-compose**:
-![](run_docker-compose.png)
+Abra um terminal e execute: 
+```bash
+$ sudo docker exec -it meu-mosquitto-container mosquitto_sub -h localhost -t teste
+```
 
-- Checando o status do servidor e os últimos logs de acesso de fora do container, através do comando **docker exec**:
-![](docker_exec_0.png)
-![](docker_exec_1.png)
-> Talvez seja necessário alterar algumas configurações do servidor para executar esses comandos!
+Abra um segundo terminal e execute: 
+```bash
+$ sudo docker exec -it meu-mosquitto-container mosquitto_pub -h localhost -t teste -m "Olá, Mosquitto!"
+```
+

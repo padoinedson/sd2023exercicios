@@ -103,3 +103,12 @@ Rafaela Londero
 - 10  
 - 10
 
+Renan L. Dambrós
+- 23    eth.estimateGas:
+- 10  
+- 10
+
+ Augusto Eduardo Sisti
+- 25    personal.listAccounts
+- 10  
+- 10

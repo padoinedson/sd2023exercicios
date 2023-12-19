@@ -78,6 +78,31 @@ Guilherme Bonfada
 - 10
 
 
+Guilherme Eckhardt
+- 23    Consumir mensagens a partir 
+- 10
+- 10
 
+
+Vinicius Smaniotto Goulart
+- 23   mostra a posição de todos os consumidores dentro de um grupo de consumidores e a defasagem do consumidor ao final da adesão  
+- 10
+- 10
+
+Rafaela Londero
+- 21     cat mensagem.txt | kafka-console-producer 
+- 10
+- 10
+
+Augusto Eduardo Sisti
+- 21      Gerador de Mensagens com Script Python
+- 10
+- 10
+
+
+Gabriel Fischer Burmann
+- 20       "key.separator=-"
+- 10
+- 10
 
 000003043
