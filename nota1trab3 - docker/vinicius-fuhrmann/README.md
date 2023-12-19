@@ -27,7 +27,9 @@ Crie um arquivo Dockerfile com o conteúdo abaixo:
 ##### -> Verificar o status do contêiner: docker ps
 
 ![](dockerfile.png)
-![Implementar cqlsh](dockerfile1.png)
+
+### Implementar cqlsh
+![](dockerfile1.png)
 
 ### 3.Instalação com Docker-Compose
 
@@ -55,7 +57,9 @@ Criação do arquivo docker-compose.yml com o conteúdo abaixo:
 ##### -> Verifique se o container foi criado com sucesso: docker ps -a
 
 ![](compose.png)
-![Implementar cqlsh](compose1.png)
+
+### Implementar cqlsh
+![](compose1.png)
 
 
 
