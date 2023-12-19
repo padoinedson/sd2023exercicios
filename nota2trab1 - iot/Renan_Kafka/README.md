@@ -105,7 +105,7 @@ sudo docker-compose ps
 
 9. Acesse o container:
 ```
-sudo docker exec -it nome_pasta_kafka2_1 bash
+sudo docker exec -it kafka_kafka2_1 bash
 ```
 
 10. Crie um tópico:
@@ -124,19 +124,19 @@ kafka-topics.sh --list --bootstrap-server kafka1:9093
 
 12. Envie dados para o kafka:
 ```
-kafka-console-producer.sh --topic nome_topico --bootstrap-server kafka1:9093
+kafka-console-producer.sh --topic animes --bootstrap-server kafka1:9093
 ```
 
 ![Envio dados Kafka](images/Todos_os_nodos_on_1.png)
 
 13. Abra outro terminal:
 ```
-sudo docker exec -it nome_pasta_kafka2_1 bash
+sudo docker exec -it kafka_kafka2_1 bash
 ```
 
 14. Use o comando para consumir as mensagens enviadas:
 ```
-kafka-console-consumer.sh --topic nome_topico --from-beginning --bootstrap-server kafka1:9093
+kafka-console-consumer.sh --topic animes --from-beginning --bootstrap-server kafka1:9093
 ```
 
 ![Consumo mensagens](images/Todos_os_nodos_on_2.png)
@@ -144,7 +144,7 @@ kafka-console-consumer.sh --topic nome_topico --from-beginning --bootstrap-serve
 - Produtor e Consumidor com um dos Nodos OFF.
 1. Derrube um nó:
 ```
-sudo docker stop nome_pasta_kafka2_1
+sudo docker stop kakfa_kafka2_1
 ```
 
 2. Verifique os containers em execução
@@ -154,11 +154,11 @@ sudo docker-compose ps
 
 3. Entre em outro container e veja se as mensagens continuam lá:
 ```
-sudo docker start nome_pasta_kafka1_1
+sudo docker start kafka_kafka1_1
 ```
 
 ```
-kafka-console-consumer.sh --topic nome_topico --from-beginning --bootstrap-server kafka1:9093
+kafka-console-consumer.sh --topic animes --from-beginning --bootstrap-server kafka1:9093
 ```
 
 ![Nodos off 1](images/Um_nodo_off_1.png)
@@ -169,7 +169,7 @@ kafka-console-consumer.sh --topic nome_topico --from-beginning --bootstrap-serve
 
 1. Inicie o nó:
 ```
-sudo docker start nome_pasta_kafka2_1
+sudo docker start kafka_kafka2_1
 ```
 
 2. Verifique os containers em execução
@@ -179,11 +179,11 @@ sudo docker-compose ps
 
 3. Entre em outro container e veja se as mensagens continuam lá:
 ```
-sudo docker exec -it nome_pasta_kafka2_1 bash
+sudo docker exec -it kafka_kafka2_1 bash
 ```
 
 ```
-kafka-console-consumer.sh --topic nome_topico --from-beginning --bootstrap-server kafka1:9093
+kafka-console-consumer.sh --topic animes --from-beginning --bootstrap-server kafka1:9093
 ```
 
 ![Novo nodo 1](images/Novo_nodo_1.png)
@@ -192,7 +192,7 @@ kafka-console-consumer.sh --topic nome_topico --from-beginning --bootstrap-serve
 
 - Consumidor com leitura em grupo
 ```
-kafka-console-consumer.sh --topic nome_topico --bootstrap-server kafka1:9093 --from-beginning --group otaku
+kafka-console-consumer.sh --topic animes --bootstrap-server kafka1:9093 --from-beginning --group otaku
 ```
 ![Consumidor em grupo](images/Consumidor_em_grupo.png)
 
