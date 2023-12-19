@@ -173,7 +173,7 @@ Terminal recebeu em tempo real as postagens
 
 `exit` para sair do contêiner
 
-## Derrubar 1 nó, para testede alteração:
+## Derrubar 1 nó, para teste de alteração:
 Derrubar nó:
 ```
 sudo docker stop kafka_kafka-1_1
@@ -261,7 +261,8 @@ Atletico MG
 ![Alt text](<producer msg-1.jpeg>)
 ![Alt text](<Consumer msg-1.jpeg>)
 ![Alt text](<Consumer msg 2-1.jpeg>)
----------------------------------------------------------------------------------------
+
+
 # Novidades
 
 ## Gerador de Mensagens com Script Python
@@ -341,7 +342,7 @@ sudo docker-compose down
 ```
 
 ## Print Git
-
+![Alt text](<git.png>)
 
 
 
