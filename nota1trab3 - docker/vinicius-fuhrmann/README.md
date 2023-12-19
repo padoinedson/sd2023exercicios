@@ -26,6 +26,7 @@ Crie um arquivo Dockerfile com o conteúdo abaixo:
 
 ##### -> Verificar o status do contêiner: docker ps
 
+### Em funcionamento
 ![](dockerfile.png)
 
 ### Implementar cqlsh
@@ -56,6 +57,7 @@ Criação do arquivo docker-compose.yml com o conteúdo abaixo:
 ##### -> Execução do Docker Compose: docker-compose up -d
 ##### -> Verifique se o container foi criado com sucesso: docker ps -a
 
+### Em funcionamento
 ![](compose.png)
 
 ### Implementar cqlsh
