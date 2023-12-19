@@ -1,0 +1,28 @@
+FROM ethereum/client-go:release-1.10
+
+EXPOSE 8551
+EXPOSE 8552
+EXPOSE 8553
+EXPOSE 8554
+EXPOSE 8555
+EXPOSE 8556
+
+EXPOSE 30305
+EXPOSE 30305/tcp
+EXPOSE 30305/udp
+
+EXPOSE 30306
+EXPOSE 30306/tcp
+EXPOSE 30306/udp
+
+EXPOSE 30307
+EXPOSE 30307/tcp
+EXPOSE 30307/udp
+
+COPY ./genesis.json /root/
+
+RUN mkdir ~/node-1
+RUN mkdir ~/node-2
+RUN mkdir ~/node-3
+
+ENTRYPOINT ["sh"]
