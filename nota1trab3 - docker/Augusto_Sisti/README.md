@@ -108,6 +108,7 @@ $ sudo docker-compose up
 $ nano teste.py
 ```
 ![Alt text](Script.jpeg)
+
 2- Rodar o script
 ```
 $ pypy teste.py
