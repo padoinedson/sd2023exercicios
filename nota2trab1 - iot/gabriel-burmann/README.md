@@ -110,5 +110,8 @@ Enquanto no consumidor:
 
 <img src="./img/consumer_mtg.png"/>
 
-Ele realiza um filtro no grep "2023", onde ele busca por ano em que a coleção foi lançada. 
+Ele realiza um filtro no grep "2023", onde ele busca por ano em que a coleção foi lançada.
 
+## Print do git
+ 
+<img src="./img/GIT.png"/>
