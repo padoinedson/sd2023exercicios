@@ -1,7 +1,0 @@
-version: '2'
-services:
-    pypy:
-        image: gutopy:2.2
-        container_name: guto-py
-        stdin_open: true
-        tty: true
