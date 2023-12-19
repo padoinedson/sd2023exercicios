@@ -311,4 +311,9 @@ Minerar para Efetuar as Transações e a Fila Vazia
 Fila vazia
 ![Alt text](<Extra - Fila Vazia-1.jpeg>)
 
-Commit
+## Prints Git
+![Alt text](<git1.png>)
+![Alt text](<git2.png>)
+![Alt text](<git3.png>)
+
+
