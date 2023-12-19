@@ -90,3 +90,4 @@ Como podemos ver no print, existe a palavra jett 3x.
 <img src="imagens/resposta3.png">
 
 Print Git: 
+<img src="imagens/printdogit.png">
