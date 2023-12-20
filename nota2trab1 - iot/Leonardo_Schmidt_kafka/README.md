@@ -30,7 +30,7 @@
 
 6. Crie um arquivo docke-compose.yml e cole o seguinte conteúdo:
 
-    ```bash
+    ```yaml
     version: '2'
 services:
   zookeeper:
