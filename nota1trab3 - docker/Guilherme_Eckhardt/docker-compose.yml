@@ -1,0 +1,5 @@
+services:
+  influxdb:
+    image: influxdb
+    ports:
+      - "8090:8086"
