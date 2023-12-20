@@ -350,3 +350,12 @@ Vamos utilizar o comando:
 Para obter o número de blocos mais recentes da Blockchain Ethereum
 
 ![novidade](./novidade.jpg)
+
+# COMANDOS GIT
+
+GIT ADD
+GIT COMMIT
+GIT PUSH
+
+![git](./ComandosGit.png)
+
