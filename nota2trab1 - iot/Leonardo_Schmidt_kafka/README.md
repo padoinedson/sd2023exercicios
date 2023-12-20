@@ -32,59 +32,59 @@
 
     ```yaml
     version: '2'
-services:
-  zookeeper:
-    image: wurstmeister/zookeeper:latest
-    ports:
-     - "2181:2181"
+    services:
+      zookeeper:
+        image: wurstmeister/zookeeper:latest
+        ports:
+         - "2181:2181"
 
-  kafka1:
-    image: wurstmeister/kafka:latest
-    ports:
-     - "9292:9292"
-    expose:
-     - "9292"
-    environment:
-      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka1:9093,OUTSIDE://localhost:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
-      KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
-      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
-      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
-      KAFKA_BROKER_ID: 1
-      KAFKA_NUM_PARTITIONS: 3
-      KAFKA_REPLICATION_FACTOR: 3
+      kafka1:
+        image: wurstmeister/kafka:latest
+        ports:
+         - "9292:9292"
+        expose:
+         - "9292"
+        environment:
+          KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka1:9093,OUTSIDE://localhost:9092
+          KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+          KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
+          KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+          KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+          KAFKA_BROKER_ID: 1
+          KAFKA_NUM_PARTITIONS: 3
+          KAFKA_REPLICATION_FACTOR: 3
 
-  kafka2:
-    image: wurstmeister/kafka:latest
-    ports:
-     - "9494:9494"
-    expose:
-     - "9494"
-    environment:
-      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka2:9095,OUTSIDE://localhost:9094
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
-      KAFKA_LISTENERS: INSIDE://0.0.0.0:9095,OUTSIDE://0.0.0.0:9094
-      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
-      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
-      KAFKA_BROKER_ID: 2
-      KAFKA_NUM_PARTITIONS: 3
-      KAFKA_REPLICATION_FACTOR: 3
+      kafka2:
+        image: wurstmeister/kafka:latest
+        ports:
+         - "9494:9494"
+        expose:
+         - "9494"
+        environment:
+          KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka2:9095,OUTSIDE://localhost:9094
+          KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+          KAFKA_LISTENERS: INSIDE://0.0.0.0:9095,OUTSIDE://0.0.0.0:9094
+          KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+          KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+          KAFKA_BROKER_ID: 2
+          KAFKA_NUM_PARTITIONS: 3
+          KAFKA_REPLICATION_FACTOR: 3
 
-  kafka3:
-    image: wurstmeister/kafka:latest
-    ports:
-     - "9696:9696"
-    expose:
-     - "9696"
-    environment:
-      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka3:9097,OUTSIDE://localhost:9096
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
-      KAFKA_LISTENERS: INSIDE://0.0.0.0:9097,OUTSIDE://0.0.0.0:9096
-      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
-      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
-      KAFKA_BROKER_ID: 3
-      KAFKA_NUM_PARTITIONS: 3
-      KAFKA_REPLICATION_FACTOR: 3
+      kafka3:
+        image: wurstmeister/kafka:latest
+        ports:
+         - "9696:9696"
+        expose:
+         - "9696"
+        environment:
+          KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka3:9097,OUTSIDE://localhost:9096
+          KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+          KAFKA_LISTENERS: INSIDE://0.0.0.0:9097,OUTSIDE://0.0.0.0:9096
+          KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+          KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+          KAFKA_BROKER_ID: 3
+          KAFKA_NUM_PARTITIONS: 3
+          KAFKA_REPLICATION_FACTOR: 3
     ```
 
 7. Suba o docker-compose:
