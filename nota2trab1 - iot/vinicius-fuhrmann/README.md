@@ -11,10 +11,15 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
 
 ### 1. Instalações
 
- ->Fazer o download do kafka: wget https://archive.apache.org/dist/kafka/3.3.1/kafka_2.13-3.3.1.tgz
+ ->Fazer o download do kafka:
+ ```bash
+ wget https://archive.apache.org/dist/kafka/3.3.1/kafka_2.13-3.3.1.tgz
+ ```
  
- ->Descompactar o arquivo: tar -xzf kafka_2.13-3.3.1.tgz
-
+ ->Descompactar o arquivo: 
+ ```bash
+ tar -xzf kafka_2.13-3.3.1.tgz
+```
 #### Criar arquivo chamado "docker-compose.yml" com o seguinte conteudo:
 
 	version: '3'
@@ -98,8 +103,10 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
 
 ### 2. Execução
 
- ->Iniciar o serviço: docker compose up -d
- 
+ ->Iniciar o serviço: 
+ ```bash
+ docker compose up -d
+ ```
  ![](Execute.png)
  
  ->Acessar o kafka-ui na url http://localhost:8500
