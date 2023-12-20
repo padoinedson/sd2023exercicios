@@ -160,8 +160,8 @@
 14. Agora o produtor está soltando mais conteudo e ambos estão recebendo:
 
    ![Produtor](images/produtor.png)
-   ![Consumidor 1](images/consumidor2.png)
-   ![Consumidor 2](images/consumidor3.png)
+   ![Consumidor 1](images/consumidor1.png)
+   ![Consumidor 2](images/consumidor2.png)
    
 #### Leitura em grupo
 
@@ -189,9 +189,3 @@
 
 ![Add e commit dos arquivos](images/git-addecommit.png)
 ![Push dos arquivos](images/git-push.png)
-
-
-
-
-
-
