@@ -1,9 +1,7 @@
 ## Trabalho em IoT: Instalação do Apache Kafka, Zookeeper e Kafka UI
-
 ------------
 
-
-Aluno: Vinicius Krupp Fuhrmann
+#### Aluno: Vinicius Krupp Fuhrmann
 
 ------------
 
@@ -16,7 +14,7 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
  
  ->Descompactar o arquivo: tar -xzf kafka_2.13-3.3.1.tgz
 
-##### Criar arquivo chamado "docker-compose.yml" com o seguinte conteudo:
+#### Criar arquivo chamado "docker-compose.yml" com o seguinte conteudo:
 
 	version: '3'
 	services:
@@ -133,6 +131,7 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
 
 ### 3. Novidade
  ->Utilização do Kafka UI
+ 
  ->Análise de informações dos tópicos
  
  ![](Analys.png)
