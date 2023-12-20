@@ -1,359 +1,206 @@
-# Bianca Carolina Dahmer
-
-## Criação para armazenar dados Blockchain
-Esta pasta será compartilhada com o container. 
-Para isso utilizei os comandos abaixo:
-
-    $ cd ~
-    $ mkdir ethereum
+# BIANCA CAROLINA DAHMER
 
-## Arquivo salvo com o nome **genesis.json** dentro da pasta **Etherum**
-
-    {
-        "config": {
-        "chainId": 2023,
-        "homesteadBlock": 0,
-        "eip150Block": 0,
-        "eip155Block": 0,
-        "eip158Block": 0,
-        "byzantiumBlock": 0,
-        "constantinopleBlock": 0,
-        "petersburgBlock": 0,
-        "istanbulBlock": 0
-        },
-        "alloc": {
-        "0x873fdF11A26934Cc21FaB49c1d9Aae5b7Ea5c94f": {
-        "balance": "1000"
-        },
-        "0x3E7da3B7d0547761796A91F7bca917Db35e95A31": {
-        "balance": "2000"
-        },
-        "0x012927e15d064d3867B92872843e347376E98014": {
-        "balance": "3000"
-        },
-        "0xYourMinerAddress": {
-        "balance": "150" 
-        }
-        },
-        "coinbase": "0xYourMinerAddress",
-        "difficulty": "0x20000",
-        "extraData": "",
-        "gasLimit": "0x2fefd8",
-        "nonce": "0x0000000000000111",
-        "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "timestamp": "0x00"
-    }
+## KAFKA
 
-O arquivo genesis.json foi configurado para a criação de dois usuários com os valores (1000, 2000, 3000) após a mineração ele será recompensado com um valor de 150 bitcoins. "NOVIDADE ACRESCENTADA AO ARQUIVO GENESIS"
+### INSTALAÇÃO DOCKER/COMPOSE
 
-## Download da Imagem
-Neste trabalho foi utilizada a mesma imagem usada em aula. 
-Link da imagem:  https://hub.docker.com/r/ethereum/client-go:release-1.10
+Primeiro vamos instalar o Docker e o Docker Compose com os seguintes comandos abaixo:
 
-    $ sudo docker pull ethereum/client-go:release-1.10
+    $ sudo apt install docker
 
-## Executar o container
-No Terminal 1 - Gerenciar Docker
+    $ sudo apt install docker-compose
 
-    $ sudo docker run -d --name ethereum-node -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30302:30302 -it --entrypoint=/bin/sh ethereum client-go:release-1.10
+### DOWNLOAD KAFKA
 
-Para rodar o Container
+    $ wget https://archive.apache.org/dist/kafka/3.3.1/kafka_2.13-3.3.1.tgz
 
-    $ sudo docker start ethereum-node
-    $ sudo docker ps
+Vamos verificar se deu certo a instalação do Kafka. Para isso, basta dar o comando abaixo:
 
-Caso você deseja excluir o Container
+    $ ls -l
 
-    $ sudo docker stop ethereum-node
-    $ sudo docker rm ethereum-node  
+Descompacte a pasta utilizando o comando abaixo:
 
-Agora vamos acessar o container no **Terminal 2** e confirmar se o arquivo genesis.json está no local
+    $ tar -xzf kafka_2.13-3.3.1.tgz
 
-    $ sudo docker exec -it ethereum-node sh
-    $ cd /root
-    $ ls
-    $ cat genesis.json
+Caso queira remover os arquivos ou diretórios, escreva o comando abaixo:
 
-Agora vamos acessar o container no **Terminal 3** e confirmar se o arquivo genesis.json está no local
+    $ rm kafka_2.13-3.3.1.tgz
 
-    $ sudo docker exec -it ethereum-node sh
-    $ cd /root
-    $ ls
-    $ cat genesis.json
+## PASTA KAFKA
 
-Agora vamos acessar o container no **Terminal 4** e confirmar se o arquivo genesis.json está no local
+Agora vamos criar uma pasta para o Kafka.
 
-    $ sudo docker exec -it ethereum-node sh
-    $ cd /root
-    $ ls
-    $ cat genesis.json
+    $ mkdir Kafka
 
-# CRIAR CONTAS
-Agora iremos realizar o cadastro das contas
+Vamos entrar na pasta
 
-No **Termina 2** execute o comando abaixo:                         
-É importante ressaltar que você anote e guarde a sua **SENHA** e a **CHAVE PUBLICA** em um bloco de notas!
+    # cd Kafka
 
-    $ geth account new --datadir ~/bia1
+## ARQUIVO DOCKER-COMPOSE.YML
 
-![Bianca1](./bianca1.jpg)
+Para cirar um arquivo docker compose basta atribuir o comando abaixo no terminal.
 
-No **Termina 3** execute o comando abaixo:                         
-É importante ressaltar que você anote e guarde a sua **SENHA** e a **CHAVE PUBLICA** em um bloco de notas!
+    $ nano docker-compose.yml
 
-    $ geth account new --datadir ~/bia2
+Logo após criar o arquivo compose vamos atribuir a configuração abaixo dentro do arquivo yml.
 
-![Bianca2](./bianca2.jpg)
+    services:
+        zookeeper:
+            image: wurstmeister/zookeeper:latest
+            ports:
+              - "2181:2181"
 
-No **Termina 4** execute o comando abaixo:                         
-É importante ressaltar que você anote e guarde a sua **SENHA** e a **CHAVE PUBLICA** em um bloco de notas!
+         kafka1:
+            image: wurstmeister/kafka:latest
+             ports:
+                - "9292:9292"
+            expose:
+                - "9292"
+            environment:
+                KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka1:9093,OUTSIDE://localhost:9092
+                KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+                KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
+                KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+                KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+                KAFKA_BROKER_ID: 1
+                KAFKA_NUM_PARTITIONS: 3
+                KAFKA_REPLICATION_FACTOR: 3
 
-    $ geth account new --datadir ~/bia3
+    kafka2:
+        image: wurstmeister/kafka:latest
+        ports:
+             - "9494:9494"
+    expose:
+         - "9494"
+    environment:
+        KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka2:9095,OUTSIDE://localhost:9094
+        KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+        KAFKA_LISTENERS: INSIDE://0.0.0.0:9095,OUTSIDE://0.0.0.0:9094
+        KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+        KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+        KAFKA_BROKER_ID: 2
+        KAFKA_NUM_PARTITIONS: 3
+        KAFKA_REPLICATION_FACTOR: 3
 
-![Bianca3](./bianca3.jpg)
+    kafka3:
+        image: wurstmeister/kafka:latest
+        ports:
+            - "9696:9696"
+    expose:
+        - "9696"
+    environment:
+        KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka3:9097,OUTSIDE://localhost:9096
+        KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+        KAFKA_LISTENERS: INSIDE://0.0.0.0:9097,OUTSIDE://0.0.0.0:9096
+         KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+        KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+        KAFKA_BROKER_ID: 3
+        KAFKA_NUM_PARTITIONS: 3
+        KAFKA_REPLICATION_FACTOR: 3
 
-Para visualização das chaves privadas das contas, execute o comando abaixo
+Salve o arquivo e inicie os serviços do Docker Compose. Logo após, confirme que os serviços entrarem em execução.
 
-    $ cat /root/bia1/keystore/nome_do_arquivo_indicado_na_criacao
+    $ sudo docker-compose up -d
+    $ sudo docker-compose ps
 
-## Atualize as chaves públicas das contas criadas no arquivo genesis.json
-No **Terminal 1** edite os campos alloc (atualizar as chaves públicas dos usuários criados: "chave publica": "valor inicial wei/eth")
+Vamos acessar o container
 
-    $ cd ~
-    $ nano ethereum/genesis.json
+    $ sudo docker exec -it kafka_kafka2_1 bash
 
-    "alloc": {
-    "0xEed8E55794C5680D0c631597e02F6ce2B75AF631": {
-      "balance": "1000"
-    },
-    "0x95952D7A666Ad834EfcE2357f5a31F530329bA3F": {
-      "balance": "2000"
-    },
-     "0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019": {
-      "balance": "3000"
-    },
-    "0x0000000000000000000000000000000000000000": {
-      "balance": "150"} 
-    }
+## CRIAÇÃO DO TÓPICO
 
-## Conferir arquivo genesis.json
-No **Terminal 2**
+Para criar um tópico basta seguir o seguinte comando, irei criar o Tópico "bianca". Mas você poderá criar o tópico com qualquer nome, basta substituir o "bianca" por outra coisa.
 
-    $ cat /root/genesis.json
+    $ kafka-topics.sh --create --topic bianca --partitions 3 --replication-factor 3 --bootstrap-server kafka1:9093
 
-# NÓS
-Para inicializar os nós na rede
+![topico1](./topico1.png)
 
-No **TERMINAL 2**
+Caso deseja visualizar o tópico criado, ou a lista de tópicos, basta seguir o seguinte comando abaixo:
 
-    $ cd /root
-    $ geth --datadir /root/bia1/ init genesis.json
+    $ kafka-topics.sh --list --bootstrap-server kafka1:9093
 
-No **TERMINAL 3**
+## PRODUTOR E CONSUMIDOR (nodos on)
 
-    $ cd /root
-    $ geth --datadir /root/bia2/ init genesis.json
+Primeiro iremos encaminar os dados para o Kafka, para isso siga o comando abaixo:
 
-No **TERMINAL 4**
+    $ kafka-console-producer.sh --topic bianca --bootstrap-server kafka1:9093
 
-    $ cd /root
-    $ geth --datadir /root/bia3/ init genesis.json
+Não esqueça de trocar o nome "bianca" pelo nome do tópico que você criou.
 
-## Colocar os nós da rede para rodar
-No **TERMINAL 2**                
-Anotar e guardar o seu enode!
+![envio](./envio.png)
 
-    $ geth --datadir ~/bia1 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
+Agora vamos abrir um segundo terminal. E digitar o seguinte comando nele, para executar um contêiner Docker.
 
-No **TERMINAL 3**                          
-Anotar e guardar o seu enode!
+    $ sudo docker exec -it kafka_kafka2_1 bash
 
-    $ geth --datadir ~/bia2 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
+Logo após vamos utilizar o comando,
 
-No **TERMINAL 4**                         
-Anotar e guardar o seu enode!
+    $ kafka-console-consumer.sh --topic animes --from-beginning --bootstrap-server kafka1:9093
 
-    $ geth --datadir ~/bia3 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
+Para consumir as mensagens de um tópico no Apache do Kafka a partir da linha de comando.
 
+![consumir](./consumir.png)
 
-Vamos definir a mesma networkid do arquivo **genesis.json** define uma porta diferente para cada nodo --port 30302 vamos usar "--allow-insecure-unlock" para habilitar "unlocking accounts" opção "console" chama o console do "geth"
+## PRODUTOR E CONSUMIDOR (nodos off)
 
-# ADM
-Para visualizar a quantidade de pares 
+Vamos então derrubar um nó utilizando o comando abaixo:
 
-    $ net.peerCount
+    $ sudo docker stop kakfa_kafka2_1
 
-### Para adiciona um par
+E iremos verificar os containers que estão em execução ainda.
 
-    $ admin.addPeer("atualizar com o enode do outro nó");
+    $ sudo docker-compose ps
 
-**Exemplo:**
-    
-    $ admin.addPeer("enode://dbf5fc5b10036895f3eee2dd81eed1ed29c52300e15e250ffbfb00b321f3a2fe7be9b9c00bc716d927d783c91c6a6a2c0aef2da1e397208a19020f52fe764409@127.0.0.1:30303");
+Vamos verificar se as mensagens ainda estão rodando, porém acessando outro container. 
 
-Informando quando colocamos o nó para rodar
+    $ sudo docker start kafka_kafka1_1
+    $ kafka-console-consumer.sh --topic bianca --from-beginning --bootstrap-server kafka1:9093
 
-### Vamos verificar se adicionou os pares
+![container](./container.png)
 
-    $ net.peerCount
+## PRODUTOR E CONSUMIDOR (nodos novos)
 
-### Vamos visualizar as informações sobre os pares
+Vamos iniciar o nó primeiro e verificar se está executando.
 
-    $ admin.peers
+    $ sudo docker start kafka_kafka2_1
+    $ sudo docker-compose ps
 
-### Visualizar as informações sobre os nós 
-**genesis** e **head** ainda são os mesmos
+Iremos entrar em outro container e verificar se as mensagens permanecem rodando mesmo em um novo nó.
 
-    $ admin.nodeInfo
+    $ sudo docker exec -it kafka_kafka2_1 bash
+    $ kafka-console-consumer.sh --topic bianca --from-beginning --bootstrap-server kafka1:9093
 
-# CONTAS
-**Para exibir as contas**
+![NovoNodo](./NovoNodo.png) 
 
-    $ eth.accounts
+## CONSUMIDOR COM LEITURA EM GRUPO
 
-LEMBRANDO que em cada terminal temos uma conta
+Vamos utilizar o comando abaixo para iniciar um consumidor de console Kafka
 
-## Vamos verificar os saldos das contas
+    $ kafka-console-consumer.sh --topic bianca --bootstrap-server kafka1:9093 --from-beginning --group favoritos
 
-    $ eth.getBalance("atualizar com a chave publica")
-
-Exemplo:
-
-        $ eth.getBalance("0xd1a2DdAd9d9Da721ADa7eE7d67731C5cFFd37434")
-
-Uma conta deve ter saldo 1000, 2000 e a outra 3000.
-
-# MINERAR
-### Iniciar a mineração
-
-    $ miner.start(10)
-
-10 indica a quantidade de threads. Verificar o saldo enquanto minera para poder efetivar uma transferência.
-
-### Parar a mineração
-
-    $ miner.stop()
-
-### Para verificar o saldo - conferir os ganhos da mineração
-
-    $ eth.getBalance("0xd1a2DdAd9d9Da721ADa7eE7d67731C5cFFd37434")
-
-### Conferir - genesis e head se não são os mesmos
-
-    $ admin.nodeInfo
-
-# TRANSAÇÃO
-### Vamos verificar o saldo das contas
-
-    $ eth.getBalance("atualizar com a chave publica")
-
-    $ eth.getBalance("0xEed8E55794C5680D0c631597e02F6ce2B75AF631")
-    $ eth.getBalance("0x95952D7A666Ad834EfcE2357f5a31F530329bA3F")
-    $ eth.getBalance("0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019")
-
-### CONTA 1
-
-![Saldo1](./saldo1.jpg)
-
-### CONTA 2 
-
-![Saldo2](./saldo2.jpg)
-
-### CONTA 3
-
-![Saldo3](./saldo3.jpg)
-
-### Vamos liberar a conta para uso
-
-    $ personal.unlockAccount("0xEed8E55794C5680D0c631597e02F6ce2B75AF631")
-    $ personal.unlockAccount("0x95952D7A666Ad834EfcE2357f5a31F530329bA3F")
-    $ personal.unlockAccount("0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019")
-
-### Vamos enviar uma transação 
-
-Transaçaõ da conta 1 para a conta 2
-
-    $ eth.sendTransaction({from:"0xEed8E55794C5680D0c631597e02F6ce2B75AF631", to:"0x95952D7A666Ad834EfcE2357f5a31F530329bA3F", value:1111, gas:21000})
-    
-Transaçaõ da conta 2 para a conta 3
-
-$ eth.sendTransaction({from:"0x95952D7A666Ad834EfcE2357f5a31F530329bA3F", to:"0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019", value:1111, gas:21000})
-
-Transaçaõ da conta 3 para a conta 1
-
-$ eth.sendTransaction({from:"0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019", to:"0xEed8E55794C5680D0c631597e02F6ce2B75AF631", value:1111, gas:21000})
-
-### Vamos verificar o pool de transações
-
-    $ txpool.status
-
-verifique que a transação está pendente {pending: 1, queued: 0}
-
-### Iniciar a mineração
-
-    $ miner.start(10)
-
-### Parar a mineração
-
-    $ miner.stop()
-
-### Vamos verificar o pool de transações
-
-    $ txpool.status
-
-verifique que a transação foi realizada {pending: 1, queued: 0}
-
-### Vamor verificar o novo saldo das contas
-
-    $ eth.getBalance("0xEed8E55794C5680D0c631597e02F6ce2B75AF631")
-    $ eth.getBalance("0x95952D7A666Ad834EfcE2357f5a31F530329bA3F")
-    $ eth.getBalance("0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019")
-
-### Sair do console
-
-    $ exit
-
-### Para criar contas dentro do NÓ
-
-    $ personal.newAccount()
-
-### Para exibir todas as contas
-
-     $ eth.accounts
-
-### Ver o saldo de cada conta
-
-    $ eth.getBalance("0xEed8E55794C5680D0c631597e02F6ce2B75AF631")
-    $ eth.getBalance("0x95952D7A666Ad834EfcE2357f5a31F530329bA3F")
-    $ eth.getBalance("0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019")
-
-# CONTAINER 
-### Parar os containers 
-
-    $ sudo docker stop ethereum-node
-
-### Excluir o container
-
-    $ docker rm ethereum-node
-
-### Excluir a pasta 
-
-    $ cd ~ $ sudo rm -rf ethereum
+![grupo](./grupo.png)
 
 # NOVIDADE
 
-Vamos utilizar o comando:
+Para descrever um grupo de consumidores basta digitar o comando abaixo, não esqueça de alterar o nome "favoritos" pelo qual você deseja.
 
-    $ eth.blockNumber
+    $ kafka-consumer-groups.sh --bootstrap-server localhost:9093 --describe --group favoritos
 
-Para obter o número de blocos mais recentes da Blockchain Ethereum
+![consumidores](./consumidores.png)
 
-![novidade](./novidade.jpg)
+Para deletar um tópico
+
+    $ kafka-topics.sh --bootstrap-server localhost:9093 --delete --topic bianca
+
+![deletetopico](./deletetopico.png)
+
+Para deletar um grupo
+
+    $ kafka-consumer-groups.sh --bootstrap-server localhost:9093 --delete --group favoritos
+
+![deletegrupo](./deletegrupo.png)
 
 # COMANDOS GIT
+### GIT ADD, GIT COMMIT E GIT PUSH
 
-## GIT ADD, GIT COMMIT E GIT PUSH
-
-![git](./ComandosGit.png)
-
+![git](./git.png)
