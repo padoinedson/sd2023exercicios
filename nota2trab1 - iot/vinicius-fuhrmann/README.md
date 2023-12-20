@@ -1,18 +1,19 @@
-### :fa-laptop: Trabalho em IoT: Instalação do Apache Kafka, Zookeeper e Kafka UI
+## Trabalho em IoT: Instalação do Apache Kafka, Zookeeper e Kafka UI
 
 ------------
 
 
-Nome: Vinicius Krupp Fuhrmann
+Aluno: Vinicius Krupp Fuhrmann
 
 ------------
 
 
 Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a utilização do Docker e Docker Compose para a instalação do Apache Kafka, Zookeeper e Kafka UI. Essas ferramentas são essenciais para a criação de um ambiente eficiente e escalável, facilitando o processamento de eventos em tempo real.
 
-#### 1. Instalações
+### 1. Instalações
 
  ->Fazer o download do kafka: wget https://archive.apache.org/dist/kafka/3.3.1/kafka_2.13-3.3.1.tgz
+ 
  ->Descompactar o arquivo: tar -xzf kafka_2.13-3.3.1.tgz
 
 ##### Criar arquivo chamado "docker-compose.yml" com o seguinte conteudo:
@@ -96,13 +97,14 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
 ------------
 
 
-####  2. Execução
+### 2. Execução
 
  ->Iniciar o serviço: docker compose up -d
  
  ![](Execute.png)
  
  ->Acessar o kafka-ui na url http://localhost:8500
+ 
  ->Criar Topico ao clicar em Add a Topic no canto superior direito
 
  ![](CriarTopic.png)
@@ -112,12 +114,15 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
  ![](Topic.png)
  
  ->Criar mensagem
+ 
  ->Clique no botão Produce Message
+ 
  ->Defina os atributos Key e Value
  
  ![](Message.png)
  
  ->Ler menssagem
+ 
  ->Na aba Messages teremos o que foi criado
  
  ![](ViewMessage.png)
@@ -126,7 +131,7 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
 ------------
 
 
-####  3. Novidade
+### 3. Novidade
  ->Utilização do Kafka UI
  ->Análise de informações dos tópicos
  
@@ -137,7 +142,9 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
 ------------
 
 
-####  4. Comandos Git
+### 4. Comandos Git
+
+ ![](Enviar.png)
  
  
  
