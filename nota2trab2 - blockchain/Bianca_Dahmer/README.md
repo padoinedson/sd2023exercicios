@@ -97,21 +97,21 @@ No **Termina 2** execute o comando abaixo:
 
     $ geth account new --datadir ~/bia1
 
-![Bianca1](/bianca1.jpg)
+![Bianca1](./bianca1.jpg)
 
 No **Termina 3** execute o comando abaixo:                         
 É importante ressaltar que você anote e guarde a sua **SENHA** e a **CHAVE PUBLICA** em um bloco de notas!
 
     $ geth account new --datadir ~/bia2
 
-![Bianca2](/bianca2.jpg)
+![Bianca2](./bianca2.jpg)
 
 No **Termina 4** execute o comando abaixo:                         
 É importante ressaltar que você anote e guarde a sua **SENHA** e a **CHAVE PUBLICA** em um bloco de notas!
 
     $ geth account new --datadir ~/bia3
 
-![Bianca3](/bianca3.jpg)
+![Bianca3](./bianca3.jpg)
 
 Para visualização das chaves privadas das contas, execute o comando abaixo
 
@@ -124,16 +124,16 @@ No **Terminal 1** edite os campos alloc (atualizar as chaves públicas dos usuá
     $ nano ethereum/genesis.json
 
     "alloc": {
-    "0x21b539f0E3daBe6967cf105725a2607ad8D1878C": {
+    "0xEed8E55794C5680D0c631597e02F6ce2B75AF631": {
       "balance": "1000"
     },
-    "0xd5c427F14ee798b0573cDd7E07374Ba1d8997222": {
+    "0x95952D7A666Ad834EfcE2357f5a31F530329bA3F": {
       "balance": "2000"
     },
-     "0x1B518Bff97fE7eDaC6bDFC6c0e0Ba711fB88eC4b": {
+     "0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019": {
       "balance": "3000"
     },
-    "0xYourMinerAddress": {
+    "0x0000000000000000000000000000000000000000": {
       "balance": "150"} 
     }
 
@@ -161,12 +161,12 @@ No **TERMINAL 4**
     $ geth --datadir /root/bia3/ init genesis.json
 
 ## Colocar os nós da rede para rodar
-No **TERMINAL 2**                            
+No **TERMINAL 2**                
 Anotar e guardar o seu enode!
 
     $ geth --datadir ~/bia1 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
 
-No **TERMINAL 3**                           
+No **TERMINAL 3**                          
 Anotar e guardar o seu enode!
 
     $ geth --datadir ~/bia2 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
@@ -248,28 +248,41 @@ Uma conta deve ter saldo 1000, 2000 e a outra 3000.
 
     $ eth.getBalance("atualizar com a chave publica")
 
-    $ eth.getBalance("0x51404Da1a1dA4D04534Ad85a1bE4e10f326e63B3")
-    $ eth.getBalance("0xe3CcD77ABc1b4Db5dC40E793C881e80273E29310")
+    $ eth.getBalance("0xEed8E55794C5680D0c631597e02F6ce2B75AF631")
+    $ eth.getBalance("0x95952D7A666Ad834EfcE2357f5a31F530329bA3F")
+    $ eth.getBalance("0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019")
 
 ### CONTA 1
 
-![Saldo1](/saldo1.jpg)
+![Saldo1](./saldo1.jpg)
 
 ### CONTA 2 
 
-![Saldo2](/saldo2.jpg)
+![Saldo2](./saldo2.jpg)
 
 ### CONTA 3
 
-![Saldo3](/saldo3.jpg)
+![Saldo3](./saldo3.jpg)
 
 ### Vamos liberar a conta para uso
 
-    $ personal.unlockAccount("0xe3CcD77ABc1b4Db5dC40E793C881e80273E29310")
+    $ personal.unlockAccount("0xEed8E55794C5680D0c631597e02F6ce2B75AF631")
+    $ personal.unlockAccount("0x95952D7A666Ad834EfcE2357f5a31F530329bA3F")
+    $ personal.unlockAccount("0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019")
 
 ### Vamos enviar uma transação 
 
-    $ eth.sendTransaction({from:"0xe3CcD77ABc1b4Db5dC40E793C881e80273E29310", to:"0x51404Da1a1dA4D04534Ad85a1bE4e10f326e63B3", value:1111, gas:21000})
+Transaçaõ da conta 1 para a conta 2
+
+    $ eth.sendTransaction({from:"0xEed8E55794C5680D0c631597e02F6ce2B75AF631", to:"0x95952D7A666Ad834EfcE2357f5a31F530329bA3F", value:1111, gas:21000})
+    
+Transaçaõ da conta 2 para a conta 3
+
+$ eth.sendTransaction({from:"0x95952D7A666Ad834EfcE2357f5a31F530329bA3F", to:"0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019", value:1111, gas:21000})
+
+Transaçaõ da conta 3 para a conta 1
+
+$ eth.sendTransaction({from:"0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019", to:"0xEed8E55794C5680D0c631597e02F6ce2B75AF631", value:1111, gas:21000})
 
 ### Vamos verificar o pool de transações
 
@@ -293,8 +306,9 @@ verifique que a transação foi realizada {pending: 1, queued: 0}
 
 ### Vamor verificar o novo saldo das contas
 
-    $ eth.getBalance("0x51404Da1a1dA4D04534Ad85a1bE4e10f326e63B3")
-    $ eth.getBalance("0xe3CcD77ABc1b4Db5dC40E793C881e80273E29310")
+    $ eth.getBalance("0xEed8E55794C5680D0c631597e02F6ce2B75AF631")
+    $ eth.getBalance("0x95952D7A666Ad834EfcE2357f5a31F530329bA3F")
+    $ eth.getBalance("0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019")
 
 ### Sair do console
 
@@ -310,7 +324,9 @@ verifique que a transação foi realizada {pending: 1, queued: 0}
 
 ### Ver o saldo de cada conta
 
-     $ eth.getBalance("0x2252c45b06524e132b57b1fd3fbf65d2e2e8fb5c")  
+    $ eth.getBalance("0xEed8E55794C5680D0c631597e02F6ce2B75AF631")
+    $ eth.getBalance("0x95952D7A666Ad834EfcE2357f5a31F530329bA3F")
+    $ eth.getBalance("0xC3C4DfA771a630E821C9905F069C6a92C7Ae3019")
 
 # CONTAINER 
 ### Parar os containers 
@@ -333,4 +349,4 @@ Vamos utilizar o comando:
 
 Para obter o número de blocos mais recentes da Blockchain Ethereum
 
-![novidade](/novidade.jpg)
+![novidade](./novidade.jpg)
