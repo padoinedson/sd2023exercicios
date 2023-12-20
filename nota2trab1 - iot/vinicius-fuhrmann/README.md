@@ -107,7 +107,7 @@ Neste trabalho, a implementação e desenvolvimento de soluções IoT demandam a
  
  ->Criar Topico ao clicar em Add a Topic no canto superior direito
 
- ![](CriarTopic.png)
+ ![](CriaTopic.png)
  
  ->Definir o nome do tópico e a quantidade de partições
  
