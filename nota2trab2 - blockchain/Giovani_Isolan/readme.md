@@ -153,16 +153,16 @@ de o comando 'miner.stop()' para parar a mineracao
 
 apos isso e necessario desbloquear as contas para poder fazer as transferencias.
 
-    personal.unlockAccount("0x65a7f3862cCdDDD0ABb2f71750d200C65e5FC627")
+    personal.unlockAccount("sua chave")
 
 <img src="imagens/desbloqueioconta1.png">
 
-    personal.unlockAccount("0x4c4CC7cD985915c644E0242A3cF79e1B7C5fE6B5")
+    personal.unlockAccount("sua chave")
 
 <img src="imagens/desbloqueioconta2.png">
 
 
-    personal.unlockAccount("0x2A44D4a9061286ff933BEe276D6BE88C4f294f83")
+    personal.unlockAccount("sua chave")
 
 <img src="imagens/desbloqueioconta3.png">
 
@@ -172,12 +172,12 @@ Agora foi feito as transferencia entre as contas:
 
 Conta yasuo1 para garen2:
 
-    eth.sendTransaction({from:"0x65a7f3862cCdDDD0ABb2f71750d200C65e5FC627", to:"0x4c4CC7cD985915c644E0242A3cF79e1B7C5fE6B5", value:111, gas:21000})
+    eth.sendTransaction({from:"chave", to:"chave", value:111, gas:21000})
     
 <img src="imagens/conta1para2.png">
 Conta garen2 para katarina3
 
-    eth.sendTransaction({from:"0x4c4CC7cD985915c644E0242A3cF79e1B7C5fE6B5", to:"0x2A44D4a9061286ff933BEe276D6BE88C4f294f83", value:222, gas:21000})
+    eth.sendTransaction({from:"chave", to:"chave", value:222, gas:21000})
 
 <img src="imagens/conta2para3.png">
 Apos isso para minerar a taxa de gas
