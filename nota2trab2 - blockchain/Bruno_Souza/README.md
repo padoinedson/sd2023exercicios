@@ -73,12 +73,12 @@ Nome: Bruno César Guisso de Souza
 
 8. Execute o container:
 ```bash
-    sudo docker run -d --name ethereum-node -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30310:30310 -p 30320:30320 -p 30330:30330 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10
+    sudo docker run -d --name ethereum-chain -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30310:30310 -p 30320:30320 -p 30330:30330 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10
 ```
 
 9. Acesse o container, entre em /root, verifique se o arquivo `genesis.json` está presente (Abra 2 terminais adicionais para as outras contas):
 ```bash
-    sudo docker exec -it ethereum-node sh
+    sudo docker exec -it ethereum-chain sh
 ```
     
 ```bash
