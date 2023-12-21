@@ -15,7 +15,7 @@ sudo apt install elixir
 ###Iniciar o serviço:
 
 ```
-sudo service influxdb start
+sudo service elixir start
 ```
 
 ### Instalação Docker
