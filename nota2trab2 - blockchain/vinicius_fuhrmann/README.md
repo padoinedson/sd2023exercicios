@@ -9,16 +9,22 @@
 ###### - Demanda da utilização do Docker!
 
 -> Atualize e faça o upgrade do sistema:
+```bash
 	sudo apt update
 	sudo apt upgrade
-
+```
 -> Crie um diretório chamado ethereum:
+```bash
 	mkdir ethereum
+```
 	
 -> Crie o arquivo genesis.json dentro da ethereum:
+```bash
 	nano genesis.json
-	
+```
+
 Adicione o seguinte conteudo:
+```bash
 	{
 	    "config": {
 		"chainId": 2023,
@@ -49,23 +55,33 @@ Adicione o seguinte conteudo:
 	    "timestamp": "0x00"
 	}	
 	
-
+```
 
 -> Baixe a imagem 'ethereum/client-go':
+```bash
 	sudo docker pull ethereum/client-go:release-1.10
+```
 	
 -> Execute o container:
-	sudo docker run -d --name ethereum-node -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30310:30310 -p 30320:30320 -p 		30330:30330 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10
+```bash
+sudo docker run -d --name ethereum-node -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30310:30310 -p 30320:30320 -p 		30330:30330 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10
+```
 
 -> Abra mais 3 terminais para funcionarem como clientes:
 -> Execute o docker dentro de cada um:
-	sudo docker exec -it ethereum-node sh
+```bash
+sudo docker exec -it ethereum-node sh
+```
 
 -> Entre na root
+```bash
 	cd /root
+```
 
 -> Apos feito isso nos 3 clientes crie as contas em cada 1 dos 3:
+```bash
 	geth account new --datadir ~/(Substitua pelo nome desejado para a conta)
+```
 
 ![](user1.png)
 ![](user2.png)
@@ -76,14 +92,14 @@ Adicione o seguinte conteudo:
 ###### bebeto
 0x0cff36f076Ae27B16e6c77DbE85e7B6de772139B
 
-reinaldo
+######reinaldo
 0x01Aa3EBdbd0680aa8BDEfB4a7cefEA080E253A21
 
-moises
+######moises
 0x1c3B9cfc1BC31069528cA42Ebfcf17C048ce82e9
 
 -> Com a chave pública de cada um atualize o arquivo genesis.json
-
+```bash
 	{
 	    "config": {
 		"chainId": 2023,
@@ -116,58 +132,80 @@ moises
 	    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
 	    "timestamp": "0x00"
 	}
-	
+```
+
 -> Iniciar Nos de Rede em cada terminal de cliente:
+```bash
 	geth --datadir /root/(Substitua pelo nome de cada cliente)/ init genesis.json
+```
 
 -> Nos terminais respectivos para cada cliente, execute:
-	
+```bash	
 	geth --datadir ~/bebeto --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console
 	
 	geth --datadir ~/reinaldo --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8546 --port 30302 --http.port 8544 --allow-insecure-unlock console
 	
 	geth --datadir ~/moises --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8548 --port 30500 --http.port 30501 --allow-insecure-unlock console
-	
+```
+
 -> Verifique o saldo das contas:
+```bash
 	eth.getBalance("Chave da conta")
+```
 
 ![](saldo1.png)
 ![](saldo2.png)
 ![](saldo3.png)
 
 -> Inicie a mineração:
+```bash	
 	miner.start(10)
-	
+```
+
 ![](minera1.png)
 ![](minera2.png)
 ![](minera3.png)
 
 -> Pare a mineração:
+```bash	
 	miner.stop()
+```
 
 -> Transações entre contas:
 
 -> Primeira conta para a segunda:
+```bash
 	eth.sendTransaction({from:"0x0cff36f076Ae27B16e6c77DbE85e7B6de772139B", to:"0x01Aa3EBdbd0680aa8BDEfB4a7cefEA080E253A21", value:111, gas:21000})
+```
 
 ![](transfer1-2.png)
 
 -> Segunda conta para a terceira:
+```bash	
 	eth.sendTransaction({from:"0x01Aa3EBdbd0680aa8BDEfB4a7cefEA080E253A21", to:"0x1c3B9cfc1BC31069528cA42Ebfcf17C048ce82e9", value:222, gas:21000})
+```
 
 ![](transfer2-3.png)
 
 -> Verifique o status do pool de transações:
+```bash
 	txpool.status
+```
 	
 ->Refazer a Mineracao	
+```bash	
 	miner.start(10)
+```
 
 ->Parar Mineracao
+```bash	
 	miner.stop()
+```
 
 -> Verifique o saldo novamente para cada conta:
+```bash
 	eth.getBalance("Chave da conta")
+```
 	
 ![](jaminera1.png)
 ![](jaminera2.png)
@@ -187,4 +225,7 @@ net.peerCount -> Retorna o número de pares (peers) conectados ao nó Ethereum.
 ![](peer1.png)
 ![](peer2.png)
 ![](peer3.png)
+
+Git
+![](enviado.png)
 
