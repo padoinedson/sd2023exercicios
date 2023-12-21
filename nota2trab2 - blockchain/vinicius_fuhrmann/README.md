@@ -64,13 +64,13 @@ Adicione o seguinte conteudo:
 	
 -> Execute o container:
 ```bash
-sudo docker run -d --name ethereum-node -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30310:30310 -p 30320:30320 -p 		30330:30330 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10
+	sudo docker run -d --name ethereum-node -v $HOME/ethereum:/root -p 8545:8545 -p 8544:8544 -p 30301:30301 -p 30310:30310 -p 30320:30320 -p 		30330:30330 -it --entrypoint=/bin/sh ethereum/client-go:release-1.10
 ```
 
 -> Abra mais 3 terminais para funcionarem como clientes:
 -> Execute o docker dentro de cada um:
 ```bash
-sudo docker exec -it ethereum-node sh
+	sudo docker exec -it ethereum-node sh
 ```
 
 -> Entre na root
@@ -89,13 +89,13 @@ sudo docker exec -it ethereum-node sh
 
 ##### Contas Criadas e sua chave:
 
-###### bebeto
+bebeto
 0x0cff36f076Ae27B16e6c77DbE85e7B6de772139B
 
-######reinaldo
+reinaldo
 0x01Aa3EBdbd0680aa8BDEfB4a7cefEA080E253A21
 
-######moises
+moises
 0x1c3B9cfc1BC31069528cA42Ebfcf17C048ce82e9
 
 -> Com a chave pública de cada um atualize o arquivo genesis.json
@@ -214,6 +214,7 @@ sudo docker exec -it ethereum-node sh
 ### Novidade
 
 eth.blockNUmber -> Retorna o número do bloco mais recente na blockchain Ethereum.
+
 net.peerCount -> Retorna o número de pares (peers) conectados ao nó Ethereum.
 
 -> eth.blockNUmber
