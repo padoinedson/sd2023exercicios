@@ -88,3 +88,6 @@ Na novidade, eu coloquei como teste valores repetidos, como no meu caso e de per
 Como podemos ver no print, existe a palavra jett 3x.
 
 <img src="imagens/resposta3.png">
+
+Print Git: 
+<img src="imagens/printdogit.png">

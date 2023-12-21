@@ -1,0 +1,7 @@
+{
+	email leonardoojczenaszschmidt@gmail.com
+}
+
+caddy.leonardo.com {
+	reverse_proxy 185.61.126.168:8200/
+}

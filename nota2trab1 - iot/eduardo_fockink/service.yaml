@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: LoadBalancer
+  ports:
+  - name: site1-port
+    port: 8080
+    targetPort: 8080
+  - name: site2-port
+    port: 9090
+    targetPort: 9090
+  selector:
+    app: nginx-custom
