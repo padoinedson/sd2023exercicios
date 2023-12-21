@@ -95,6 +95,7 @@ kafka-3:
 
 Verificar execução:
 `sudo docker-compose ps`
+
 ![Alt text](<I 1.png>)
 
 Acessar um container:
@@ -102,19 +103,23 @@ Acessar um container:
 
 Criar um tópico:
 `kafka-topics --create --bootstrap-server localhost:29092 --replication-factor 3 --partitions 3 --topic gremio`
+
 ![Alt text](<I 2.png>)
 
 # Produtor e Consumidor normal (Nodos ON)
 Criar produtor:
 `kafka-console-producer --broker-list localhost:29092 --topic gremio`
+
 ![Alt text](<II 1.png>)
 
 Acessar outro container e criar consumidor:
 `kafka-console-consumer --broker-list localhost:29092 --topic gremio`
+
 ![Alt text](<II 2.png>)
 
 Conferir se todos os nodes estão on:
 `sudo docker ps`
+
 ![Alt text](<II 3.png>)
 
 # Produtor e Consumidor com um dos nodos off (derrubar um nodo)
@@ -122,6 +127,7 @@ Derrubar o nodo:
 `sudo docker stop a_kafka-1_1`
 Conferir se o nodo foi derrubado:
 `sudo docker ps`
+
 ![Alt text](III.png)
 
 # Produtor e Consumidor com um nodo novo (adicionar um nodo)
@@ -133,7 +139,9 @@ Acessar um container:
 `sudo docker exec -it a_kafka-2_1 bash`
 Visualizar o consumidor:
 `kafka-console-consumer --broker-list localhost:29092 --topic gremio`
+
 ![Alt text](<IV 1.png>)
+
 ![Alt text](<IV 2.png>)
 
 # Consumidor com leitura em grupo
@@ -141,6 +149,7 @@ Acessar um container:
 `sudo docker exec -it a_kafka-1_1 bash`
 Criar o consumidor com leitura em grupo:
 `kafka-console-consumer --bootstrap-server localhost:29092 --topic calor --from-beginning --group grupo`
+
 ![Alt text](V.png)
 
 # Novidade
@@ -153,3 +162,9 @@ Consumidor:
 `sudo docker exec -it a_kafka-1_1 kafka-console-consumer --topic gremio --bootstrap-server localhost:29092 --from-beginning`
 ![Alt text](VI.png)
 
+# git
+![Alt text](https://cdn.discordapp.com/attachments/213387668292108288/1187315629993238528/image.png?ex=659670d9&is=6583fbd9&hm=cf05d9b7ba166bed2ee5b9b01625c66917c5a0bfbcdda4ae1cb944b42541c655&)
+
+![Alt text](https://cdn.discordapp.com/attachments/213387668292108288/1187315693620822027/image.png?ex=659670e8&is=6583fbe8&hm=e506054f272815f6937a9b4163f786d05022ca280356c489f05bde6a7820da95&)
+
+![Alt text](https://cdn.discordapp.com/attachments/213387668292108288/1187315750306840606/image.png?ex=659670f6&is=6583fbf6&hm=5a0b7513652bf4ee01108c076260add7c240288eefa161529b617a976d0e6011&)
