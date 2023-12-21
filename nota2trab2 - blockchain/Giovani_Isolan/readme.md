@@ -188,13 +188,15 @@ Apos isso para minerar a taxa de gas
 
 Agora foi verificado o valor das 3 contas apos a nova mineracao:
 
-eth.getBalance("0x65a7f3862cCdDDD0ABb2f71750d200C65e5FC627")
-    <img src="imagens/saldoapostransferencia1.png">
+    eth.getBalance("chave")
 
-eth.getBalance("0x4c4CC7cD985915c644E0242A3cF79e1B7C5fE6B5")
-    <img src="imagens/saldoapostransferencia2.png">
+<img src="imagens/saldoapostransferencia1.png">
 
-eth.getBalance("0x2A44D4a9061286ff933BEe276D6BE88C4f294f83")
+    eth.getBalance("chave")
+
+<img src="imagens/saldoapostransferencia2.png">
+
+    eth.getBalance("chave")
 
 <img src="imagens/saldoapostransferencia3.png">
 
@@ -252,3 +254,9 @@ para ver esses valores precisamos seguir mais esses comandos:
  <img src="imagens/getblock.png">
 
  extraData: Esta é a parte relevante,  e uma sequência de bytes que pode conter informações personalizadas definidas pelos mineradores. no meu exemplo deu esse valor "0x74657374616e646f20313233" é uma representação hexadecimal que pode ser decodificada para a string "testando 123".
+
+
+ **Print do git**
+
+ <img src="imagens/envio1.png">
+ <img src="imagens/envio2.png">
