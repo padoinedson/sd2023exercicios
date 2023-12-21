@@ -206,6 +206,6 @@ kafka-console-consumer.sh --topic minecraft --bootstrap-server kafka1:9093 --fro
 ```
 kafka-topics.sh --bootstrap-server localhost:9093 --delete --topic minecraft
 ```
-![Deletado](imagens/deletado.png)
+![Deletado](imagens/topicodeletado.png)
 
 
