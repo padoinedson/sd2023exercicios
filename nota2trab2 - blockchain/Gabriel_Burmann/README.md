@@ -11,7 +11,7 @@ Baixar o container utilizado durante esse trabalho
  
 `$ sudo docker pull ethereum/client-go:release-1.10`
 
-<img src="./img/image (11).png">
+<img src="./img/image11.png">
 Criar uma pasta “ethereum”
 
 
@@ -91,7 +91,7 @@ Conta 2
 Conta 3
 `$ geth account new --datadir ~/burmann3`
   
-<img src="./img/Image (12).png">
+<img src="./img/Image12.png">
 
 OBS:Atualizar os dados no arquivo genesis.json com a “Public address of the key” de cada conta nos locais de “alloc”: 
 
@@ -113,7 +113,7 @@ Após isso, rodar os seguintes comandos em cada terminal:
 `$ geth --datadir /root/burmann1/ init genesis.json`
 
 Troque o burmann1 para cada usaurio, burmann2 e burmann3
-<img src="./img/image (13).png">
+<img src="./img/image13.png">
 
 Em cada terminal
 `$ geth --datadir ~/burmann1 --networkid 2023 --http --http.api 'txpool,eth,net,web3,personal,admin,miner' --http.corsdomain '*' --authrpc.port 8547 --allow-insecure-unlock console`
@@ -155,11 +155,11 @@ Conferir o saldo de cada conta:
 $ eth.getBalance("0x16B19C42Df0B71a8f0Dd0033ff97B4D13e1676F8")
 
 Usuario 1
-<img src="./img/image (14).png">
+<img src="./img/image14.png">
 Usuario 2 
-<img src="./img/image (15).png">
+<img src="./img/image15.png">
 usuario 3
-<img src="./img/image (16).png">
+<img src="./img/image16.png">
 ## Minerar
 Iniciar mineração
 
@@ -192,7 +192,7 @@ $ miner.start(10)
 
 $ miner.stop()
 
-<img src="./img/image 20.png">
+<img src="./img/image20.png">
 
 Conferir o saldo atual em todas as contas
 
@@ -204,11 +204,11 @@ $ eth.getBalance("0x16B19C42Df0B71a8f0Dd0033ff97B4D13e1676F8")
 
 
 ## Minha novidade
-Para não precisar inicar outro terminal para minerar em outro usuário podemos utilizar o 
-  miner.setEtherbase("seu_endereco").Basicamente ele troca o endereco e todas as recompesas da mineração são creditadas na conta associada a esse endereço.
+Para não precisar abrir terminal para minerar em outro usuário podemos utilizar o miner.setEtherbase("seu_endereco"). Basicamente ele troca o endereco e todas as recompesas da mineração são creditadas na conta associada a esse endereço.
   
 <img src="./img/novidade.png">
 
 ## Git
 
-<img src="./img/git.png"/>
+<img src="./img/git1.png"/>
+<img src="./img/git2.png"/>
