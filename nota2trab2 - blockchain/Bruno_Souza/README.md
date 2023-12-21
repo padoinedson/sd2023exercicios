@@ -243,5 +243,5 @@ Nome: Bruno César Guisso de Souza
    ![Saldo Final 2](imagens/final2.png)
 ```bash
     eth.getBalance("0x64B05AA2839A1cEEA7bd4cc6747c2DEAeBD567E2")
-   ![Saldo Final 3](imagens/final3.png)
 ```
+   ![Saldo Final 3](imagens/final3.png)
