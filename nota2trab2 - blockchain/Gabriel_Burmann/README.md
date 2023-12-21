@@ -91,7 +91,7 @@ Conta 2
 Conta 3
 `$ geth account new --datadir ~/burmann3`
   
-<img src="./img/Image12.png">
+<img src="./img/image12.png">
 
 OBS:Atualizar os dados no arquivo genesis.json com a “Public address of the key” de cada conta nos locais de “alloc”: 
 
@@ -132,27 +132,27 @@ Os comandos devem estar no formato:
 admin.addPeer("enode://da60fc76469e51bac658128e1f4f024aa80eccdc586cbfca41c6e8692793621688f9ffa194f9635fe9b392b6e2269d7f3ffc3543f2bf8b359bace84d21474437@127.0.0.1:30302")
 
 Terminal 1
-$ admin.addPeer("<enode da conta número 2>");
+`$ admin.addPeer("<enode da conta número 2>");`
 
-$ admin.addPeer("<enode da conta número 3>");
+`$ admin.addPeer("<enode da conta número 3>");`
 
 
 Terminal 2
-$ admin.addPeer("<enode da conta número 1>");
+`$ admin.addPeer("<enode da conta número 1>");`
 
-$ admin.addPeer("<enode da conta número 3>");
+`$ admin.addPeer("<enode da conta número 3>");`
 
 
 Terminal 3
-$ admin.addPeer("<enode da conta número 2>");
+`$ admin.addPeer("<enode da conta número 2>");`
 
-$ admin.addPeer("<enode da conta número 1>");
+`$ admin.addPeer("<enode da conta número 1>");`
 
 
 Conferir o saldo de cada conta:
 
 
-$ eth.getBalance("0x16B19C42Df0B71a8f0Dd0033ff97B4D13e1676F8")
+`eth.getBalance("0x16B19C42Df0B71a8f0Dd0033ff97B4D13e1676F8")`
 
 Usuario 1
 <img src="./img/image14.png">
@@ -163,44 +163,45 @@ usuario 3
 ## Minerar
 Iniciar mineração
 
-$ miner.start(10)
+`miner.start(10)`
 
 Parar a mineração
 
-$ miner.stop()
+`miner.stop()`
 
 
 Conferir o saldo de cada conta novamente
 
-$ eth.getBalance("0x16B19C42Df0B71a8f0Dd0033ff97B4D13e1676F8")
+`eth.getBalance("0x16B19C42Df0B71a8f0Dd0033ff97B4D13e1676F8")`
 
 
 ## Fazer uma Transação
 
-eth.sendTransaction({from:"0xC93B051be30FbFCDA3A63145662ec685443Dd66B", to:"0x14f947a04e1fa25Fb66664FE155Fe524c1EaF3CD", value:100, gas:21000})
+`eth.sendTransaction({from:"0xC93B051be30FbFCDA3A63145662ec685443Dd66B", to:"0x14f947a04e1fa25Fb66664FE155Fe524c1EaF3CD", value:100, gas:21000})`
 
 Transferindo 100 ETH da conta 1 para a 2
 
-eth.sendTransaction({from:"0x14f947a04e1fa25Fb66664FE155Fe524c1EaF3CD", to:"0xC93B051be30FbFCDA3A63145662ec685443Dd66B", value:300, gas:21000})
+`eth.sendTransaction({from:"0x14f947a04e1fa25Fb66664FE155Fe524c1EaF3CD", to:"0xC93B051be30FbFCDA3A63145662ec685443Dd66B", value:300, gas:21000})`
 
 Transferindo 300 ETH da conta 2 para a conta 3
 
+
+Aparecerá uma transação pendente.
+<img src="./img/image20.png">
+
 Iniciar um mineração novamente para registrar as transações
 
+`miner.start(10)`
 
-$ miner.start(10)
-
-$ miner.stop()
-
-<img src="./img/image20.png">
+`miner.stop()`
 
 Conferir o saldo atual em todas as contas
 
-$ eth.getBalance("0xC93B051be30FbFCDA3A63145662ec685443Dd66B")
+`eth.getBalance("0xC93B051be30FbFCDA3A63145662ec685443Dd66B")`
 
-$ eth.getBalance("0x14f947a04e1fa25Fb66664FE155Fe524c1EaF3CD")
+`eth.getBalance("0x14f947a04e1fa25Fb66664FE155Fe524c1EaF3CD")`
 
-$ eth.getBalance("0x16B19C42Df0B71a8f0Dd0033ff97B4D13e1676F8")
+`eth.getBalance("0x16B19C42Df0B71a8f0Dd0033ff97B4D13e1676F8")`
 
 
 ## Minha novidade
