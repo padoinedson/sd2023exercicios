@@ -144,6 +144,7 @@ envia 111 da conta 1 para a conta 2.
 eth.sendTransaction({from:"0x14A893287722D2ea7050f66B4e3421feB5e631d1", to:"0x0D77996eAd0C9C0fbFdE5dB550D808779577b1e4", value:111, gas:21000})
 ```
 ![txpool](https://media.discordapp.net/attachments/848753904405446687/1187551750576689162/transaction1.png?ex=65974cc0&is=6584d7c0&hm=65176a3e3f4e4d68688d95014f31c0f6412213724f246cbbf9cea3a8bc882a6f&=&format=webp&quality=lossless)
+
 verificar status
 `txpool.status`
 ![txpool](https://media.discordapp.net/attachments/848753904405446687/1187550216610643978/txpool.png?ex=65974b53&is=6584d653&hm=c9459d03f278b531764010f5876c26217a872079d21f13f4d0ec24f0d8d8908d&=&format=webp&quality=lossless)
@@ -155,9 +156,13 @@ mineirar para efetivar a transação
 verificar status após mineiração
 `txpool.status`
 ![txpool](https://media.discordapp.net/attachments/848753904405446687/1187552457782468648/txpool2.png?ex=65974d69&is=6584d869&hm=af1d3c56f7362e12aee60a03658ce50fc5771abe62f5c846de643072eca1b50f&=&format=webp&quality=lossless)
+
 conta 1 após transação
+
 ![txpool](https://media.discordapp.net/attachments/848753904405446687/1187552757226414120/balance1trans.png?ex=65974db0&is=6584d8b0&hm=ed3b5e1db82d3581d78dad0543842c90b5d567ebbaee6156b5b77c132956e96f&=&format=webp&quality=lossless)
+
 conta 2 após transação
+
 ![txpool](https://media.discordapp.net/attachments/848753904405446687/1187553109451489290/balance2trans.png?ex=65974e04&is=6584d904&hm=12f807e26079c4975d2a13991521e53f03a4c50dd5baf2b92c4c01271756bdb6&=&format=webp&quality=lossless)
 
 ### Transação 2
