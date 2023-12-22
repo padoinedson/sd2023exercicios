@@ -167,7 +167,10 @@ eth.sendTransaction({from:"0x0D77996eAd0C9C0fbFdE5dB550D808779577b1e4", to:"0x49
 ```
 conta 3 após transação
 ![txpool](https://media.discordapp.net/attachments/848753904405446687/1187553592622727178/balance3trans.png?ex=65974e78&is=6584d978&hm=12ba1fbf07cfec1326b61117a2c2e071d19d0ca9116917dfd66781eb36daf064&=&format=webp&quality=lossless)
+## Novidades
+nas transações foi definido um preço para o gas que foi de 21000, mas o valor do gas pode ser definido pelo codigo:
+`miner.setGasPrice(valor do Gas)`
 
-
-
+## Git
+![git](https://media.discordapp.net/attachments/848753904405446687/1187555509507723274/image.png?ex=65975041&is=6584db41&hm=b54d8b2d1745c9bf9f47b884104a2db5901925ca2bd9172024f626e0b3a7ca81&=&format=webp&quality=lossless&width=570&height=701)
 
